@@ -9,6 +9,7 @@
 #import "BSAttentionViewController.h"
 #import "UIBarButtonItem+LBButtonToBarButtonItem.h"
 #import "BSRecommendViewController.h"
+#import "BSLoginViewController.h"
 
 
 
@@ -42,7 +43,8 @@
  */
 - (IBAction)LoginButton {
     
-    
+    BSLoginViewController *loginVC = [[BSLoginViewController alloc] init];
+    [self presentViewController:loginVC animated:YES completion:nil];
     
 }
 

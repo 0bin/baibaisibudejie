@@ -13,6 +13,11 @@
 		244350C71CD986B0008767FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 244350C61CD986B0008767FB /* Assets.xcassets */; };
 		244350D51CD986B0008767FB /* ______OCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 244350D41CD986B0008767FB /* ______OCTests.m */; };
 		244350E01CD986B0008767FB /* ______OCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 244350DF1CD986B0008767FB /* ______OCUITests.m */; };
+		2448FBE81CD99B5E00E49921 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 2448FBE71CD99B5E00E49921 /* Foundation+Log.m */; };
+		2448FBEC1CD9A13D00E49921 /* BSTitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2448FBEA1CD9A13D00E49921 /* BSTitleTableViewCell.m */; };
+		2448FBED1CD9A13D00E49921 /* BSTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2448FBEB1CD9A13D00E49921 /* BSTitleTableViewCell.xib */; };
+		247F23F41CDB73A2009A6595 /* BSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247F23F21CDB73A2009A6595 /* BSLoginViewController.m */; };
+		247F23F51CDB73A2009A6595 /* BSLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247F23F31CDB73A2009A6595 /* BSLoginViewController.xib */; };
 		24CAA6A51CD98CC6005AD776 /* BSAttentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CAA6781CD98CC6005AD776 /* BSAttentionViewController.m */; };
 		24CAA6A61CD98CC6005AD776 /* BSAttentionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24CAA6791CD98CC6005AD776 /* BSAttentionViewController.xib */; };
 		24CAA6A71CD98CC6005AD776 /* BSRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CAA67B1CD98CC6005AD776 /* BSRecommendViewController.m */; };
@@ -25,7 +30,6 @@
 		24CAA6AE1CD98CC6005AD776 /* UIView+LBFrameExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CAA6981CD98CC6005AD776 /* UIView+LBFrameExtension.m */; };
 		24CAA6AF1CD98CC6005AD776 /* BSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CAA69B1CD98CC6005AD776 /* BSNavigationController.m */; };
 		24CAA6B01CD98CC6005AD776 /* BSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CAA69D1CD98CC6005AD776 /* BSTabBarController.m */; };
-		24CAA6B11CD98CC6005AD776 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CAA69E1CD98CC6005AD776 /* Foundation+Log.m */; };
 		24CAA6B21CD98CC6005AD776 /* BSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CAA6A41CD98CC6005AD776 /* BSTabBar.m */; };
 /* End PBXBuildFile section */
 
@@ -49,8 +53,8 @@
 /* Begin PBXFileReference section */
 		244350B71CD986B0008767FB /* 仿百思不得姐OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "仿百思不得姐OC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		244350BB1CD986B0008767FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		244350BD1CD986B0008767FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		244350BE1CD986B0008767FB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		244350BD1CD986B0008767FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
+		244350BE1CD986B0008767FB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
 		244350C61CD986B0008767FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		244350CB1CD986B0008767FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		244350D01CD986B0008767FB /* 仿百思不得姐OCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "仿百思不得姐OCTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,14 +63,21 @@
 		244350DB1CD986B0008767FB /* 仿百思不得姐OCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "仿百思不得姐OCUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		244350DF1CD986B0008767FB /* ______OCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "______OCUITests.m"; sourceTree = "<group>"; };
 		244350E11CD986B1008767FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2448FBE71CD99B5E00E49921 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		2448FBE91CD9A13D00E49921 /* BSTitleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTitleTableViewCell.h; sourceTree = "<group>"; };
+		2448FBEA1CD9A13D00E49921 /* BSTitleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTitleTableViewCell.m; sourceTree = "<group>"; };
+		2448FBEB1CD9A13D00E49921 /* BSTitleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSTitleTableViewCell.xib; sourceTree = "<group>"; };
+		247F23F11CDB73A2009A6595 /* BSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLoginViewController.h; sourceTree = "<group>"; };
+		247F23F21CDB73A2009A6595 /* BSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSLoginViewController.m; sourceTree = "<group>"; };
+		247F23F31CDB73A2009A6595 /* BSLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSLoginViewController.xib; sourceTree = "<group>"; };
 		24CAA6771CD98CC6005AD776 /* BSAttentionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAttentionViewController.h; sourceTree = "<group>"; };
 		24CAA6781CD98CC6005AD776 /* BSAttentionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAttentionViewController.m; sourceTree = "<group>"; };
 		24CAA6791CD98CC6005AD776 /* BSAttentionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSAttentionViewController.xib; sourceTree = "<group>"; };
 		24CAA67A1CD98CC6005AD776 /* BSRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendViewController.h; sourceTree = "<group>"; };
 		24CAA67B1CD98CC6005AD776 /* BSRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommendViewController.m; sourceTree = "<group>"; };
 		24CAA67C1CD98CC6005AD776 /* BSRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSRecommendViewController.xib; sourceTree = "<group>"; };
-		24CAA67F1CD98CC6005AD776 /* BSCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCategoryModel.h; sourceTree = "<group>"; };
-		24CAA6801CD98CC6005AD776 /* BSCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCategoryModel.m; sourceTree = "<group>"; };
+		24CAA67F1CD98CC6005AD776 /* BSCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BSCategoryModel.h; path = ../View/BSCategoryModel.h; sourceTree = "<group>"; };
+		24CAA6801CD98CC6005AD776 /* BSCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BSCategoryModel.m; path = ../View/BSCategoryModel.m; sourceTree = "<group>"; };
 		24CAA6831CD98CC6005AD776 /* BSEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEssenceViewController.h; sourceTree = "<group>"; };
 		24CAA6841CD98CC6005AD776 /* BSEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEssenceViewController.m; sourceTree = "<group>"; };
 		24CAA6891CD98CC6005AD776 /* BSMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMeViewController.h; sourceTree = "<group>"; };
@@ -81,7 +92,6 @@
 		24CAA69B1CD98CC6005AD776 /* BSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNavigationController.m; sourceTree = "<group>"; };
 		24CAA69C1CD98CC6005AD776 /* BSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTabBarController.h; sourceTree = "<group>"; };
 		24CAA69D1CD98CC6005AD776 /* BSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTabBarController.m; sourceTree = "<group>"; };
-		24CAA69E1CD98CC6005AD776 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		24CAA6A31CD98CC6005AD776 /* BSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTabBar.h; sourceTree = "<group>"; };
 		24CAA6A41CD98CC6005AD776 /* BSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTabBar.m; sourceTree = "<group>"; };
 		685B7A1BE0098BF7920E4106 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,10 +151,6 @@
 			isa = PBXGroup;
 			children = (
 				24CAA6741CD98CC6005AD776 /* Classes */,
-				244350BD1CD986B0008767FB /* AppDelegate.h */,
-				244350BE1CD986B0008767FB /* AppDelegate.m */,
-				244350C61CD986B0008767FB /* Assets.xcassets */,
-				244350CB1CD986B0008767FB /* Info.plist */,
 				244350BA1CD986B0008767FB /* Supporting Files */,
 			);
 			path = "仿百思不得姐OC";
@@ -153,6 +159,8 @@
 		244350BA1CD986B0008767FB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				244350C61CD986B0008767FB /* Assets.xcassets */,
+				244350CB1CD986B0008767FB /* Info.plist */,
 				244350BB1CD986B0008767FB /* main.m */,
 			);
 			name = "Supporting Files";
@@ -179,6 +187,8 @@
 		24CAA6741CD98CC6005AD776 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				244350BD1CD986B0008767FB /* AppDelegate.h */,
+				244350BE1CD986B0008767FB /* AppDelegate.m */,
 				24CAA6751CD98CC6005AD776 /* Attention-关注 */,
 				24CAA6811CD98CC6005AD776 /* Essence-精华 */,
 				24CAA6871CD98CC6005AD776 /* Me-我 */,
@@ -207,6 +217,9 @@
 				24CAA67A1CD98CC6005AD776 /* BSRecommendViewController.h */,
 				24CAA67B1CD98CC6005AD776 /* BSRecommendViewController.m */,
 				24CAA67C1CD98CC6005AD776 /* BSRecommendViewController.xib */,
+				247F23F11CDB73A2009A6595 /* BSLoginViewController.h */,
+				247F23F21CDB73A2009A6595 /* BSLoginViewController.m */,
+				247F23F31CDB73A2009A6595 /* BSLoginViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -214,6 +227,8 @@
 		24CAA67D1CD98CC6005AD776 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				24CAA67F1CD98CC6005AD776 /* BSCategoryModel.h */,
+				24CAA6801CD98CC6005AD776 /* BSCategoryModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -221,8 +236,9 @@
 		24CAA67E1CD98CC6005AD776 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				24CAA67F1CD98CC6005AD776 /* BSCategoryModel.h */,
-				24CAA6801CD98CC6005AD776 /* BSCategoryModel.m */,
+				2448FBE91CD9A13D00E49921 /* BSTitleTableViewCell.h */,
+				2448FBEA1CD9A13D00E49921 /* BSTitleTableViewCell.m */,
+				2448FBEB1CD9A13D00E49921 /* BSTitleTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -331,7 +347,6 @@
 			children = (
 				24CAA6941CD98CC6005AD776 /* Category */,
 				24CAA6991CD98CC6005AD776 /* Controller */,
-				24CAA69E1CD98CC6005AD776 /* Foundation+Log.m */,
 				24CAA69F1CD98CC6005AD776 /* Lib */,
 				24CAA6A01CD98CC6005AD776 /* Model */,
 				24CAA6A11CD98CC6005AD776 /* Other */,
@@ -379,6 +394,7 @@
 		24CAA6A11CD98CC6005AD776 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				2448FBE71CD99B5E00E49921 /* Foundation+Log.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -474,6 +490,7 @@
 		244350AF1CD986B0008767FB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = BS;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = LinBin;
 				TargetAttributes = {
@@ -518,9 +535,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				247F23F51CDB73A2009A6595 /* BSLoginViewController.xib in Resources */,
 				24CAA6A61CD98CC6005AD776 /* BSAttentionViewController.xib in Resources */,
 				24CAA6A81CD98CC6005AD776 /* BSRecommendViewController.xib in Resources */,
 				244350C71CD986B0008767FB /* Assets.xcassets in Resources */,
+				2448FBED1CD9A13D00E49921 /* BSTitleTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,6 +613,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24CAA6A91CD98CC6005AD776 /* BSCategoryModel.m in Sources */,
+				2448FBE81CD99B5E00E49921 /* Foundation+Log.m in Sources */,
 				24CAA6A71CD98CC6005AD776 /* BSRecommendViewController.m in Sources */,
 				24CAA6AF1CD98CC6005AD776 /* BSNavigationController.m in Sources */,
 				24CAA6AB1CD98CC6005AD776 /* BSMeViewController.m in Sources */,
@@ -603,10 +623,11 @@
 				24CAA6AD1CD98CC6005AD776 /* UIBarButtonItem+LBButtonToBarButtonItem.m in Sources */,
 				24CAA6AE1CD98CC6005AD776 /* UIView+LBFrameExtension.m in Sources */,
 				24CAA6B01CD98CC6005AD776 /* BSTabBarController.m in Sources */,
+				2448FBEC1CD9A13D00E49921 /* BSTitleTableViewCell.m in Sources */,
 				244350BF1CD986B0008767FB /* AppDelegate.m in Sources */,
-				24CAA6B11CD98CC6005AD776 /* Foundation+Log.m in Sources */,
 				24CAA6AC1CD98CC6005AD776 /* BSNewViewController.m in Sources */,
 				244350BC1CD986B0008767FB /* main.m in Sources */,
+				247F23F41CDB73A2009A6595 /* BSLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
