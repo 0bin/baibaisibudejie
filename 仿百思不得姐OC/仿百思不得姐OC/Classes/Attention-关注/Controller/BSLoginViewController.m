@@ -8,7 +8,10 @@
 
 #import "BSLoginViewController.h"
 
-@interface BSLoginViewController ()
+@interface BSLoginViewController () <UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *accountTF;
+@property (weak, nonatomic) IBOutlet UITextField *PSWTF;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *loginLaoutLeft;
 
 @end
 
@@ -17,11 +20,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    //returnKey 当输入为空时 禁止点击
+    self.accountTF.enablesReturnKeyAutomatically = YES;
+    self.PSWTF.enablesReturnKeyAutomatically = YES;
+    //占位字体属性设置：
+    NSMutableDictionary *attributed = [NSMutableDictionary dictionary];
+    attributed[NSForegroundColorAttributeName] = [UIColor whiteColor];
+    self.accountTF.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"请输入手机号" attributes:attributed];
+    self.PSWTF.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"请输入密码" attributes:attributed];
 }
 - (IBAction)dismissButton:(UIButton *)sender {
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+
 - (IBAction)rigesterButton:(UIButton *)sender {
+    if (self.loginLaoutLeft.constant == 0) {
+        self.loginLaoutLeft.constant = - self.view.bounds.size.width;
+        [sender setTitle:@"已有账号" forState:UIControlStateNormal];
+    } else {
+        self.loginLaoutLeft.constant = 0;
+        [sender setTitle:@"注册账号" forState:UIControlStateNormal];
+    
+    }
+
+    [UIView animateWithDuration:0.6 animations:^{
+        [self.view layoutIfNeeded];
+    }];
 }
 - (IBAction)loginButton:(UIButton *)sender {
     
@@ -40,10 +66,24 @@
 
 - (IBAction)loginQQWeibo:(UIButton *)sender {
 }
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 
+    [self.view endEditing:YES];
+
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+#pragma mark - UITextFieldDelegate
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (textField == self.accountTF) {
+        [self.PSWTF becomeFirstResponder];
+    } else {
+        [self.view endEditing:YES];
+    }
+    return YES;
+
 }
 
 /*
