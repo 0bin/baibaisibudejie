@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "BSTabBarController.h"
+#import "BSSettingGuideView.h"
+
 
 @interface AppDelegate ()
 
@@ -20,8 +22,11 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [[BSTabBarController alloc] init];
+
     [self.window makeKeyAndVisible];
-    
+    BSSettingGuideView *guide = [BSSettingGuideView guideView];
+    [guide setFrame:self.window.bounds];
+    [self.window addSubview:guide];
     
     return YES;
 }

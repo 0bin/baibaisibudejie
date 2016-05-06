@@ -36,6 +36,9 @@
 
 
 - (IBAction)rigesterButton:(UIButton *)sender {
+    
+    [self.view endEditing:YES];
+    
     if (self.loginLaoutLeft.constant == 0) {
         self.loginLaoutLeft.constant = - self.view.bounds.size.width;
         [sender setTitle:@"已有账号" forState:UIControlStateNormal];
