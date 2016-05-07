@@ -1,6 +1,6 @@
 //
 //  UIBarButtonItem+LBButtonToBarButtonItem.h
-//  仿-百思不得姐
+//  将button封装成UIBarButtonItem
 //
 //  Created by LinBin on 16/4/29.
 //  Copyright © 2016年 LinBin. All rights reserved.
@@ -21,5 +21,5 @@
  *  @return UIBarButtonItem
  */
 + (UIBarButtonItem *) itemWithImage:(NSString *)image highlightImage:(NSString *)highlightImage target:(id)target action:(SEL)action;
-//+ (UIBarButtonItem *) itemWithTitle:(NSString *)title image:(NSString *)image highlightImage:(NSString *)highlightImage target:(id)target action:(SEL)action;
+
 @end

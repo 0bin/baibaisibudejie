@@ -1,6 +1,5 @@
-//
+//  直接.X .Y .W .H
 //  UIView+LBFrameExtension.h
-//  仿-百思不得姐
 //
 //  Created by LinBin on 16/4/29.
 //  Copyright © 2016年 LinBin. All rights reserved.
@@ -10,9 +9,13 @@
 
 @interface UIView (LBFrameExtension)
 
-@property (assign, nonatomic) CGFloat width;
-@property (assign, nonatomic) CGFloat height;
-@property (assign, nonatomic) CGFloat x;
-@property (assign, nonatomic) CGFloat y;
+
+@property (nonatomic, assign) CGFloat width;
+@property (nonatomic, assign) CGFloat height;
+@property (nonatomic, assign) CGFloat x;
+@property (nonatomic, assign) CGFloat y;
+@property (nonatomic, assign) CGSize size;
+@property (nonatomic, assign) CGFloat centerX;
+@property (nonatomic, assign) CGFloat centerY;
 
 @end

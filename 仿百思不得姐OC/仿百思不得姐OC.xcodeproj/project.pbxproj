@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		01F5DED275DD6B7CEEF8BD5F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 685B7A1BE0098BF7920E4106 /* libPods.a */; };
+		243B05BE1CDDAD980081D490 /* BSEssenceALLTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 243B05BD1CDDAD980081D490 /* BSEssenceALLTableController.m */; };
 		244350BC1CD986B0008767FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 244350BB1CD986B0008767FB /* main.m */; };
 		244350BF1CD986B0008767FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 244350BE1CD986B0008767FB /* AppDelegate.m */; };
 		244350C71CD986B0008767FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 244350C61CD986B0008767FB /* Assets.xcassets */; };
@@ -53,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		243B05BC1CDDAD980081D490 /* BSEssenceALLTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEssenceALLTableController.h; sourceTree = "<group>"; };
+		243B05BD1CDDAD980081D490 /* BSEssenceALLTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEssenceALLTableController.m; sourceTree = "<group>"; };
 		244350B71CD986B0008767FB /* 仿百思不得姐OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "仿百思不得姐OC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		244350BB1CD986B0008767FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		244350BD1CD986B0008767FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
@@ -263,6 +266,8 @@
 			children = (
 				24CAA6831CD98CC6005AD776 /* BSEssenceViewController.h */,
 				24CAA6841CD98CC6005AD776 /* BSEssenceViewController.m */,
+				243B05BC1CDDAD980081D490 /* BSEssenceALLTableController.h */,
+				243B05BD1CDDAD980081D490 /* BSEssenceALLTableController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -633,6 +638,7 @@
 				24CAA6AD1CD98CC6005AD776 /* UIBarButtonItem+LBButtonToBarButtonItem.m in Sources */,
 				24CAA6AE1CD98CC6005AD776 /* UIView+LBFrameExtension.m in Sources */,
 				24CAA6B01CD98CC6005AD776 /* BSTabBarController.m in Sources */,
+				243B05BE1CDDAD980081D490 /* BSEssenceALLTableController.m in Sources */,
 				2448FBEC1CD9A13D00E49921 /* BSTitleTableViewCell.m in Sources */,
 				244350BF1CD986B0008767FB /* AppDelegate.m in Sources */,
 				24CAA6AC1CD98CC6005AD776 /* BSNewViewController.m in Sources */,

@@ -24,9 +24,8 @@
     self.window.rootViewController = [[BSTabBarController alloc] init];
 
     [self.window makeKeyAndVisible];
-    BSSettingGuideView *guide = [BSSettingGuideView guideView];
-    [guide setFrame:self.window.bounds];
-    [self.window addSubview:guide];
+    [BSSettingGuideView show];
+ 
     
     return YES;
 }

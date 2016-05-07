@@ -14,7 +14,9 @@
 
 @implementation BSTabBar
 
-
+/**
+ *  设置addButton
+ */
 - (instancetype)initWithFrame:(CGRect)frame {
 
     if (self = [super initWithFrame:frame]) {
@@ -35,13 +37,14 @@
 
 }
 
-
+/**
+ *  重排tabbar内item 的位置
+ */
 - (void)layoutSubviews {
     [super layoutSubviews];
     
     [self.addButton setFrame:CGRectMake(0, 0, self.addButton.currentImage.size.width, self.addButton.currentImage.size.height)];
     [self.addButton setCenter:CGPointMake(self.bounds.size.width * 0.5, self.bounds.size.height * 0.5)];
-    
     CGFloat buttonW = self.bounds.size.width * 0.2;
     CGFloat buttonH = self.bounds.size.height;
     NSInteger index = 0;
@@ -50,12 +53,7 @@
         CGFloat buttonX = (index > 1 ? index + 1 : index) * buttonW;
             [button setFrame:CGRectMake(buttonX, 0, buttonW, buttonH)];
             index++;
-            
-        
     }
-    
-    
-    
 }
 /*
 // Only override drawRect: if you perform custom drawing.

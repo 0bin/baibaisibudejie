@@ -9,7 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface BSSettingGuideView : UIView
-
+/**
+ *  创建guide
+ */
 + (instancetype)guideView;
 
+/**
+ *  显示设置引导
+ */
++ (void)show;
 @end
