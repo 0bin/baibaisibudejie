@@ -7,6 +7,7 @@
 //
 
 #import "BSLoginViewController.h"
+#import "LBVerticalButton.h"
 
 @interface BSLoginViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *accountTF;

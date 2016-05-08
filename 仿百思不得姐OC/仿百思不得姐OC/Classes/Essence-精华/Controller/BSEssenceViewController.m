@@ -186,8 +186,6 @@
  *  点击移动动画停止调用
  */
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
-    
-    
 
     //添加控制器对应的视图
     NSInteger index = scrollView.contentOffset.x / scrollView.width;

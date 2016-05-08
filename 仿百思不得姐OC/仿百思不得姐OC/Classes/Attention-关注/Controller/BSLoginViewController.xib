@@ -168,9 +168,15 @@
                             <rect key="frame" x="510" y="85" width="70" height="95"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="70" id="TbN-aJ-ShQ"/>
+                                <constraint firstAttribute="width" constant="70" id="hzR-zO-V9J"/>
                                 <constraint firstAttribute="height" constant="95" id="j8l-5Y-y5D"/>
                             </constraints>
                             <state key="normal" image="login_tecent_icon"/>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="TbN-aJ-ShQ"/>
+                                </mask>
+                            </variation>
                             <connections>
                                 <action selector="loginQQWeibo:" destination="-1" eventType="touchUpInside" id="hO8-G6-Vmi"/>
                             </connections>

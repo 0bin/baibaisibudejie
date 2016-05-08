@@ -7,6 +7,7 @@
 //
 
 #import "BSTabBar.h"
+#import "BSPublishViewController.h"
 
 @interface BSTabBar ()
 @property (weak, nonatomic) UIButton *addButton;
@@ -33,8 +34,9 @@
 }
 
 - (void)addButtonClick {
-     NSLog(@"-----------------------");
-
+     
+    BSPublishViewController *pulish = [[BSPublishViewController alloc] init];
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:pulish animated:NO completion:nil];
 }
 
 /**
