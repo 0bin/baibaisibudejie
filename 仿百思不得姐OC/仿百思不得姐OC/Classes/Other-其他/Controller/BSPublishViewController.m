@@ -98,10 +98,9 @@
         
         if (i == self.view.subviews.count - 1) {
             [animation setCompletionBlock:^(POPAnimation *animation, BOOL finish) {
-                  [self dismissViewControllerAnimated:NO completion:nil];
+                  [self dismissViewControllerAnimated:YES completion:nil];
                 
             }];
-          
         }
     }
 

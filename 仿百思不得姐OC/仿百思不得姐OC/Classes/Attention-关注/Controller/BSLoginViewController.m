@@ -29,7 +29,9 @@
     attributed[NSForegroundColorAttributeName] = [UIColor whiteColor];
     self.accountTF.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"请输入手机号" attributes:attributed];
     self.PSWTF.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"请输入密码" attributes:attributed];
+   
 }
+
 - (IBAction)dismissButton:(UIButton *)sender {
     
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -79,6 +81,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 #pragma mark - UITextFieldDelegate
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     if (textField == self.accountTF) {

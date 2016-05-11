@@ -11,6 +11,7 @@
 		240C88481CDF114600CFAE58 /* BSPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 240C88461CDF114600CFAE58 /* BSPublishViewController.m */; };
 		240C88491CDF114600CFAE58 /* BSPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 240C88471CDF114600CFAE58 /* BSPublishViewController.xib */; };
 		240C884C1CDF43E500CFAE58 /* LBVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 240C884B1CDF43E500CFAE58 /* LBVerticalButton.m */; };
+		2415D02E1CE21BF600A2E55E /* BSMeDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2415D02D1CE21BF600A2E55E /* BSMeDataModel.m */; };
 		243B05BE1CDDAD980081D490 /* BSEssenceALLTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 243B05BD1CDDAD980081D490 /* BSEssenceALLTableController.m */; };
 		244350BC1CD986B0008767FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 244350BB1CD986B0008767FB /* main.m */; };
 		244350BF1CD986B0008767FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 244350BE1CD986B0008767FB /* AppDelegate.m */; };
@@ -62,6 +63,8 @@
 		240C88471CDF114600CFAE58 /* BSPublishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSPublishViewController.xib; sourceTree = "<group>"; };
 		240C884A1CDF43E500CFAE58 /* LBVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBVerticalButton.h; sourceTree = "<group>"; };
 		240C884B1CDF43E500CFAE58 /* LBVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBVerticalButton.m; sourceTree = "<group>"; };
+		2415D02C1CE21BF600A2E55E /* BSMeDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMeDataModel.h; sourceTree = "<group>"; };
+		2415D02D1CE21BF600A2E55E /* BSMeDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMeDataModel.m; sourceTree = "<group>"; };
 		243B05BC1CDDAD980081D490 /* BSEssenceALLTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEssenceALLTableController.h; sourceTree = "<group>"; };
 		243B05BD1CDDAD980081D490 /* BSEssenceALLTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEssenceALLTableController.m; sourceTree = "<group>"; };
 		244350B71CD986B0008767FB /* 仿百思不得姐OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "仿百思不得姐OC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -316,6 +319,8 @@
 		24CAA68B1CD98CC6005AD776 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2415D02C1CE21BF600A2E55E /* BSMeDataModel.h */,
+				2415D02D1CE21BF600A2E55E /* BSMeDataModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -640,6 +645,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2415D02E1CE21BF600A2E55E /* BSMeDataModel.m in Sources */,
 				240C88481CDF114600CFAE58 /* BSPublishViewController.m in Sources */,
 				24CAA6A91CD98CC6005AD776 /* BSCategoryModel.m in Sources */,
 				2448FBE81CD99B5E00E49921 /* Foundation+Log.m in Sources */,

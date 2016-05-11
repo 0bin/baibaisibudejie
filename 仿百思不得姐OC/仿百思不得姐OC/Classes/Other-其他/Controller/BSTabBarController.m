@@ -36,7 +36,7 @@
     BSAttentionViewController *attention = [[BSAttentionViewController alloc] init];
     [self addTabBarChildVC:attention Image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon" title:@"关注"];
  
-    BSMeViewController *me = [[BSMeViewController alloc] init];
+    BSMeViewController *me = [[BSMeViewController alloc] initWithStyle:UITableViewStyleGrouped];
     [self addTabBarChildVC:me Image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon" title:@"我"];
     //通过kvc替换系统tabbar
     BSTabBar *tabBar = [[BSTabBar alloc] init];
