@@ -10,10 +10,15 @@
 #import "UIBarButtonItem+LBButtonToBarButtonItem.h"
 #import <AFNetworking.h>
 #import "BSMeDataModel.h"
+#import <UIButton+WebCache.h>
 
 @interface BSMeViewController ()
 @property (strong, nonatomic) NSArray *dataArray;
 @property (weak, nonatomic) UIView *footerView;
+@property (strong, nonatomic) NSMutableDictionary *images;
+@property (strong, nonatomic) NSMutableDictionary *operationsDict;
+@property (strong, nonatomic) NSOperationQueue *queue;
+
 @end
 
 @implementation BSMeViewController
@@ -37,7 +42,7 @@
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        NSLog(@"---%@---",responseObject);
+
         NSMutableArray *arrayM = [NSMutableArray array];
         for (NSDictionary *dict in responseObject[@"square_list"]) {
             BSMeDataModel *model = [BSMeDataModel modelWihtDict:dict];
@@ -53,9 +58,7 @@
 }
 
 - (void)addFooterView {
-    
 
-    
     NSInteger column = 4;
     CGFloat buttonW = [UIScreen mainScreen].bounds.size.width / column;
     CGFloat buttonH = buttonW;
@@ -67,13 +70,8 @@
         CGFloat buttonY = i / column * buttonH;
         BSMeDataModel *model = self.dataArray[i];
         UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(buttonX, buttonY, buttonW, buttonH)];
-        
-        NSURL *url = [NSURL URLWithString:model.icon];
-        NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:nil delegateQueue:[[NSOperationQueue alloc] init]];
-        NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:<#(NSURLRequestCachePolicy)#> timeoutInterval:<#(NSTimeInterval)#>]
-        NSURLSessionTask *task =
-        
-        [button setImage:[UIImage imageNamed:model.icon] forState:UIControlStateNormal];
+        NSLog(@"---%@---",model.icon);
+        [button sd_setImageWithURL:[NSURL URLWithString:model.icon] forState:UIControlStateNormal];
         [button setTitle:model.name forState:UIControlStateNormal];
         [button addTarget:self action:@selector(footerButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.footerView addSubview:button];
@@ -82,42 +80,11 @@
 
 }
 
+
+
 - (void)footerButtonClick:(UIButton *)button {
 
-    //创建下载图片的url
-    NSURL *url = [NSURL URLWithString:urlString];
-    
-    //创建网络请求配置类
-    NSURLSessionConfiguration * configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    
-    //创建网络会话
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration delegate:nil delegateQueue:[NSOperationQueue new]];
-    
-    //创建请求并设置缓存策略以及超时时长
-    NSURLRequest *imgRequest = [NSURLRequest requestWithURL:url cachePolicy:0 timeoutInterval:30.f];
-    //*也可通过configuration.requestCachePolicy 设置缓存策略
-    
-    //创建一个下载任务
-    NSURLSessionDownloadTask *task = [session downloadTaskWithRequest:imgRequest completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        
-        //下载完成后获取数据 此时已经自动缓存到本地，下次会直接从本地缓存获取，不再进行网络请求
-        NSData * data = [NSData dataWithContentsOfURL:location];
-        
-        //回到主线程
-        dispatch_async(dispatch_get_main_queue(), ^{
-            
-            //设置图片
-            self.image = [UIImage imageWithData:data];
-        });
-        
-        
-    }];
-    
-    
-    //启动下载任务
-    [task resume];
-    
-}
+
 
 
 }
