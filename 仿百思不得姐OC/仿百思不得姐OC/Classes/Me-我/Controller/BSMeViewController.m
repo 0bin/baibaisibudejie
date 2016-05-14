@@ -8,9 +8,9 @@
 
 #import "BSMeViewController.h"
 #import "UIBarButtonItem+LBButtonToBarButtonItem.h"
-#import <AFNetworking.h>
 #import "BSMeDataModel.h"
-#import <UIButton+WebCache.h>
+#import "LBVerticalButton.h"
+#import "LBTableFooterView.h"
 
 @interface BSMeViewController ()
 @property (strong, nonatomic) NSArray *dataArray;
@@ -30,64 +30,11 @@
     [self setNavigationItem];
     [self setTable];
     
-    UIView *footerView = [[UIView alloc] init];
-    [footerView setBackgroundColor:[UIColor redColor]];
-    self.tableView.tableFooterView = footerView;
-    self.footerView = footerView;
-
-    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    parameters[@"a"] = @"square";
-    parameters[@"c"] = @"topic";
-    [[AFHTTPSessionManager manager]GET:@"https://api.budejie.com/api/api_open.php" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-
-        NSMutableArray *arrayM = [NSMutableArray array];
-        for (NSDictionary *dict in responseObject[@"square_list"]) {
-            BSMeDataModel *model = [BSMeDataModel modelWihtDict:dict];
-            [arrayM addObject:model];
-        }
-        self.dataArray = arrayM;
-        [self addFooterView];
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"---%@---",error);
-        
-    }];
-}
-
-- (void)addFooterView {
-
-    NSInteger column = 4;
-    CGFloat buttonW = [UIScreen mainScreen].bounds.size.width / column;
-    CGFloat buttonH = buttonW;
-
     
-    for (NSInteger i = 0; i < self.dataArray.count; i++) {
-        
-        CGFloat buttonX = i % column * buttonW;
-        CGFloat buttonY = i / column * buttonH;
-        BSMeDataModel *model = self.dataArray[i];
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(buttonX, buttonY, buttonW, buttonH)];
-        NSLog(@"---%@---",model.icon);
-        [button sd_setImageWithURL:[NSURL URLWithString:model.icon] forState:UIControlStateNormal];
-        [button setTitle:model.name forState:UIControlStateNormal];
-        [button addTarget:self action:@selector(footerButtonClick:) forControlEvents:UIControlEventTouchUpInside];
-        [self.footerView addSubview:button];
-    }
-    [self.footerView setFrame:CGRectMake(0, 200, [UIScreen mainScreen].bounds.size.width, self.dataArray.count / column * buttonH)];
-
+    self.tableView.tableFooterView = [[LBTableFooterView alloc] init];
 }
 
 
-
-- (void)footerButtonClick:(UIButton *)button {
-
-
-
-
-}
 
 
 /**

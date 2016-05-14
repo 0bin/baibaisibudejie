@@ -30,15 +30,15 @@
 
 - (void)layoutSubviews {
     
-    self.imageView.x = 0;
-    self.imageView.y = 0;
-    self.imageView.width = self.width;
-    self.imageView.height = self.width;
-    
-    self.titleLabel.x = 0;
-    self.titleLabel.y = self.imageView.height;
-    self.titleLabel.width = self.width;
-    self.titleLabel.height = self.height - self.imageView.height;
+//    self.imageView.x = 0;
+//    self.imageView.y = 0;
+//    self.imageView.width = self.width;
+//    self.imageView.height = self.width;
+//    
+//    self.titleLabel.x = 0;
+//    self.titleLabel.y = self.imageView.height;
+//    self.titleLabel.width = self.width;
+//    self.titleLabel.height = self.height - self.imageView.height;
 
 }
 
