@@ -8,12 +8,21 @@
 
 #import "LBSquareButton.h"
 #import "UIView+LBFrameExtension.h"
+#import "BSMeDataModel.h"
+#import <UIButton+WebCache.h>
+
+
+@interface LBSquareButton ()
+
+@end
 
 @implementation LBSquareButton
 
 
 - (void)setup {
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    self.titleLabel.font = [UIFont systemFontOfSize:14];
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -31,10 +40,13 @@
 
 - (void)layoutSubviews {
     
-    self.imageView.y = self.height * 0.2;
-    self.imageView.width = self.width * 0.4;
-    self.imageView.height = self.width * 0.4;
-    self.imageView.centerX = self.centerX;
+    [super layoutSubviews];
+    
+    
+    self.imageView.width = self.height * 0.5;
+    self.imageView.height = self.width * 0.5;
+    self.imageView.y = self.height * 0.1;
+    self.imageView.centerX = self.width * 0.5;
     
     self.titleLabel.x = 0;
     self.titleLabel.y = CGRectGetMaxY(self.imageView.frame);
@@ -42,5 +54,9 @@
     self.titleLabel.height = self.height -  self.titleLabel.y;
     
 }
-
+- (void)setModel:(BSMeDataModel *)model {
+    _model = model;
+    [self sd_setImageWithURL:[NSURL URLWithString:model.icon] forState:UIControlStateNormal];
+    [self setTitle:model.name forState:UIControlStateNormal];
+}
 @end

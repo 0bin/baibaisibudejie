@@ -22,6 +22,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     //returnKey 当输入为空时 禁止点击
+   
+    
     self.accountTF.enablesReturnKeyAutomatically = YES;
     self.PSWTF.enablesReturnKeyAutomatically = YES;
     //占位字体属性设置：
@@ -29,6 +31,8 @@
     attributed[NSForegroundColorAttributeName] = [UIColor whiteColor];
     self.accountTF.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"请输入手机号" attributes:attributed];
     self.PSWTF.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"请输入密码" attributes:attributed];
+    self.accountTF.tintColor = [UIColor whiteColor];
+    self.PSWTF.tintColor = [UIColor whiteColor];
    
 }
 

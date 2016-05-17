@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class BSMeDataModel;
 @interface LBSquareButton : UIButton
+
+@property (strong, nonatomic) BSMeDataModel *model;
 
 @end

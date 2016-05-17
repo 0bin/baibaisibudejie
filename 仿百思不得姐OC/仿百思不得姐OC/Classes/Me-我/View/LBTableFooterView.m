@@ -4,11 +4,13 @@
 //
 //  Created by LinBin on 16/5/14.
 //  Copyright © 2016年 LinBin. All rights reserved.
-//
+//  自定义footerview   添加button
 
 #import "LBTableFooterView.h"
 #import "BSMeDataModel.h"
 #import "UIView+LBFrameExtension.h"
+#import "LBSquareButton.h"
+#import "BSMeWebVViewController.h"
 #import <AFNetworking.h>
 #import <UIButton+WebCache.h>
 
@@ -21,11 +23,13 @@
 
 @implementation LBTableFooterView
 
+
+
 - (instancetype)initWithFrame:(CGRect)frame {
     
     if (self = [super initWithFrame:frame]) {
 
-        self.backgroundColor = [UIColor whiteColor];        
+//请求数据
         NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
         parameters[@"a"] = @"square";
         parameters[@"c"] = @"topic";
@@ -51,31 +55,54 @@
     return self;
 }
 
+
+/**
+ *  添加Button
+ */
 - (void)addButton:(NSArray *)array {
-    
+//最大列数
     NSInteger column = 4;
     CGFloat buttonW = [UIScreen mainScreen].bounds.size.width / column;
     CGFloat buttonH = buttonW;
-    
-    
     for (NSInteger i = 0; i < array.count; i++) {
-        
-        UIButton *button = [[UIButton alloc] init];
+        LBSquareButton *button = [[LBSquareButton alloc] init];
         CGFloat buttonX = i % column * buttonW;
         CGFloat buttonY = i / column * buttonH;
-        BSMeDataModel *model = array[i];
-        [button setFrame:CGRectMake(buttonX, buttonY, buttonW, buttonH)];
-        [button sd_setImageWithURL:[NSURL URLWithString:model.icon] forState:UIControlStateNormal];
-        [button setTitle:model.name forState:UIControlStateNormal];
+        [button setFrame:CGRectMake(buttonX, buttonY, buttonW - 1, buttonH - 1)];
+        [button setBackgroundColor:[UIColor whiteColor]];
+        button.model = array[i];
+        [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:button];
        
     }
-    self.height = 
+//获取最大行数、最大高度
+    NSInteger row = (array.count + column - 1) / column;
+    self.height = row * buttonH;
+//设置tableview 可滚动范围
+    [(UITableView *)self.superview setContentSize:CGSizeMake(0,CGRectGetMaxY(self.frame))];
+    
 
 }
 
+/**
+ *  button点击方法
+ */
+- (void)buttonClick:(LBSquareButton *)button {
+     
+    if ([button.model.url hasPrefix:@"http"]) {
+        
+        BSMeWebVViewController *webVC = [[BSMeWebVViewController alloc] init];
+        webVC.url = button.model.url;
+        webVC.name = button.model.name;
+  
+        UITabBarController *tabBar = (UITabBarController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+        UINavigationController *nav = (UINavigationController *)tabBar.selectedViewController;
+        [nav pushViewController:webVC animated:YES];
+   
+        
+    }
 
-
+}
 
 
 

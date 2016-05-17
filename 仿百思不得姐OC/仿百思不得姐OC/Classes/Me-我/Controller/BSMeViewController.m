@@ -11,13 +11,16 @@
 #import "BSMeDataModel.h"
 #import "LBVerticalButton.h"
 #import "LBTableFooterView.h"
+#import "UIView+LBFrameExtension.h"
+#import "BSLoginViewController.h"
 
 @interface BSMeViewController ()
 @property (strong, nonatomic) NSArray *dataArray;
-@property (weak, nonatomic) UIView *footerView;
+
 @property (strong, nonatomic) NSMutableDictionary *images;
 @property (strong, nonatomic) NSMutableDictionary *operationsDict;
 @property (strong, nonatomic) NSOperationQueue *queue;
+
 
 @end
 
@@ -30,8 +33,14 @@
     [self setNavigationItem];
     [self setTable];
     
-    
-    self.tableView.tableFooterView = [[LBTableFooterView alloc] init];
+    LBTableFooterView *footerView = [[LBTableFooterView alloc] init];
+    self.tableView.tableFooterView = footerView;
+    [self.tableView layoutIfNeeded];
+    [self.tableView setContentSize:CGSizeMake(0, CGRectGetMaxY(footerView.subviews.lastObject.frame))];
+    [self.tableView reloadData];
+       NSLog(@"-----------------------");
+
+
 }
 
 
@@ -47,6 +56,7 @@
     self.tableView.sectionHeaderHeight = 0;
     self.tableView.sectionFooterHeight = 10;
     [self.tableView setContentInset:UIEdgeInsetsMake(-20, 0, 0, 0)];
+
 }
 
 /**
@@ -106,19 +116,15 @@
     return cell;
     
 }
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*
-#pragma mark - Navigation
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSLog(@"---%@---",indexPath);
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+        BSLoginViewController *login = [[BSLoginViewController alloc] init];
+        [self presentViewController:login animated:YES completion:nil];
+    
+
 }
-*/
 
 @end

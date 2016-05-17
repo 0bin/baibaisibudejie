@@ -25,6 +25,8 @@
 		247F23F41CDB73A2009A6595 /* BSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247F23F21CDB73A2009A6595 /* BSLoginViewController.m */; };
 		247F23F51CDB73A2009A6595 /* BSLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247F23F31CDB73A2009A6595 /* BSLoginViewController.xib */; };
 		2495CC551CE6EAEC0012BE94 /* LBSquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2495CC541CE6EAEC0012BE94 /* LBSquareButton.m */; };
+		24AF42181CE865C000839629 /* BSMeWebVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AF42161CE865C000839629 /* BSMeWebVViewController.m */; };
+		24AF42191CE865C000839629 /* BSMeWebVViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24AF42171CE865C000839629 /* BSMeWebVViewController.xib */; };
 		24CAA6A51CD98CC6005AD776 /* BSAttentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CAA6781CD98CC6005AD776 /* BSAttentionViewController.m */; };
 		24CAA6A61CD98CC6005AD776 /* BSAttentionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24CAA6791CD98CC6005AD776 /* BSAttentionViewController.xib */; };
 		24CAA6A71CD98CC6005AD776 /* BSRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CAA67B1CD98CC6005AD776 /* BSRecommendViewController.m */; };
@@ -92,6 +94,9 @@
 		247F23F31CDB73A2009A6595 /* BSLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSLoginViewController.xib; sourceTree = "<group>"; };
 		2495CC531CE6EAEC0012BE94 /* LBSquareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBSquareButton.h; sourceTree = "<group>"; };
 		2495CC541CE6EAEC0012BE94 /* LBSquareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBSquareButton.m; sourceTree = "<group>"; };
+		24AF42151CE865C000839629 /* BSMeWebVViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMeWebVViewController.h; sourceTree = "<group>"; };
+		24AF42161CE865C000839629 /* BSMeWebVViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMeWebVViewController.m; sourceTree = "<group>"; };
+		24AF42171CE865C000839629 /* BSMeWebVViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSMeWebVViewController.xib; sourceTree = "<group>"; };
 		24CAA6771CD98CC6005AD776 /* BSAttentionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAttentionViewController.h; sourceTree = "<group>"; };
 		24CAA6781CD98CC6005AD776 /* BSAttentionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAttentionViewController.m; sourceTree = "<group>"; };
 		24CAA6791CD98CC6005AD776 /* BSAttentionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSAttentionViewController.xib; sourceTree = "<group>"; };
@@ -318,6 +323,9 @@
 			children = (
 				24CAA6891CD98CC6005AD776 /* BSMeViewController.h */,
 				24CAA68A1CD98CC6005AD776 /* BSMeViewController.m */,
+				24AF42151CE865C000839629 /* BSMeWebVViewController.h */,
+				24AF42161CE865C000839629 /* BSMeWebVViewController.m */,
+				24AF42171CE865C000839629 /* BSMeWebVViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -581,6 +589,7 @@
 				24CAA6A61CD98CC6005AD776 /* BSAttentionViewController.xib in Resources */,
 				24CAA6A81CD98CC6005AD776 /* BSRecommendViewController.xib in Resources */,
 				244350C71CD986B0008767FB /* Assets.xcassets in Resources */,
+				24AF42191CE865C000839629 /* BSMeWebVViewController.xib in Resources */,
 				2448FBED1CD9A13D00E49921 /* BSTitleTableViewCell.xib in Resources */,
 				24E31CFE1CDCDF0200A42C26 /* BSSettingGuideView.xib in Resources */,
 			);
@@ -676,6 +685,7 @@
 				244350BF1CD986B0008767FB /* AppDelegate.m in Sources */,
 				24CAA6AC1CD98CC6005AD776 /* BSNewViewController.m in Sources */,
 				240C884C1CDF43E500CFAE58 /* LBVerticalButton.m in Sources */,
+				24AF42181CE865C000839629 /* BSMeWebVViewController.m in Sources */,
 				244350BC1CD986B0008767FB /* main.m in Sources */,
 				247F23F41CDB73A2009A6595 /* BSLoginViewController.m in Sources */,
 			);
