@@ -11,6 +11,7 @@
 #import "UIBarButtonItem+LBButtonToBarButtonItem.h"
 #import "UIView+LBFrameExtension.h"
 #import "BSEssenceALLTableController.h"
+#import "BSTextTableViewController.h"
 
 #define childVCCount 7
 
@@ -139,9 +140,9 @@
     [allTable setTitle:@"全部"];
     [self addChildViewController:allTable];
     
-    BSEssenceALLTableController *two = [[BSEssenceALLTableController alloc] init];
-    [two setTitle:@"two"];
-    [self addChildViewController:two];
+    BSTextTableViewController *text = [[BSTextTableViewController alloc] init];
+    [text setTitle:@"text"];
+    [self addChildViewController:text];
     
     BSEssenceALLTableController *three = [[BSEssenceALLTableController alloc] init];
     [three setTitle:@"three"];

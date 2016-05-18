@@ -18,19 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //请求数据
-    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    parameters[@"a"] = @"tag_recommend";
-    parameters[@"c"] = @"topic";
-    parameters[@"action"] = @"sub";
-    [[AFHTTPSessionManager manager]GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"---%@---",responseObject);
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-        
-    }];
+
     
 
 

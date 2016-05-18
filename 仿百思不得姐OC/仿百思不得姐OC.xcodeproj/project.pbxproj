@@ -13,6 +13,8 @@
 		240C884C1CDF43E500CFAE58 /* LBVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 240C884B1CDF43E500CFAE58 /* LBVerticalButton.m */; };
 		2415D02E1CE21BF600A2E55E /* BSMeDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2415D02D1CE21BF600A2E55E /* BSMeDataModel.m */; };
 		24250BF51CE748D200182957 /* LBTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24250BF41CE748D200182957 /* LBTableFooterView.m */; };
+		243200C91CEC06C400B8D45F /* BSTextTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 243200C81CEC06C400B8D45F /* BSTextTableViewController.m */; };
+		243200CC1CEC336400B8D45F /* BSTextDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 243200CB1CEC336400B8D45F /* BSTextDataModel.m */; };
 		243B05BE1CDDAD980081D490 /* BSEssenceALLTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 243B05BD1CDDAD980081D490 /* BSEssenceALLTableController.m */; };
 		244350BC1CD986B0008767FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 244350BB1CD986B0008767FB /* main.m */; };
 		244350BF1CD986B0008767FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 244350BE1CD986B0008767FB /* AppDelegate.m */; };
@@ -71,6 +73,10 @@
 		2415D02D1CE21BF600A2E55E /* BSMeDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMeDataModel.m; sourceTree = "<group>"; };
 		24250BF31CE748D200182957 /* LBTableFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBTableFooterView.h; sourceTree = "<group>"; };
 		24250BF41CE748D200182957 /* LBTableFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBTableFooterView.m; sourceTree = "<group>"; };
+		243200C71CEC06C400B8D45F /* BSTextTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTextTableViewController.h; sourceTree = "<group>"; };
+		243200C81CEC06C400B8D45F /* BSTextTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTextTableViewController.m; sourceTree = "<group>"; };
+		243200CA1CEC336400B8D45F /* BSTextDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTextDataModel.h; sourceTree = "<group>"; };
+		243200CB1CEC336400B8D45F /* BSTextDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTextDataModel.m; sourceTree = "<group>"; };
 		243B05BC1CDDAD980081D490 /* BSEssenceALLTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEssenceALLTableController.h; sourceTree = "<group>"; };
 		243B05BD1CDDAD980081D490 /* BSEssenceALLTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEssenceALLTableController.m; sourceTree = "<group>"; };
 		244350B71CD986B0008767FB /* 仿百思不得姐OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "仿百思不得姐OC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -290,6 +296,8 @@
 				24CAA6841CD98CC6005AD776 /* BSEssenceViewController.m */,
 				243B05BC1CDDAD980081D490 /* BSEssenceALLTableController.h */,
 				243B05BD1CDDAD980081D490 /* BSEssenceALLTableController.m */,
+				243200C71CEC06C400B8D45F /* BSTextTableViewController.h */,
+				243200C81CEC06C400B8D45F /* BSTextTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -304,6 +312,8 @@
 		24CAA6861CD98CC6005AD776 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				243200CA1CEC336400B8D45F /* BSTextDataModel.h */,
+				243200CB1CEC336400B8D45F /* BSTextDataModel.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -679,11 +689,13 @@
 				24CAA6AE1CD98CC6005AD776 /* UIView+LBFrameExtension.m in Sources */,
 				24CAA6B01CD98CC6005AD776 /* BSTabBarController.m in Sources */,
 				243B05BE1CDDAD980081D490 /* BSEssenceALLTableController.m in Sources */,
+				243200CC1CEC336400B8D45F /* BSTextDataModel.m in Sources */,
 				2448FBEC1CD9A13D00E49921 /* BSTitleTableViewCell.m in Sources */,
 				2495CC551CE6EAEC0012BE94 /* LBSquareButton.m in Sources */,
 				24250BF51CE748D200182957 /* LBTableFooterView.m in Sources */,
 				244350BF1CD986B0008767FB /* AppDelegate.m in Sources */,
 				24CAA6AC1CD98CC6005AD776 /* BSNewViewController.m in Sources */,
+				243200C91CEC06C400B8D45F /* BSTextTableViewController.m in Sources */,
 				240C884C1CDF43E500CFAE58 /* LBVerticalButton.m in Sources */,
 				24AF42181CE865C000839629 /* BSMeWebVViewController.m in Sources */,
 				244350BC1CD986B0008767FB /* main.m in Sources */,
