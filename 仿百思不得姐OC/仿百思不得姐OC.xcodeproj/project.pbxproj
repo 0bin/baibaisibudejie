@@ -10,6 +10,7 @@
 		01F5DED275DD6B7CEEF8BD5F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 685B7A1BE0098BF7920E4106 /* libPods.a */; };
 		2409235F1CED4BAF00863061 /* BSTextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2409235D1CED4BAF00863061 /* BSTextTableViewCell.m */; };
 		240923601CED4BAF00863061 /* BSTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2409235E1CED4BAF00863061 /* BSTextTableViewCell.xib */; };
+		240923631CEDEC4500863061 /* NSDate+LBDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 240923621CEDEC4500863061 /* NSDate+LBDate.m */; };
 		240C88481CDF114600CFAE58 /* BSPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 240C88461CDF114600CFAE58 /* BSPublishViewController.m */; };
 		240C88491CDF114600CFAE58 /* BSPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 240C88471CDF114600CFAE58 /* BSPublishViewController.xib */; };
 		240C884C1CDF43E500CFAE58 /* LBVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 240C884B1CDF43E500CFAE58 /* LBVerticalButton.m */; };
@@ -69,6 +70,8 @@
 		2409235C1CED4BAF00863061 /* BSTextTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTextTableViewCell.h; sourceTree = "<group>"; };
 		2409235D1CED4BAF00863061 /* BSTextTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTextTableViewCell.m; sourceTree = "<group>"; };
 		2409235E1CED4BAF00863061 /* BSTextTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSTextTableViewCell.xib; sourceTree = "<group>"; };
+		240923611CEDEC4500863061 /* NSDate+LBDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+LBDate.h"; sourceTree = "<group>"; };
+		240923621CEDEC4500863061 /* NSDate+LBDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+LBDate.m"; sourceTree = "<group>"; };
 		240C88451CDF114600CFAE58 /* BSPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPublishViewController.h; sourceTree = "<group>"; };
 		240C88461CDF114600CFAE58 /* BSPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPublishViewController.m; sourceTree = "<group>"; };
 		240C88471CDF114600CFAE58 /* BSPublishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSPublishViewController.xib; sourceTree = "<group>"; };
@@ -421,6 +424,8 @@
 				24CAA6961CD98CC6005AD776 /* UIBarButtonItem+LBButtonToBarButtonItem.m */,
 				24CAA6971CD98CC6005AD776 /* UIView+LBFrameExtension.h */,
 				24CAA6981CD98CC6005AD776 /* UIView+LBFrameExtension.m */,
+				240923611CEDEC4500863061 /* NSDate+LBDate.h */,
+				240923621CEDEC4500863061 /* NSDate+LBDate.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -703,6 +708,7 @@
 				2448FBEC1CD9A13D00E49921 /* BSTitleTableViewCell.m in Sources */,
 				2495CC551CE6EAEC0012BE94 /* LBSquareButton.m in Sources */,
 				24250BF51CE748D200182957 /* LBTableFooterView.m in Sources */,
+				240923631CEDEC4500863061 /* NSDate+LBDate.m in Sources */,
 				244350BF1CD986B0008767FB /* AppDelegate.m in Sources */,
 				24CAA6AC1CD98CC6005AD776 /* BSNewViewController.m in Sources */,
 				243200C91CEC06C400B8D45F /* BSTextTableViewController.m in Sources */,

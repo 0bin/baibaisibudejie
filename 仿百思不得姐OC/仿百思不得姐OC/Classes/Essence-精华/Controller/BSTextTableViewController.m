@@ -169,7 +169,7 @@
     }
     
     cell.textData = self.textData[indexPath.row];
-
+    NSLog(@"---%@---",cell);
     return cell;
 }
 
