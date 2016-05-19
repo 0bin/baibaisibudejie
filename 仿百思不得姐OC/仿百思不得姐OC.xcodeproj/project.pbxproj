@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		01F5DED275DD6B7CEEF8BD5F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 685B7A1BE0098BF7920E4106 /* libPods.a */; };
+		2409235F1CED4BAF00863061 /* BSTextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2409235D1CED4BAF00863061 /* BSTextTableViewCell.m */; };
+		240923601CED4BAF00863061 /* BSTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2409235E1CED4BAF00863061 /* BSTextTableViewCell.xib */; };
 		240C88481CDF114600CFAE58 /* BSPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 240C88461CDF114600CFAE58 /* BSPublishViewController.m */; };
 		240C88491CDF114600CFAE58 /* BSPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 240C88471CDF114600CFAE58 /* BSPublishViewController.xib */; };
 		240C884C1CDF43E500CFAE58 /* LBVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 240C884B1CDF43E500CFAE58 /* LBVerticalButton.m */; };
@@ -64,6 +66,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2409235C1CED4BAF00863061 /* BSTextTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTextTableViewCell.h; sourceTree = "<group>"; };
+		2409235D1CED4BAF00863061 /* BSTextTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTextTableViewCell.m; sourceTree = "<group>"; };
+		2409235E1CED4BAF00863061 /* BSTextTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSTextTableViewCell.xib; sourceTree = "<group>"; };
 		240C88451CDF114600CFAE58 /* BSPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPublishViewController.h; sourceTree = "<group>"; };
 		240C88461CDF114600CFAE58 /* BSPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPublishViewController.m; sourceTree = "<group>"; };
 		240C88471CDF114600CFAE58 /* BSPublishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSPublishViewController.xib; sourceTree = "<group>"; };
@@ -75,8 +80,8 @@
 		24250BF41CE748D200182957 /* LBTableFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBTableFooterView.m; sourceTree = "<group>"; };
 		243200C71CEC06C400B8D45F /* BSTextTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTextTableViewController.h; sourceTree = "<group>"; };
 		243200C81CEC06C400B8D45F /* BSTextTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTextTableViewController.m; sourceTree = "<group>"; };
-		243200CA1CEC336400B8D45F /* BSTextDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTextDataModel.h; sourceTree = "<group>"; };
-		243200CB1CEC336400B8D45F /* BSTextDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTextDataModel.m; sourceTree = "<group>"; };
+		243200CA1CEC336400B8D45F /* BSTextDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BSTextDataModel.h; path = ../View/BSTextDataModel.h; sourceTree = "<group>"; };
+		243200CB1CEC336400B8D45F /* BSTextDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BSTextDataModel.m; path = ../View/BSTextDataModel.m; sourceTree = "<group>"; };
 		243B05BC1CDDAD980081D490 /* BSEssenceALLTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEssenceALLTableController.h; sourceTree = "<group>"; };
 		243B05BD1CDDAD980081D490 /* BSEssenceALLTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEssenceALLTableController.m; sourceTree = "<group>"; };
 		244350B71CD986B0008767FB /* 仿百思不得姐OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "仿百思不得姐OC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -305,6 +310,8 @@
 		24CAA6851CD98CC6005AD776 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				243200CA1CEC336400B8D45F /* BSTextDataModel.h */,
+				243200CB1CEC336400B8D45F /* BSTextDataModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -312,8 +319,9 @@
 		24CAA6861CD98CC6005AD776 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				243200CA1CEC336400B8D45F /* BSTextDataModel.h */,
-				243200CB1CEC336400B8D45F /* BSTextDataModel.m */,
+				2409235C1CED4BAF00863061 /* BSTextTableViewCell.h */,
+				2409235D1CED4BAF00863061 /* BSTextTableViewCell.m */,
+				2409235E1CED4BAF00863061 /* BSTextTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -600,6 +608,7 @@
 				24CAA6A81CD98CC6005AD776 /* BSRecommendViewController.xib in Resources */,
 				244350C71CD986B0008767FB /* Assets.xcassets in Resources */,
 				24AF42191CE865C000839629 /* BSMeWebVViewController.xib in Resources */,
+				240923601CED4BAF00863061 /* BSTextTableViewCell.xib in Resources */,
 				2448FBED1CD9A13D00E49921 /* BSTitleTableViewCell.xib in Resources */,
 				24E31CFE1CDCDF0200A42C26 /* BSSettingGuideView.xib in Resources */,
 			);
@@ -682,6 +691,7 @@
 				24CAA6AF1CD98CC6005AD776 /* BSNavigationController.m in Sources */,
 				24CAA6AB1CD98CC6005AD776 /* BSMeViewController.m in Sources */,
 				24E31CFC1CDCDEC000A42C26 /* BSSettingGuideView.m in Sources */,
+				2409235F1CED4BAF00863061 /* BSTextTableViewCell.m in Sources */,
 				24CAA6B21CD98CC6005AD776 /* BSTabBar.m in Sources */,
 				24CAA6AA1CD98CC6005AD776 /* BSEssenceViewController.m in Sources */,
 				24CAA6A51CD98CC6005AD776 /* BSAttentionViewController.m in Sources */,

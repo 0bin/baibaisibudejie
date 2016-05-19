@@ -6,15 +6,16 @@
 //  Copyright © 2016年 LinBin. All rights reserved.
 //
 
-#import "BSTextTableViewController.h"
-#import "BSTextDataModel.h"
+
 
 #import <YYModel.h>
 #import <AFNetworking.h>
 #import <UIImageView+WebCache.h>
 #import <MJRefresh.h>
 
-
+#import "BSTextTableViewController.h"
+#import "BSTextDataModel.h"
+#import "BSTextTableViewCell.h"
 
 @interface BSTextTableViewController ()
 
@@ -41,8 +42,10 @@
     return  _textData;
 }
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
      //添加刷新控件
     [self addRefreshController];
     
@@ -59,8 +62,10 @@
    
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadTextData:)];
     self.tableView.mj_header.automaticallyChangeAlpha = YES;
-    self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreTextData:)];
-
+    [self.tableView.mj_header beginRefreshing];
+    
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreTextData:)];
+    
 }
 
 /**
@@ -69,7 +74,7 @@
 - (void)loadTextData:(UIRefreshControl *)refresh {
     
     [self.tableView.mj_footer endRefreshing];
-    //请求数据
+//请求数据
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
@@ -103,9 +108,10 @@
  */
 - (void)loadMoreTextData:(UIRefreshControl *)refresh {
     
+    
     [self.tableView.mj_header endRefreshing];
     self.page++;
-    //请求更多数据
+//请求更多数据
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
@@ -125,11 +131,11 @@
             BSTextDataModel *model = [BSTextDataModel yy_modelWithJSON:dict];
             [arrayM addObject:model];
         }
-        //添加更多数据
+//添加更多数据
         [self.textData addObjectsFromArray:arrayM];
-        //更新table 数据
+//更新table 数据
         [self.tableView reloadData];
-        //结束刷新
+ //结束刷新
         [self.tableView.mj_footer endRefreshing];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         self.page--;
@@ -147,7 +153,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
+    self.tableView.mj_footer.hidden = (self.textData.count == 0);
     return self.textData.count;
 }
 
@@ -155,19 +161,25 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    static NSString *ID = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    static NSString *ID = @"textCell";
+    BSTextTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if (cell == nil)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
+        cell = [BSTextTableViewCell cell];
     }
     
-    BSTextDataModel *model = self.textData[indexPath.row];
-    cell.textLabel.text = model.name;
-    cell.detailTextLabel.text = model.text;
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:model.profile_image]placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    cell.textData = self.textData[indexPath.row];
+
     return cell;
 }
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 200;
+
+}
+
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
