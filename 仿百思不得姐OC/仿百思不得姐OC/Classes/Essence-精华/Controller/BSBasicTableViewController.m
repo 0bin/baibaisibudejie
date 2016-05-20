@@ -1,11 +1,10 @@
 //
-//  BSTextTableViewController.m
+//  BSBasicTableViewController.m
 //  仿百思不得姐OC
 //
-//  Created by LinBin on 16/5/18.
+//  Created by LinBin on 16/5/20.
 //  Copyright © 2016年 LinBin. All rights reserved.
 //
-
 
 
 #import <YYModel.h>
@@ -13,11 +12,12 @@
 #import <UIImageView+WebCache.h>
 #import <MJRefresh.h>
 
-#import "BSTextTableViewController.h"
+#import "BSBasicTableViewController.h"
 #import "BSTextDataModel.h"
 #import "BSTextTableViewCell.h"
 
-@interface BSTextTableViewController ()
+
+@interface BSBasicTableViewController ()
 
 /** 数据 */
 @property (strong, nonatomic) NSMutableArray *textData;
@@ -28,14 +28,14 @@
 /** 加载页数 */
 @property (assign, nonatomic) NSDictionary *parameters;
 
-
 @end
 
-@implementation BSTextTableViewController
+@implementation BSBasicTableViewController
+
 
 
 - (NSMutableArray *)textData {
-
+    
     if (_textData == nil) {
         _textData = [NSMutableArray array];
     }
@@ -45,21 +45,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-     //添加刷新控件
+    //添加刷新控件
     [self addRefreshController];
     
-    
-
-        
-
 }
 
 /**
  *  添加刷新控件
  */
 - (void)addRefreshController {
-   
+    
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadTextData:)];
     self.tableView.mj_header.automaticallyChangeAlpha = YES;
     [self.tableView.mj_header beginRefreshing];
@@ -74,13 +69,13 @@
 - (void)loadTextData:(UIRefreshControl *)refresh {
     
     [self.tableView.mj_footer endRefreshing];
-//请求数据
+    //请求数据
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @"29";
+    parameters[@"type"] = @(self.type);
     self.parameters = parameters;
-
+    
     [[AFHTTPSessionManager manager]GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (self.parameters != parameters) return;
@@ -92,15 +87,15 @@
             [arrayM addObject:model];
         }
         self.textData = arrayM;
-//更新table数据
+        //更新table数据
         [self.tableView reloadData];
-//结束刷新
+        //结束刷新
         [self.tableView.mj_header endRefreshing];
         self.page = 0;
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-         [self.tableView.mj_header endRefreshing];
+        [self.tableView.mj_header endRefreshing];
     }];
-
+    
 }
 
 /**
@@ -111,11 +106,11 @@
     
     [self.tableView.mj_header endRefreshing];
     self.page++;
-//请求更多数据
+    //请求更多数据
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @"29";
+    parameters[@"type"] = @(self.type);
     parameters[@"page"] = @(self.page);
     parameters[@"maxtime"] = self.maxtime;
     self.parameters = parameters;
@@ -131,24 +126,24 @@
             BSTextDataModel *model = [BSTextDataModel yy_modelWithJSON:dict];
             [arrayM addObject:model];
         }
-//添加更多数据
+        //添加更多数据
         [self.textData addObjectsFromArray:arrayM];
-//更新table 数据
+        //更新table 数据
         [self.tableView reloadData];
- //结束刷新
+        //结束刷新
         [self.tableView.mj_footer endRefreshing];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         self.page--;
-         [self.tableView.mj_footer endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
     }];
     
-
+    
 }
 
-#pragma mark - Table view data source
+#pragma mark - Tableview datasource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-
+    
     return 1;
 }
 
@@ -169,59 +164,26 @@
     }
     
     cell.textData = self.textData[indexPath.row];
-    NSLog(@"---%@---",cell);
+    
     return cell;
 }
 
-
+#pragma mark - Tableview datagate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 200;
-
+    BSTextDataModel *model = self.textData[indexPath.row];
+    
+    CGSize maxsize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 40, MAXFLOAT);
+    CGFloat contentLabelH = [model.text boundingRectWithSize:maxsize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size.height;
+    
+    CGFloat imageH = 51;
+    CGFloat bottomH = 44;
+    
+    return imageH + contentLabelH + bottomH + 30;
+    
 }
 
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

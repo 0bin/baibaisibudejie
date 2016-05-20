@@ -24,7 +24,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *caiButton;
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
+@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 
+@property (weak, nonatomic) IBOutlet UIImageView *sinav;
 
 @end
 
@@ -45,21 +47,10 @@
     _textData = textData;
     [self.icon sd_setImageWithURL:[NSURL URLWithString:textData.profile_image]placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
     self.nameLabel.text = textData.name;
-    
     self.timeLabel.text = textData.create_time;
-    
-    NSDate *nowDate = [NSDate date];
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"yy-MM-dd HH:mm:ss"];
-    NSDate *creatDate = [formatter dateFromString:textData.create_time];
-    NSDateComponents *component = [nowDate dateIntervalWithFromDate:creatDate];
-    
-    
+    self.sinav.hidden = !textData.isSina_v;
+    self.contentLabel.text = textData.text;
 
-    
-    
-    
-    
     [self setButtonTitleWithButton:self.dingButton count:textData.ding palceHolder:@"顶"];
     [self setButtonTitleWithButton:self.caiButton count:textData.cai palceHolder:@"踩"];
     [self setButtonTitleWithButton:self.shareButton count:textData.repost palceHolder:@"转发"];
@@ -68,7 +59,7 @@
 }
 
 /**
- *  判断数量 为0 显示顶  >10000显示万
+ *  判断数量 为0 显示顶 ， >10000显示万
  */
 - (void)setButtonTitleWithButton:(UIButton *)button count:(NSInteger)count palceHolder:(NSString *)placeHolder{
 

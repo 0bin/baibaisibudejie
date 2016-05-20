@@ -150,34 +150,69 @@
                             <constraint firstItem="1fz-aC-maU" firstAttribute="top" secondItem="ZAh-V4-XOe" secondAttribute="bottom" id="yOE-8M-W5c"/>
                         </constraints>
                     </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile_AddV_authen" translatesAutoresizingMaskIntoConstraints="NO" id="AGv-bd-C4k">
+                        <rect key="frame" x="34" y="34" width="14" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="O3k-Om-jaH"/>
+                            <constraint firstAttribute="width" constant="14" id="ern-mg-n5T"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQ1-DL-70J">
+                        <rect key="frame" x="8" y="56" width="304" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="qBZ-1E-00y" firstAttribute="top" secondItem="Tkf-2R-xuD" secondAttribute="top" id="6nk-ui-SXB"/>
+                    <constraint firstItem="Tkf-2R-xuD" firstAttribute="leading" secondItem="AGv-bd-C4k" secondAttribute="trailing" constant="-14" id="7R2-ku-nRI"/>
                     <constraint firstItem="f93-9R-Xh0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="937-EL-Lb2"/>
                     <constraint firstItem="RNa-Iy-mx9" firstAttribute="leading" secondItem="qBZ-1E-00y" secondAttribute="leading" id="C3r-6q-vnm"/>
+                    <constraint firstAttribute="trailing" secondItem="LQ1-DL-70J" secondAttribute="trailing" constant="8" id="DPb-ek-G8q"/>
                     <constraint firstItem="Tkf-2R-xuD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Dl2-mw-h4W"/>
+                    <constraint firstItem="Tkf-2R-xuD" firstAttribute="leading" secondItem="AGv-bd-C4k" secondAttribute="trailing" constant="-24" id="EV1-yF-tiE"/>
+                    <constraint firstItem="Tkf-2R-xuD" firstAttribute="top" secondItem="AGv-bd-C4k" secondAttribute="bottom" constant="-20" id="MLV-X9-PdR"/>
                     <constraint firstItem="qBZ-1E-00y" firstAttribute="leading" secondItem="Tkf-2R-xuD" secondAttribute="trailing" constant="8" id="MbB-9F-WGt"/>
+                    <constraint firstItem="LQ1-DL-70J" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="MxG-lw-9fq"/>
                     <constraint firstItem="Tkf-2R-xuD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="NAu-gV-dbT"/>
                     <constraint firstAttribute="bottom" secondItem="wm7-Wp-Asz" secondAttribute="bottom" id="Rw9-zU-LBi"/>
+                    <constraint firstItem="AGv-bd-C4k" firstAttribute="trailing" secondItem="Tkf-2R-xuD" secondAttribute="trailing" constant="5" id="SWh-S9-DDW"/>
                     <constraint firstItem="RNa-Iy-mx9" firstAttribute="bottom" secondItem="Tkf-2R-xuD" secondAttribute="bottom" id="WBF-KR-k0u"/>
                     <constraint firstAttribute="trailing" secondItem="f93-9R-Xh0" secondAttribute="trailing" constant="8" id="aHy-F2-nbt"/>
+                    <constraint firstItem="AGv-bd-C4k" firstAttribute="bottom" secondItem="Tkf-2R-xuD" secondAttribute="bottom" constant="5" id="gc2-HJ-oLB"/>
                     <constraint firstAttribute="trailing" secondItem="wm7-Wp-Asz" secondAttribute="trailing" id="tT4-SN-UvE"/>
                     <constraint firstItem="wm7-Wp-Asz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="uhy-GY-aKx"/>
+                    <constraint firstItem="AGv-bd-C4k" firstAttribute="top" secondItem="Tkf-2R-xuD" secondAttribute="bottom" constant="5" id="vYQ-A6-ynM"/>
+                    <constraint firstItem="LQ1-DL-70J" firstAttribute="top" secondItem="AGv-bd-C4k" secondAttribute="bottom" constant="8" id="yAI-st-Gb2"/>
+                    <constraint firstItem="Tkf-2R-xuD" firstAttribute="leading" secondItem="AGv-bd-C4k" secondAttribute="trailing" constant="-5" id="zM4-uP-hAv"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="7R2-ku-nRI"/>
+                        <exclude reference="EV1-yF-tiE"/>
+                        <exclude reference="MLV-X9-PdR"/>
+                        <exclude reference="zM4-uP-hAv"/>
+                        <exclude reference="vYQ-A6-ynM"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="caiButton" destination="l3w-Vl-hR3" id="GSU-eu-Rwe"/>
                 <outlet property="commentButton" destination="heQ-lV-N4c" id="f4Q-IZ-gBc"/>
+                <outlet property="contentLabel" destination="LQ1-DL-70J" id="2Qo-I5-b8c"/>
                 <outlet property="dingButton" destination="Sso-F0-hBc" id="GEA-LP-JhK"/>
                 <outlet property="icon" destination="Tkf-2R-xuD" id="dse-VN-GEZ"/>
                 <outlet property="nameLabel" destination="qBZ-1E-00y" id="beK-M5-vNM"/>
                 <outlet property="shareButton" destination="gKg-hA-bmj" id="NCy-mI-Ty0"/>
+                <outlet property="sinav" destination="AGv-bd-C4k" id="KU1-vc-PuU"/>
                 <outlet property="timeLabel" destination="RNa-Iy-mx9" id="oLO-96-m7W"/>
             </connections>
             <point key="canvasLocation" x="255" y="316"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Profile_AddV_authen" width="14" height="14"/>
         <image name="cell-button-line" width="1" height="29"/>
         <image name="cellFollowClickIcon" width="19" height="20"/>
         <image name="cellFollowIcon" width="19" height="20"/>

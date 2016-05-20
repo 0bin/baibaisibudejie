@@ -11,7 +11,7 @@
 #import "UIBarButtonItem+LBButtonToBarButtonItem.h"
 #import "UIView+LBFrameExtension.h"
 #import "BSEssenceALLTableController.h"
-#import "BSTextTableViewController.h"
+#import "BSBasicTableViewController.h"
 
 #define childVCCount 7
 
@@ -136,32 +136,39 @@
  */
 - (void)addChildVCWithContentScrollView {
     
-    BSEssenceALLTableController *allTable = [[BSEssenceALLTableController alloc] init];
+    BSBasicTableViewController *allTable = [[BSBasicTableViewController alloc] init];
     [allTable setTitle:@"全部"];
+    allTable.type = BSBasicTypeAll;
     [self addChildViewController:allTable];
     
-    BSTextTableViewController *text = [[BSTextTableViewController alloc] init];
-    [text setTitle:@"text"];
+    BSBasicTableViewController *text = [[BSBasicTableViewController alloc] init];
+    [text setTitle:@"段子"];
+    text.type = BSBasicTypeText;
     [self addChildViewController:text];
     
-    BSEssenceALLTableController *three = [[BSEssenceALLTableController alloc] init];
-    [three setTitle:@"three"];
-    [self addChildViewController:three];
+    BSBasicTableViewController *picture = [[BSBasicTableViewController alloc] init];
+    [picture setTitle:@"图片"];
+    picture.type = BSBasicTypePicture;
+    [self addChildViewController:picture];
     
-    BSEssenceALLTableController *four = [[BSEssenceALLTableController alloc] init];
-    [four setTitle:@"four"];
-    [self addChildViewController:four];
+    BSBasicTableViewController *voice = [[BSBasicTableViewController alloc] init];
+    [voice setTitle:@"声音"];
+    voice.type = BSBasicTypeVoice;
+    [self addChildViewController:voice];
     
-    BSEssenceALLTableController *five = [[BSEssenceALLTableController alloc] init];
-    [five setTitle:@"five"];
-    [self addChildViewController:five];
+    BSBasicTableViewController *vedio = [[BSBasicTableViewController alloc] init];
+    [vedio setTitle:@"视频"];
+    vedio.type = BSBasicTypeVedio;
+    [self addChildViewController:vedio];
     
-    BSEssenceALLTableController *six = [[BSEssenceALLTableController alloc] init];
+    BSBasicTableViewController *six = [[BSBasicTableViewController alloc] init];
+    six.type = BSBasicTypeVedio;
     [six setTitle:@"six"];
     [self addChildViewController:six];
     
-    BSEssenceALLTableController *seven = [[BSEssenceALLTableController alloc] init];
+    BSBasicTableViewController *seven = [[BSBasicTableViewController alloc] init];
     [seven setTitle:@"seven"];
+    seven.type = BSBasicTypeVedio;
     [self addChildViewController:seven];
     
     
