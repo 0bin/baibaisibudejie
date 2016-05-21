@@ -9,6 +9,26 @@
 #import "BSTextDataModel.h"
 
 @implementation BSTextDataModel
+{
+    CGFloat _cellHeight;
+}
+
+
+- (CGFloat )cellHeight {
+
+    if (!_cellHeight) {
+        
+        CGSize maxsize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 40, MAXFLOAT);
+        CGFloat contentLabelH = [self.text boundingRectWithSize:maxsize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size.height;
+        CGFloat imageH = 51;
+        CGFloat bottomH = 44;
+        _cellHeight = imageH + contentLabelH + bottomH + 30;
+            
+    }
+
+    return _cellHeight;
+
+}
 
 /**
  *  处理时间显示样式

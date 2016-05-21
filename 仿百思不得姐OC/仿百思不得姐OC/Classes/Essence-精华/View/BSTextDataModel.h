@@ -6,7 +6,7 @@
 //  Copyright © 2016年 LinBin. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface BSTextDataModel : NSObject
 
@@ -38,5 +38,11 @@
 
 /** 评论的数量 */
 @property (nonatomic, assign,getter=isSina_v) BOOL sina_v;
+
+
+/**
+ *  cell的高度
+ */
+@property (assign, nonatomic,readonly) CGFloat cellHeight;
 
 @end

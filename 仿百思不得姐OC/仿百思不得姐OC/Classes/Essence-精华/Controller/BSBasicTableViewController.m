@@ -103,7 +103,6 @@
  */
 - (void)loadMoreTextData:(UIRefreshControl *)refresh {
     
-    
     [self.tableView.mj_header endRefreshing];
     self.page++;
     //请求更多数据
@@ -137,7 +136,6 @@
         [self.tableView.mj_footer endRefreshing];
     }];
     
-    
 }
 
 #pragma mark - Tableview datasource
@@ -170,20 +168,17 @@
 
 #pragma mark - Tableview datagate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     BSTextDataModel *model = self.textData[indexPath.row];
-    
-    CGSize maxsize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 40, MAXFLOAT);
-    CGFloat contentLabelH = [model.text boundingRectWithSize:maxsize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size.height;
-    
-    CGFloat imageH = 51;
-    CGFloat bottomH = 44;
-    
-    return imageH + contentLabelH + bottomH + 30;
+    return model.cellHeight;
     
 }
 
 
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
 
+    return 200;
+}
 
 
 @end
