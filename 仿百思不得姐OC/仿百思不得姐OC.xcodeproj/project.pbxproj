@@ -46,6 +46,8 @@
 		24CAA6AF1CD98CC6005AD776 /* BSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CAA69B1CD98CC6005AD776 /* BSNavigationController.m */; };
 		24CAA6B01CD98CC6005AD776 /* BSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CAA69D1CD98CC6005AD776 /* BSTabBarController.m */; };
 		24CAA6B21CD98CC6005AD776 /* BSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CAA6A41CD98CC6005AD776 /* BSTabBar.m */; };
+		24DA7B101CF176B6004EC3FE /* BSPictureCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DA7B0F1CF176B6004EC3FE /* BSPictureCellView.m */; };
+		24DA7B121CF176C5004EC3FE /* BSPictureCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24DA7B111CF176C5004EC3FE /* BSPictureCellView.xib */; };
 		24E31CFC1CDCDEC000A42C26 /* BSSettingGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E31CFB1CDCDEC000A42C26 /* BSSettingGuideView.m */; };
 		24E31CFE1CDCDF0200A42C26 /* BSSettingGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24E31CFD1CDCDF0200A42C26 /* BSSettingGuideView.xib */; };
 /* End PBXBuildFile section */
@@ -138,6 +140,9 @@
 		24CAA69D1CD98CC6005AD776 /* BSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTabBarController.m; sourceTree = "<group>"; };
 		24CAA6A31CD98CC6005AD776 /* BSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTabBar.h; sourceTree = "<group>"; };
 		24CAA6A41CD98CC6005AD776 /* BSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTabBar.m; sourceTree = "<group>"; };
+		24DA7B0E1CF176B6004EC3FE /* BSPictureCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPictureCellView.h; sourceTree = "<group>"; };
+		24DA7B0F1CF176B6004EC3FE /* BSPictureCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPictureCellView.m; sourceTree = "<group>"; };
+		24DA7B111CF176C5004EC3FE /* BSPictureCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSPictureCellView.xib; sourceTree = "<group>"; };
 		24E31CFA1CDCDEC000A42C26 /* BSSettingGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSSettingGuideView.h; sourceTree = "<group>"; };
 		24E31CFB1CDCDEC000A42C26 /* BSSettingGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSSettingGuideView.m; sourceTree = "<group>"; };
 		24E31CFD1CDCDF0200A42C26 /* BSSettingGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSSettingGuideView.xib; sourceTree = "<group>"; };
@@ -328,6 +333,9 @@
 				2409235C1CED4BAF00863061 /* BSTextTableViewCell.h */,
 				2409235D1CED4BAF00863061 /* BSTextTableViewCell.m */,
 				2409235E1CED4BAF00863061 /* BSTextTableViewCell.xib */,
+				24DA7B0E1CF176B6004EC3FE /* BSPictureCellView.h */,
+				24DA7B0F1CF176B6004EC3FE /* BSPictureCellView.m */,
+				24DA7B111CF176C5004EC3FE /* BSPictureCellView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -612,6 +620,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24DA7B121CF176C5004EC3FE /* BSPictureCellView.xib in Resources */,
 				247F23F51CDB73A2009A6595 /* BSLoginViewController.xib in Resources */,
 				240C88491CDF114600CFAE58 /* BSPublishViewController.xib in Resources */,
 				24CAA6A61CD98CC6005AD776 /* BSAttentionViewController.xib in Resources */,
@@ -721,6 +730,7 @@
 				240C884C1CDF43E500CFAE58 /* LBVerticalButton.m in Sources */,
 				24AF42181CE865C000839629 /* BSMeWebVViewController.m in Sources */,
 				244350BC1CD986B0008767FB /* main.m in Sources */,
+				24DA7B101CF176B6004EC3FE /* BSPictureCellView.m in Sources */,
 				247F23F41CDB73A2009A6595 /* BSLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

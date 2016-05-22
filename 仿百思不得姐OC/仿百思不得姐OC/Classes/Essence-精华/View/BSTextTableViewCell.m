@@ -12,6 +12,7 @@
 #import "BSTextDataModel.h"
 #import "UIView+LBFrameExtension.h"
 #import "NSDate+LBDate.h"
+#import "BSPictureCellView.h"
 
 
 
@@ -25,8 +26,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
-
 @property (weak, nonatomic) IBOutlet UIImageView *sinav;
+
+/** 图片view */
+@property (weak, nonatomic) BSPictureCellView *pictureView;
 
 @end
 
@@ -39,6 +42,20 @@
     BSTextTableViewCell *cell = [[NSBundle mainBundle] loadNibNamed:@"BSTextTableViewCell" owner:nil options:nil].lastObject;
     return cell;
 }
+
+/**
+ *  加载pictureview
+ */
+- (BSPictureCellView *)pictureView {
+
+    if (_pictureView == nil) {
+        BSPictureCellView *pictureView = [BSPictureCellView pictureView];
+        [self.contentView addSubview:pictureView];
+        self.pictureView = pictureView;
+    }
+    return _pictureView;
+}
+
 
 /**
  *  设置cell数据
@@ -55,6 +72,11 @@
     [self setButtonTitleWithButton:self.caiButton count:textData.cai palceHolder:@"踩"];
     [self setButtonTitleWithButton:self.shareButton count:textData.repost palceHolder:@"转发"];
     [self setButtonTitleWithButton:self.commentButton count:textData.comment palceHolder:@"评论"];
+    
+    if (textData.type == BSBasicTypePicture) {
+        self.pictureView.model = textData;
+        self.pictureView.frame = textData.pictureFrame;
+    }
 
 }
 
@@ -77,7 +99,7 @@
     [super awakeFromNib];
     // Initialization code
     self.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"mainCellBackground"]];
-    
+    [self setAutoresizingMask:UIViewAutoresizingNone];
 }
 
 /**

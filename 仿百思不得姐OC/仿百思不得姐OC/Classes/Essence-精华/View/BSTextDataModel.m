@@ -11,6 +11,7 @@
 @implementation BSTextDataModel
 {
     CGFloat _cellHeight;
+    CGRect _pictureFrame;
 }
 
 
@@ -20,12 +21,26 @@
         
         CGSize maxsize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 40, MAXFLOAT);
         CGFloat contentLabelH = [self.text boundingRectWithSize:maxsize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size.height;
-        CGFloat imageH = 51;
-        CGFloat bottomH = 44;
-        _cellHeight = imageH + contentLabelH + bottomH + 30;
+        
+        CGFloat iconH = 35;
+        CGFloat bottomViewH = 44;
+        CGFloat marign = 8;
+        //文字内容高度
+        _cellHeight = iconH + contentLabelH + marign * 2 + 20;
+       //图片高度
+        if ( (self.type == BSBasicTypePicture) && (self.width != 0) ) {
             
-    }
+            CGFloat pictureW = maxsize.width;
+            CGFloat pictureH = pictureW * self.height / self.width ;
+            CGFloat pictureX = marign;
+            CGFloat pictureY = _cellHeight + marign;
+            _pictureFrame = CGRectMake(pictureX, pictureY, pictureW, pictureH);
+            _cellHeight += pictureH + 2 * marign;
 
+        }
+        //底部工具条
+        _cellHeight += bottomViewH + marign;
+    }
     return _cellHeight;
 
 }

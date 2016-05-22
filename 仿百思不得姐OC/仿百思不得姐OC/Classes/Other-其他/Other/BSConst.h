@@ -8,5 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum {
+    BSBasicTypeAll = 1,
+    BSBasicTypeText = 29,
+    BSBasicTypeVedio = 41,
+    BSBasicTypeVoice = 31,
+    BSBasicTypePicture = 10,
+    BSBasicTypeVip = 1,
+    BSBasicTypeOther = 1,
+} BSBasicType;
+
+
 UIKIT_EXTERN CGFloat const TextCell;
 UIKIT_EXTERN CGFloat const bottomH;

@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BSConst.h"
+
+
 
 @interface BSTextDataModel : NSObject
-
-
 
 /** 名称 */
 @property (nonatomic, copy) NSString *name;
@@ -39,10 +40,29 @@
 /** 评论的数量 */
 @property (nonatomic, assign,getter=isSina_v) BOOL sina_v;
 
+/** 图片的高度 */
+@property (nonatomic, assign)  BSBasicType type;
+
+/** 图片的高度 */
+@property (nonatomic, assign) CGFloat height;
+/** 图片的宽度 */
+@property (nonatomic, assign) CGFloat width;
+
+/** 图片小 */
+@property (nonatomic, copy) NSString *image0;
+/** 图片大 */
+@property (nonatomic, copy) NSString *image1;
+/** 图片中 */
+@property (nonatomic, copy) NSString *image2;
 
 /**
  *  cell的高度
  */
 @property (assign, nonatomic,readonly) CGFloat cellHeight;
+
+/**
+ *  picture frame
+ */
+@property (assign, nonatomic,readonly) CGRect pictureFrame;
 
 @end
