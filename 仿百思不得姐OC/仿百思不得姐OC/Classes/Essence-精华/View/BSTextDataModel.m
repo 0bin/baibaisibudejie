@@ -32,8 +32,15 @@
             
             CGFloat pictureW = maxsize.width;
             CGFloat pictureH = pictureW * self.height / self.width ;
+            if (pictureH > 1000) {
+                self.longPicture = YES;
+                pictureH = 250;
+            }
+            
             CGFloat pictureX = marign;
             CGFloat pictureY = _cellHeight + marign;
+            
+            
             _pictureFrame = CGRectMake(pictureX, pictureY, pictureW, pictureH);
             _cellHeight += pictureH + 2 * marign;
 

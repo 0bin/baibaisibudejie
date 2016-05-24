@@ -60,9 +60,10 @@
  */
 @property (assign, nonatomic,readonly) CGFloat cellHeight;
 
-/**
- *  picture frame
- */
+/** picture frame */
 @property (assign, nonatomic,readonly) CGRect pictureFrame;
+
+/** 图片是否太长 */
+@property (assign, nonatomic,getter=isLongPicture) BOOL longPicture;
 
 @end
