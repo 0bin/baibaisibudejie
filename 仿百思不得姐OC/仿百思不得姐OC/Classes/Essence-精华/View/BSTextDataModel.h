@@ -66,4 +66,7 @@
 /** 图片是否太长 */
 @property (assign, nonatomic,getter=isLongPicture) BOOL longPicture;
 
+/** progress加载进度 */
+@property (assign, nonatomic) CGFloat progressFloat;
+
 @end

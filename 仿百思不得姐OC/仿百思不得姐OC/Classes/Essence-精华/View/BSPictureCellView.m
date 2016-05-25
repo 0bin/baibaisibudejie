@@ -6,10 +6,12 @@
 //  Copyright © 2016年 LinBin. All rights reserved.
 //
 #import <UIImageView+WebCache.h>
-#import <SVProgressHUD.h>
+
 
 #import "BSPictureCellView.h"
 #import "BSTextDataModel.h"
+#import "LBProgressView.h"
+#import "BSPictureFullScreenViewController.h"
 
 
 
@@ -17,7 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *picture;
 @property (weak, nonatomic) IBOutlet UIImageView *gif;
 @property (weak, nonatomic) IBOutlet UIButton *seeButton;
-@property (weak, nonatomic) IBOutlet SVProgressHUD *progress;
+@property (weak, nonatomic) IBOutlet LBProgressView *progress;
 
 
 
@@ -38,7 +40,7 @@
     NSString *gif = model.image0.pathExtension;
     self.gif.hidden = ![gif isEqualToString:@"gif"];
     
-    //
+    //是否大图
     if (model.isLongPicture == YES) {
         self.seeButton.hidden = NO;
         
@@ -46,22 +48,33 @@
         self.seeButton.hidden = YES;
     }
     
+    //显示图片及progress
     [self.picture sd_setImageWithURL:[NSURL URLWithString:model.image0] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         
        CGFloat progressFloat = 1.0 * receivedSize / expectedSize;
+        [self.progress setProgress:progressFloat animated:NO];
         
-        [SVProgressHUD showProgress:progressFloat status:@"正在下载"];
-       
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         
+        [self.progress setHidden:YES];
+        UIGraphicsBeginImageContextWithOptions(model.pictureFrame.size, YES, 0.0);
         
     }];
 }
 
 
+
 - (void)awakeFromNib {
 
     [self setAutoresizingMask:UIViewAutoresizingNone];
+    [self.picture setUserInteractionEnabled:YES];
+    [self.picture addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pictureClick:)]];
 }
 
+- (void)pictureClick:(UITapGestureRecognizer *)tap {
+    BSPictureFullScreenViewController *fullPicture = [[BSPictureFullScreenViewController alloc]init];
+    fullPicture.modle = self.model;
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:fullPicture animated:YES completion:nil];
+
+}
 @end
