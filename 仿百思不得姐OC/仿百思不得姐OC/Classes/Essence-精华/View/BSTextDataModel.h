@@ -55,13 +55,27 @@
 /** 图片中 */
 @property (nonatomic, copy) NSString *image2;
 
+/** 音频播放时长 */
+@property (nonatomic, assign) NSInteger voicetime;
+/** 音频播放次数 */
+@property (nonatomic, assign) NSInteger playcount;
+/** 视频播放时长 */
+@property (nonatomic, assign) NSInteger videotime;
+
+
 /**
  *  cell的高度
  */
 @property (assign, nonatomic,readonly) CGFloat cellHeight;
 
-/** picture frame */
+/** 图片 frame */
 @property (assign, nonatomic,readonly) CGRect pictureFrame;
+
+/** 声音 frame */
+@property (assign, nonatomic,readonly) CGRect voiceFrame;
+
+/** 视频 frame */
+@property (assign, nonatomic,readonly) CGRect vedioFrame;
 
 /** 图片是否太长 */
 @property (assign, nonatomic,getter=isLongPicture) BOOL longPicture;

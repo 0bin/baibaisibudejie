@@ -57,8 +57,17 @@
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         
         [self.progress setHidden:YES];
-        UIGraphicsBeginImageContextWithOptions(model.pictureFrame.size, YES, 0.0);
-        
+        if (model.isLongPicture == YES) {
+            //开启内容上下文
+            UIGraphicsBeginImageContextWithOptions(model.pictureFrame.size, YES, 0.0);
+            CGFloat drawW = model.pictureFrame.size.width;
+            CGFloat drawH = drawW * image.size.height / image.size.width;
+            //画比例缩放全图
+            [image drawInRect:CGRectMake(0, 0, drawW, drawH)];
+            self.picture.image = UIGraphicsGetImageFromCurrentImageContext();
+            UIGraphicsEndImageContext();
+        }
+    
     }];
 }
 

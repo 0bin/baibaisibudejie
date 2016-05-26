@@ -11,7 +11,7 @@
 @implementation BSTextDataModel
 {
     CGFloat _cellHeight;
-    CGRect _pictureFrame;
+    
 }
 
 
@@ -36,18 +36,36 @@
                 self.longPicture = YES;
                 pictureH = 250;
             }
-            
             CGFloat pictureX = marign;
             CGFloat pictureY = _cellHeight + marign;
-            
-            
             _pictureFrame = CGRectMake(pictureX, pictureY, pictureW, pictureH);
             _cellHeight += pictureH + 2 * marign;
 
+
+        } else if ((self.type == BSBasicTypeVoice)&& (self.width != 0)) {
+        
+            CGFloat voiceX = marign;
+            CGFloat voiceY = iconH + contentLabelH + marign * 2 + 20;
+            CGFloat voiceW = maxsize.width;
+            CGFloat voiceH = voiceW * self.height / self.width;
+            _voiceFrame = CGRectMake(voiceX, voiceY, voiceW, voiceH);
+            _cellHeight += voiceH + 2 * marign;
+        
+        } else if ((self.type == BSBasicTypeVedio)&& (self.width != 0)) {
+            CGFloat vedioX = marign;
+            CGFloat vedioY = iconH + contentLabelH + marign * 2 + 20;
+            CGFloat vedioW = maxsize.width;
+            CGFloat vedioH = vedioW * self.height / self.width;
+            _vedioFrame = CGRectMake(vedioX, vedioY, vedioW, vedioH);
+            _cellHeight += vedioH + 2 * marign;
+        
         }
         //底部工具条
         _cellHeight += bottomViewH + marign;
+        
+
     }
+    
     return _cellHeight;
 
 }
@@ -84,7 +102,6 @@
         
         return  _create_time;
     }
-
 
 }
 @end

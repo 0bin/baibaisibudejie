@@ -13,6 +13,8 @@
 #import "UIView+LBFrameExtension.h"
 #import "NSDate+LBDate.h"
 #import "BSPictureCellView.h"
+#import "BSVoiceView.h"
+#import "BSVedioView.h"
 
 
 
@@ -30,6 +32,10 @@
 
 /** 图片view */
 @property (weak, nonatomic) BSPictureCellView *pictureView;
+/** 图片view */
+@property (weak, nonatomic) BSVoiceView *voiceView;
+/** 图片view */
+@property (weak, nonatomic) BSVedioView *vedioView;
 
 @end
 
@@ -56,6 +62,31 @@
     return _pictureView;
 }
 
+/**
+ *  加载voiceview
+ */
+- (BSVoiceView *)voiceView{
+    
+    if (_voiceView == nil) {
+        BSVoiceView *voiceView = [BSVoiceView voiceView];
+        [self.contentView addSubview:voiceView];
+        self.voiceView = voiceView;
+    }
+    return _voiceView;
+}
+
+/**
+ *  加载vedioView
+ */
+- (BSVedioView *)vedioView{
+    
+    if (_vedioView == nil) {
+        BSVedioView *vedioView = [BSVedioView vedioView];
+        [self.contentView addSubview:vedioView];
+        self.vedioView = vedioView;
+    }
+    return _vedioView;
+}
 
 /**
  *  设置cell数据
@@ -74,8 +105,30 @@
     [self setButtonTitleWithButton:self.commentButton count:textData.comment palceHolder:@"评论"];
     
     if (textData.type == BSBasicTypePicture) {
+        self.pictureView.hidden = NO;
+        self.voiceView.hidden = YES;
+        self.vedioView.hidden = YES;
         self.pictureView.model = textData;
         self.pictureView.frame = textData.pictureFrame;
+    } else if (textData.type == BSBasicTypeVoice) {
+        self.voiceView.hidden = NO;
+        self.pictureView.hidden = YES;
+        self.vedioView.hidden = YES;
+        self.voiceView.model = textData;
+        self.voiceView.frame = textData.voiceFrame;
+        
+    } else if (textData.type == BSBasicTypeVedio) {
+        self.vedioView.model = textData;
+        self.vedioView.frame = textData.vedioFrame;
+        self.vedioView.hidden = NO;
+        self.pictureView.hidden = YES;
+        self.voiceView.hidden = YES;
+        
+    } else {
+        self.pictureView.hidden = YES;
+        self.voiceView.hidden = YES;
+        self.vedioView.hidden = YES;
+
     }
 
 }
