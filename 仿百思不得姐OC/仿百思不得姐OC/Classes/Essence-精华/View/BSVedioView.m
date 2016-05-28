@@ -6,7 +6,7 @@
 //  Copyright © 2016年 LinBin. All rights reserved.
 //
 #import <UIImageView+WebCache.h>
-
+#import <objc/runtime.h>
 #import "BSVedioView.h"
 #import "BSTextDataModel.h"
 
@@ -29,6 +29,8 @@
 - (void)awakeFromNib {
     
     [self setAutoresizingMask:UIViewAutoresizingNone];
+
+    
 }
 
 - (void)setModel:(BSTextDataModel *)model {

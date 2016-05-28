@@ -36,7 +36,10 @@
 @property (weak, nonatomic) BSVoiceView *voiceView;
 /** 图片view */
 @property (weak, nonatomic) BSVedioView *vedioView;
-
+/** 评论背景 */
+@property (weak, nonatomic) IBOutlet UIView *commentBackground;
+/** 评论内容 */
+@property (weak, nonatomic) IBOutlet UILabel *commentLabe;
 @end
 
 
@@ -110,6 +113,7 @@
         self.vedioView.hidden = YES;
         self.pictureView.model = textData;
         self.pictureView.frame = textData.pictureFrame;
+        
     } else if (textData.type == BSBasicTypeVoice) {
         self.voiceView.hidden = NO;
         self.pictureView.hidden = YES;

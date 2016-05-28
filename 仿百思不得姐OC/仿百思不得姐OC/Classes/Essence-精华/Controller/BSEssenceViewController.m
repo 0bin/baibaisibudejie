@@ -12,8 +12,11 @@
 #import "UIView+LBFrameExtension.h"
 #import "BSEssenceALLTableController.h"
 #import "BSBasicTableViewController.h"
+#import "BSTextEssenceViewController.h"
+#import "BSConst.h"
 
-#define childVCCount 7
+
+
 
 @interface BSEssenceViewController () <UIScrollViewDelegate>
 @property (weak, nonatomic) UIScrollView *titleScroll;
@@ -27,23 +30,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self setNavigation];
-    [self addContentScrollView];
-    [self addChildVCWithContentScrollView];
-    [self addTitleScrollView];
     
+//设置导航栏
+    [self setNavigation];
+//添加内容Scroll
+    [self addContentScrollView];
+//scroll添加子控制器
+    [self addChildVCWithContentScrollView];
+//添加内容导航栏
+    [self addTitleScrollView];
 
     [self scrollViewDidEndScrollingAnimation:self.contentScroll];
 
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
     
 }
-
-- (void)leftButtonClick {
-
-     NSLog(@"-----------------------");
-}
-
 
 
 /**
@@ -87,7 +88,7 @@
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor redColor] forState:UIControlStateDisabled];
         [button.titleLabel setFont:[UIFont systemFontOfSize:14]];
-        [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
+        [button addTarget:self action:@selector(titleScrollButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         button.tag = i;
         [titleScroll addSubview:button];
    
@@ -99,7 +100,7 @@
     indicatorView.y = self.titleScroll.height - 3;
     [titleScroll addSubview:indicatorView];
     self.indicatorView = indicatorView;
-    [self buttonClick:self.titleScroll.subviews.firstObject];
+    [self titleScrollButtonClick:self.titleScroll.subviews.firstObject];
 
 }
 
@@ -107,13 +108,8 @@
 /**
  *  titleScroll 内的button点击
  */
-- (void)buttonClick:(UIButton *)button {
+- (void)titleScrollButtonClick:(UIButton *)button {
  
-//    //选中
-//    self.selelctorButton.selected = NO;
-//    button.selected = YES;
-//    self.selelctorButton = button;
-    //设置button点击后不可用为红色，防止重复点击
     self.selelctorButton.enabled = YES;
     button.enabled = NO;
     self.selelctorButton = button;
@@ -162,16 +158,14 @@
     [self addChildViewController:vedio];
     
     BSBasicTableViewController *six = [[BSBasicTableViewController alloc] init];
-    six.type = BSBasicTypeVedio;
-    [six setTitle:@"six"];
+    six.type = BSBasicTypeAll;
+    [six setTitle:@"排行"];
     [self addChildViewController:six];
     
     BSBasicTableViewController *seven = [[BSBasicTableViewController alloc] init];
-    [seven setTitle:@"seven"];
-    seven.type = BSBasicTypeVedio;
+    [seven setTitle:@"其他"];
+    seven.type = BSBasicTypeAll;
     [self addChildViewController:seven];
-    
-    
     
 }
 
@@ -181,11 +175,75 @@
 - (void)setNavigation {
     [self.navigationItem setTitleView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]]];
     
-    UIBarButtonItem *item = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" highlightImage:@"MainTagSubIconClick" target:self action:@selector(leftButtonClick)];
-    [self.navigationItem setLeftBarButtonItem:item];
+    UIBarButtonItem *leftItem = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" highlightImage:@"MainTagSubIconClick" target:self action:@selector(leftButtonClick)];
+    UIBarButtonItem *rightItem = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" highlightImage:@"MainTagSubIconClick" target:self action:@selector(rightButtonClick:)];
+    [self.navigationItem setLeftBarButtonItem:leftItem];
+    [self.navigationItem setRightBarButtonItem:rightItem];
+    
     [self.view setBackgroundColor:[UIColor lightGrayColor]];
 
 }
+
+/**
+ *  设置导航左侧按钮点击
+ */
+- (void)leftButtonClick {
+    
+    BSTextEssenceViewController *text = [[BSTextEssenceViewController alloc] init];
+    [self.navigationController pushViewController:text animated:YES];
+}
+
+/**
+ *  设置导航右侧按钮点击
+ */
+- (void)rightButtonClick:(UIBarButtonItem *)item {
+    NSInteger count = 3;
+    CGFloat contentViewW = 100;
+    CGFloat buttonH = 44;
+    CGFloat buttonW = contentViewW;
+    CGFloat contentViewH = count * buttonH;
+    NSArray *array = @[@"扫一扫",@"雷达",@"收付款"];
+    
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(100, 100, contentViewW, contentViewH)];
+    [view setBackgroundColor:[UIColor whiteColor]];
+    [self.view addSubview:view];
+    
+    for (NSInteger i = 0; i < count; i++) {
+        
+        UIButton *button =[[UIButton alloc] init];
+        CGFloat buttonX = 0;
+        CGFloat buttonY = i * buttonH;
+        button.tag = i;
+        [button setBackgroundColor:[UIColor grayColor]];
+        [button setTitle:array[i] forState:UIControlStateNormal];
+        [button setFrame:CGRectMake(buttonX, buttonY, buttonW, buttonH - 1)];
+        [button addTarget:self action:@selector(contentButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+        [view addSubview:button];
+    }
+    
+}
+
+- (void)contentButtonClick:(UIButton *)button {
+
+    switch (button.tag) {
+        case 0:
+            
+            NSLog(@"--11111-");
+            break;
+        case 1:
+            NSLog(@"--2222-");
+            break;
+        case 2:
+            NSLog(@"--333-");
+            break;
+            
+        default:
+            break;
+    }
+
+}
+
+
 
 
 
@@ -214,7 +272,6 @@
     }
     [self.titleScroll setContentOffset:CGPointMake(buttonX,0) animated:YES];
 
-
 }
 
 /**
@@ -224,7 +281,7 @@
 
     [self scrollViewDidEndScrollingAnimation:scrollView];
     NSInteger index = scrollView.contentOffset.x / scrollView.width;
-    [self buttonClick:self.titleScroll.subviews[index]];
+    [self titleScrollButtonClick:self.titleScroll.subviews[index]];
 
 }
 /*

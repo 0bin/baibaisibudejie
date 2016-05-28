@@ -7,11 +7,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="textCell" rowHeight="144" id="KGk-i7-Jjw" customClass="BSTextTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="144"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="textCell" rowHeight="237" id="KGk-i7-Jjw" customClass="BSTextTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="237"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="143.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="236.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tkf-2R-xuD">
@@ -43,7 +43,7 @@
                         <state key="highlighted" backgroundImage="cellFollowClickIcon"/>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wm7-Wp-Asz">
-                        <rect key="frame" x="0.0" y="99" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="192" width="320" height="44"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZAh-V4-XOe">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
@@ -163,6 +163,33 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="31z-f5-vSw">
+                        <rect key="frame" x="5" y="112" width="310" height="75"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAN-Ih-7wC">
+                                <rect key="frame" x="5" y="27" width="300" height="43"/>
+                                <string key="text">LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最热评论：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nE-xn-7P9">
+                                <rect key="frame" x="5" y="5" width="70" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4nE-xn-7P9" firstAttribute="leading" secondItem="31z-f5-vSw" secondAttribute="leading" constant="5" id="0Hl-Ti-KNC"/>
+                            <constraint firstItem="4nE-xn-7P9" firstAttribute="top" secondItem="31z-f5-vSw" secondAttribute="top" constant="5" id="C95-da-sRy"/>
+                            <constraint firstItem="mAN-Ih-7wC" firstAttribute="leading" secondItem="31z-f5-vSw" secondAttribute="leading" constant="5" id="EVN-zb-4oy"/>
+                            <constraint firstAttribute="bottom" secondItem="mAN-Ih-7wC" secondAttribute="bottom" constant="5" id="P09-Gv-Ewr"/>
+                            <constraint firstItem="mAN-Ih-7wC" firstAttribute="top" secondItem="4nE-xn-7P9" secondAttribute="bottom" constant="5" id="w6p-Dy-biA"/>
+                            <constraint firstAttribute="trailing" secondItem="mAN-Ih-7wC" secondAttribute="trailing" constant="5" id="y1U-U8-gyc"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="qBZ-1E-00y" firstAttribute="top" secondItem="Tkf-2R-xuD" secondAttribute="top" id="6nk-ui-SXB"/>
@@ -172,6 +199,8 @@
                     <constraint firstAttribute="trailing" secondItem="LQ1-DL-70J" secondAttribute="trailing" constant="8" id="DPb-ek-G8q"/>
                     <constraint firstItem="Tkf-2R-xuD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Dl2-mw-h4W"/>
                     <constraint firstItem="Tkf-2R-xuD" firstAttribute="leading" secondItem="AGv-bd-C4k" secondAttribute="trailing" constant="-24" id="EV1-yF-tiE"/>
+                    <constraint firstAttribute="trailing" secondItem="31z-f5-vSw" secondAttribute="trailing" constant="5" id="F8s-EN-ukE"/>
+                    <constraint firstItem="31z-f5-vSw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="HQy-Hh-yYe"/>
                     <constraint firstItem="Tkf-2R-xuD" firstAttribute="top" secondItem="AGv-bd-C4k" secondAttribute="bottom" constant="-20" id="MLV-X9-PdR"/>
                     <constraint firstItem="qBZ-1E-00y" firstAttribute="leading" secondItem="Tkf-2R-xuD" secondAttribute="trailing" constant="8" id="MbB-9F-WGt"/>
                     <constraint firstItem="LQ1-DL-70J" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="MxG-lw-9fq"/>
@@ -179,6 +208,7 @@
                     <constraint firstAttribute="bottom" secondItem="wm7-Wp-Asz" secondAttribute="bottom" id="Rw9-zU-LBi"/>
                     <constraint firstItem="AGv-bd-C4k" firstAttribute="trailing" secondItem="Tkf-2R-xuD" secondAttribute="trailing" constant="5" id="SWh-S9-DDW"/>
                     <constraint firstItem="RNa-Iy-mx9" firstAttribute="bottom" secondItem="Tkf-2R-xuD" secondAttribute="bottom" id="WBF-KR-k0u"/>
+                    <constraint firstItem="wm7-Wp-Asz" firstAttribute="top" secondItem="31z-f5-vSw" secondAttribute="bottom" constant="5" id="YfN-4v-7j0"/>
                     <constraint firstAttribute="trailing" secondItem="f93-9R-Xh0" secondAttribute="trailing" constant="8" id="aHy-F2-nbt"/>
                     <constraint firstItem="AGv-bd-C4k" firstAttribute="bottom" secondItem="Tkf-2R-xuD" secondAttribute="bottom" constant="5" id="gc2-HJ-oLB"/>
                     <constraint firstAttribute="trailing" secondItem="wm7-Wp-Asz" secondAttribute="trailing" id="tT4-SN-UvE"/>
@@ -199,7 +229,9 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="caiButton" destination="l3w-Vl-hR3" id="GSU-eu-Rwe"/>
+                <outlet property="commentBackground" destination="31z-f5-vSw" id="Yyc-4w-e1P"/>
                 <outlet property="commentButton" destination="heQ-lV-N4c" id="f4Q-IZ-gBc"/>
+                <outlet property="commentLabe" destination="mAN-Ih-7wC" id="Xvf-to-yz1"/>
                 <outlet property="contentLabel" destination="LQ1-DL-70J" id="2Qo-I5-b8c"/>
                 <outlet property="dingButton" destination="Sso-F0-hBc" id="GEA-LP-JhK"/>
                 <outlet property="icon" destination="Tkf-2R-xuD" id="dse-VN-GEZ"/>
@@ -208,7 +240,7 @@
                 <outlet property="sinav" destination="AGv-bd-C4k" id="KU1-vc-PuU"/>
                 <outlet property="timeLabel" destination="RNa-Iy-mx9" id="oLO-96-m7W"/>
             </connections>
-            <point key="canvasLocation" x="255" y="316"/>
+            <point key="canvasLocation" x="255" y="362.5"/>
         </tableViewCell>
     </objects>
     <resources>

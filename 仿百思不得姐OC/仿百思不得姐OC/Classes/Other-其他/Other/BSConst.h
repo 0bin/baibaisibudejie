@@ -14,10 +14,10 @@ typedef enum {
     BSBasicTypeVedio = 41,
     BSBasicTypeVoice = 31,
     BSBasicTypePicture = 10,
-    BSBasicTypeVip = 1,
-    BSBasicTypeOther = 1,
+    BSBasicTypeRanking = 9,
+    BSBasicTypeOther = 13096,
 } BSBasicType;
 
-
+UIKIT_EXTERN NSInteger const childVCCount;
 UIKIT_EXTERN CGFloat const TextCell;
 UIKIT_EXTERN CGFloat const bottomH;
