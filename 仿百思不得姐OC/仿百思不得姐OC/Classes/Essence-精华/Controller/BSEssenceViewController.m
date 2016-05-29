@@ -5,7 +5,7 @@
 //  Created by LinBin on 16/4/29.
 //  Copyright © 2016年 LinBin. All rights reserved.
 //
-
+#import "BSConst.h"
 #import "BSEssenceViewController.h"
 #import "UIView+LBFrameExtension.h"
 #import "UIBarButtonItem+LBButtonToBarButtonItem.h"
@@ -13,7 +13,8 @@
 #import "BSEssenceALLTableController.h"
 #import "BSBasicTableViewController.h"
 #import "BSTextEssenceViewController.h"
-#import "BSConst.h"
+#import "LBPopoverViewController.h"
+
 
 
 
@@ -23,6 +24,10 @@
 @property (weak, nonatomic) UIScrollView *contentScroll;
 @property (weak, nonatomic) UIView *indicatorView;
 @property (strong, nonatomic) UIButton *selelctorButton;
+/**
+ *  <#Description#>
+ */
+@property (weak, nonatomic) UIView *contentView;
 @end
 
 @implementation BSEssenceViewController
@@ -196,54 +201,17 @@
 /**
  *  设置导航右侧按钮点击
  */
-- (void)rightButtonClick:(UIBarButtonItem *)item {
-    NSInteger count = 3;
-    CGFloat contentViewW = 100;
-    CGFloat buttonH = 44;
-    CGFloat buttonW = contentViewW;
-    CGFloat contentViewH = count * buttonH;
-    NSArray *array = @[@"扫一扫",@"雷达",@"收付款"];
-    
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(100, 100, contentViewW, contentViewH)];
-    [view setBackgroundColor:[UIColor whiteColor]];
-    [self.view addSubview:view];
-    
-    for (NSInteger i = 0; i < count; i++) {
+- (void)rightButtonClick:(UIButton *)item {
+
+    LBPopoverViewController * popover = [LBPopoverViewController popoverView];
+    [popover.view setFrame:CGRectMake(100, 100, 100, 100)];
+    [self presentViewController:popover animated:YES completion:^{
         
-        UIButton *button =[[UIButton alloc] init];
-        CGFloat buttonX = 0;
-        CGFloat buttonY = i * buttonH;
-        button.tag = i;
-        [button setBackgroundColor:[UIColor grayColor]];
-        [button setTitle:array[i] forState:UIControlStateNormal];
-        [button setFrame:CGRectMake(buttonX, buttonY, buttonW, buttonH - 1)];
-        [button addTarget:self action:@selector(contentButtonClick:) forControlEvents:UIControlEventTouchUpInside];
-        [view addSubview:button];
-    }
+        
+    }];
     
-}
-
-- (void)contentButtonClick:(UIButton *)button {
-
-    switch (button.tag) {
-        case 0:
-            
-            NSLog(@"--11111-");
-            break;
-        case 1:
-            NSLog(@"--2222-");
-            break;
-        case 2:
-            NSLog(@"--333-");
-            break;
-            
-        default:
-            break;
-    }
 
 }
-
-
 
 
 
