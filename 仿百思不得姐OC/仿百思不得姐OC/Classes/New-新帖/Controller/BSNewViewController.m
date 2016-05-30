@@ -22,6 +22,16 @@
     [self.navigationItem setLeftBarButtonItem:item];
     [self.view setBackgroundColor:[UIColor lightGrayColor]];
     
+    
+    UIView *red = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    [red setBackgroundColor:[UIColor redColor]];
+    [self.view addSubview:red];
+    
+    [UIView animateWithDuration:5.0 animations:^{
+        
+        [red setFrame:CGRectMake(100, 300, 100, 100)];
+    }];
+    
 }
 
 - (void)leftButtonClick {

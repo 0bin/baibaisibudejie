@@ -13,28 +13,31 @@
 #import "BSEssenceALLTableController.h"
 #import "BSBasicTableViewController.h"
 #import "BSTextEssenceViewController.h"
-#import "LBPopoverViewController.h"
-
-
-
+#import "LBPopoverView.h"
 
 
 @interface BSEssenceViewController () <UIScrollViewDelegate>
+
+/** 内容导航栏scroll */
 @property (weak, nonatomic) UIScrollView *titleScroll;
+/** 内容scroll */
 @property (weak, nonatomic) UIScrollView *contentScroll;
+/** 导航栏选中指示view */
 @property (weak, nonatomic) UIView *indicatorView;
+/** 导航栏选中button */
 @property (strong, nonatomic) UIButton *selelctorButton;
-/**
- *  <#Description#>
- */
+/** 内容view */
 @property (weak, nonatomic) UIView *contentView;
+
 @end
+
+
 
 @implementation BSEssenceViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
     
 //设置导航栏
     [self setNavigation];
@@ -58,7 +61,7 @@
 - (void)addContentScrollView {
     
     UIScrollView *contentScroll = [[UIScrollView alloc] initWithFrame:self.view.bounds];
-    [contentScroll setBackgroundColor:[UIColor blueColor]];
+    [contentScroll setBackgroundColor:[UIColor whiteColor]];
     [contentScroll setContentSize:CGSizeMake(childVCCount * self.view.width, 0)];
     [self.view addSubview:contentScroll];
     self.contentScroll = contentScroll;
@@ -88,7 +91,6 @@
     for (NSInteger i = 0; i < childVCCount; i++) {
         UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(i * titleW, 0, titleW, scrollH)];
         [button setTitle:self.childViewControllers[i].title forState:UIControlStateNormal];
-//        [button layoutIfNeeded];
         [button.titleLabel sizeToFit];
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor redColor] forState:UIControlStateDisabled];
@@ -96,7 +98,6 @@
         [button addTarget:self action:@selector(titleScrollButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         button.tag = i;
         [titleScroll addSubview:button];
-   
     }
 //添加button底部红色指示器
     UIView *indicatorView = [[UIView alloc] init];
@@ -119,7 +120,7 @@
     button.enabled = NO;
     self.selelctorButton = button;
     
-    //点击titlescroll的button 跳转到对象的内容
+//点击titlescroll的button 跳转到对象的内容
     CGFloat offsetX = button.tag * self.contentScroll.width;
     [self.contentScroll setContentOffset:CGPointMake(offsetX, 0) animated:YES];
     
@@ -178,13 +179,12 @@
  *  设置导航栏细节
  */
 - (void)setNavigation {
-    [self.navigationItem setTitleView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]]];
     
+    [self.navigationItem setTitleView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]]];
     UIBarButtonItem *leftItem = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" highlightImage:@"MainTagSubIconClick" target:self action:@selector(leftButtonClick)];
     UIBarButtonItem *rightItem = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" highlightImage:@"MainTagSubIconClick" target:self action:@selector(rightButtonClick:)];
     [self.navigationItem setLeftBarButtonItem:leftItem];
     [self.navigationItem setRightBarButtonItem:rightItem];
-    
     [self.view setBackgroundColor:[UIColor lightGrayColor]];
 
 }
@@ -201,15 +201,11 @@
 /**
  *  设置导航右侧按钮点击
  */
-- (void)rightButtonClick:(UIButton *)item {
+- (void)rightButtonClick:(UIView *)item {
 
-    LBPopoverViewController * popover = [LBPopoverViewController popoverView];
-    [popover.view setFrame:CGRectMake(100, 100, 100, 100)];
-    [self presentViewController:popover animated:YES completion:^{
-        
-        
-    }];
-    
+    LBPopoverView *popover = [LBPopoverView popoverView];
+
+    [popover showPopoverViewFrom:item];
 
 }
 

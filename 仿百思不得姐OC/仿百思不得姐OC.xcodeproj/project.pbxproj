@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		01F5DED275DD6B7CEEF8BD5F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 685B7A1BE0098BF7920E4106 /* libPods.a */; };
+		2403C3E71CFBC7FE0020AA2A /* LBPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2403C3E61CFBC7FE0020AA2A /* LBPopoverView.m */; };
 		24047C0E1CF6C75C000C9549 /* BSVedioView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24047C0D1CF6C75C000C9549 /* BSVedioView.m */; };
 		24047C101CF6C772000C9549 /* BSVedioView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24047C0F1CF6C772000C9549 /* BSVedioView.xib */; };
 		2409235F1CED4BAF00863061 /* BSTextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2409235D1CED4BAF00863061 /* BSTextTableViewCell.m */; };
@@ -30,6 +31,8 @@
 		2448FBED1CD9A13D00E49921 /* BSTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2448FBEB1CD9A13D00E49921 /* BSTitleTableViewCell.xib */; };
 		245187821CEEB0200045D810 /* BSBasicTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245187811CEEB0200045D810 /* BSBasicTableViewController.m */; };
 		245187851CEEEB4B0045D810 /* BSConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 245187841CEEEB4B0045D810 /* BSConst.m */; };
+		246487CC1CFC29BB0074B562 /* BSScanQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246487CA1CFC29BB0074B562 /* BSScanQRCodeViewController.m */; };
+		246487CD1CFC29BB0074B562 /* BSScanQRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 246487CB1CFC29BB0074B562 /* BSScanQRCodeViewController.xib */; };
 		246BE5771CF94A4000575708 /* BSTextEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246BE5751CF94A4000575708 /* BSTextEssenceViewController.m */; };
 		246BE5781CF94A4000575708 /* BSTextEssenceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 246BE5761CF94A4000575708 /* BSTextEssenceViewController.xib */; };
 		246BE57B1CF99A1100575708 /* LBDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 246BE57A1CF99A1100575708 /* LBDropDownMenu.m */; };
@@ -60,8 +63,6 @@
 		24E0CF4F1CF5DDAC00931BC3 /* BSVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24E0CF4E1CF5DDAC00931BC3 /* BSVoiceView.xib */; };
 		24E31CFC1CDCDEC000A42C26 /* BSSettingGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E31CFB1CDCDEC000A42C26 /* BSSettingGuideView.m */; };
 		24E31CFE1CDCDF0200A42C26 /* BSSettingGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24E31CFD1CDCDF0200A42C26 /* BSSettingGuideView.xib */; };
-		24F7A13D1CFAE34C002F7C70 /* LBPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F7A13B1CFAE34C002F7C70 /* LBPopoverViewController.m */; };
-		24F7A13E1CFAE34C002F7C70 /* LBPopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F7A13C1CFAE34C002F7C70 /* LBPopoverViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2403C3E51CFBC7FE0020AA2A /* LBPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBPopoverView.h; sourceTree = "<group>"; };
+		2403C3E61CFBC7FE0020AA2A /* LBPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBPopoverView.m; sourceTree = "<group>"; };
 		24047C0C1CF6C75C000C9549 /* BSVedioView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSVedioView.h; sourceTree = "<group>"; };
 		24047C0D1CF6C75C000C9549 /* BSVedioView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSVedioView.m; sourceTree = "<group>"; };
 		24047C0F1CF6C772000C9549 /* BSVedioView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSVedioView.xib; sourceTree = "<group>"; };
@@ -123,6 +126,9 @@
 		245187811CEEB0200045D810 /* BSBasicTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSBasicTableViewController.m; sourceTree = "<group>"; };
 		245187831CEEEB4B0045D810 /* BSConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BSConst.h; path = "Other-其他/Other/BSConst.h"; sourceTree = "<group>"; };
 		245187841CEEEB4B0045D810 /* BSConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BSConst.m; path = "Other-其他/Other/BSConst.m"; sourceTree = "<group>"; };
+		246487C91CFC29BB0074B562 /* BSScanQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSScanQRCodeViewController.h; sourceTree = "<group>"; };
+		246487CA1CFC29BB0074B562 /* BSScanQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSScanQRCodeViewController.m; sourceTree = "<group>"; };
+		246487CB1CFC29BB0074B562 /* BSScanQRCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSScanQRCodeViewController.xib; sourceTree = "<group>"; };
 		246BE5741CF94A4000575708 /* BSTextEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTextEssenceViewController.h; sourceTree = "<group>"; };
 		246BE5751CF94A4000575708 /* BSTextEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTextEssenceViewController.m; sourceTree = "<group>"; };
 		246BE5761CF94A4000575708 /* BSTextEssenceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSTextEssenceViewController.xib; sourceTree = "<group>"; };
@@ -174,9 +180,6 @@
 		24E31CFA1CDCDEC000A42C26 /* BSSettingGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSSettingGuideView.h; sourceTree = "<group>"; };
 		24E31CFB1CDCDEC000A42C26 /* BSSettingGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSSettingGuideView.m; sourceTree = "<group>"; };
 		24E31CFD1CDCDF0200A42C26 /* BSSettingGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSSettingGuideView.xib; sourceTree = "<group>"; };
-		24F7A13A1CFAE34C002F7C70 /* LBPopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBPopoverViewController.h; sourceTree = "<group>"; };
-		24F7A13B1CFAE34C002F7C70 /* LBPopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBPopoverViewController.m; sourceTree = "<group>"; };
-		24F7A13C1CFAE34C002F7C70 /* LBPopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBPopoverViewController.xib; sourceTree = "<group>"; };
 		685B7A1BE0098BF7920E4106 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		74659E73E4B91EBCDDE3FDC4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D2C1A27C5786AA18AF22A5E1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -353,9 +356,9 @@
 				246BE5741CF94A4000575708 /* BSTextEssenceViewController.h */,
 				246BE5751CF94A4000575708 /* BSTextEssenceViewController.m */,
 				246BE5761CF94A4000575708 /* BSTextEssenceViewController.xib */,
-				24F7A13A1CFAE34C002F7C70 /* LBPopoverViewController.h */,
-				24F7A13B1CFAE34C002F7C70 /* LBPopoverViewController.m */,
-				24F7A13C1CFAE34C002F7C70 /* LBPopoverViewController.xib */,
+				246487C91CFC29BB0074B562 /* BSScanQRCodeViewController.h */,
+				246487CA1CFC29BB0074B562 /* BSScanQRCodeViewController.m */,
+				246487CB1CFC29BB0074B562 /* BSScanQRCodeViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -512,6 +515,8 @@
 				240C884B1CDF43E500CFAE58 /* LBVerticalButton.m */,
 				24CFF4411CF54B030005B1D6 /* LBProgressView.h */,
 				24CFF4421CF54B030005B1D6 /* LBProgressView.m */,
+				2403C3E51CFBC7FE0020AA2A /* LBPopoverView.h */,
+				2403C3E61CFBC7FE0020AA2A /* LBPopoverView.m */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -671,12 +676,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				24DA7B121CF176C5004EC3FE /* BSPictureCellView.xib in Resources */,
-				24F7A13E1CFAE34C002F7C70 /* LBPopoverViewController.xib in Resources */,
 				247F23F51CDB73A2009A6595 /* BSLoginViewController.xib in Resources */,
 				24E0CF4F1CF5DDAC00931BC3 /* BSVoiceView.xib in Resources */,
 				240C88491CDF114600CFAE58 /* BSPublishViewController.xib in Resources */,
 				24CAA6A61CD98CC6005AD776 /* BSAttentionViewController.xib in Resources */,
 				24CAA6A81CD98CC6005AD776 /* BSRecommendViewController.xib in Resources */,
+				246487CD1CFC29BB0074B562 /* BSScanQRCodeViewController.xib in Resources */,
 				244350C71CD986B0008767FB /* Assets.xcassets in Resources */,
 				246BE5781CF94A4000575708 /* BSTextEssenceViewController.xib in Resources */,
 				24AF42191CE865C000839629 /* BSMeWebVViewController.xib in Resources */,
@@ -770,9 +775,10 @@
 				24E31CFC1CDCDEC000A42C26 /* BSSettingGuideView.m in Sources */,
 				2409235F1CED4BAF00863061 /* BSTextTableViewCell.m in Sources */,
 				24CFF4471CF5690F0005B1D6 /* BSPictureFullScreenViewController.m in Sources */,
-				24F7A13D1CFAE34C002F7C70 /* LBPopoverViewController.m in Sources */,
 				24CAA6B21CD98CC6005AD776 /* BSTabBar.m in Sources */,
+				246487CC1CFC29BB0074B562 /* BSScanQRCodeViewController.m in Sources */,
 				24CAA6AA1CD98CC6005AD776 /* BSEssenceViewController.m in Sources */,
+				2403C3E71CFBC7FE0020AA2A /* LBPopoverView.m in Sources */,
 				24CAA6A51CD98CC6005AD776 /* BSAttentionViewController.m in Sources */,
 				24CAA6AD1CD98CC6005AD776 /* UIBarButtonItem+LBButtonToBarButtonItem.m in Sources */,
 				24CAA6AE1CD98CC6005AD776 /* UIView+LBFrameExtension.m in Sources */,
@@ -918,6 +924,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "仿百思不得姐OC/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -933,6 +940,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "仿百思不得姐OC/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
