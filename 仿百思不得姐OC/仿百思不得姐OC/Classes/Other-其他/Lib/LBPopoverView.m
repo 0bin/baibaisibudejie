@@ -85,14 +85,13 @@
 }
 
 - (void)popverButtonClick:(UIButton *)button {
-    NSLog(@"-----------------------");
+
     if (button.tag == 0) {
         BSScanQRCodeViewController *QRCode = [[BSScanQRCodeViewController alloc] init];
         [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:QRCode animated:YES completion:^{
             
-            
         }];
-         NSLog(@"-----------------------");
+
     } else if (button.tag == 1) {
     
     } else {

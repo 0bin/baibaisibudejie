@@ -15,6 +15,7 @@
 #import "BSPictureCellView.h"
 #import "BSVoiceView.h"
 #import "BSVedioView.h"
+#import "BSCommentModel.h"
 
 
 
@@ -98,7 +99,7 @@
     _textData = textData;
     [self.icon sd_setImageWithURL:[NSURL URLWithString:textData.profile_image]placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
     self.nameLabel.text = textData.name;
-    self.timeLabel.text = textData.create_time;
+    self.timeLabel.text = textData.created_at;
     self.sinav.hidden = !textData.isSina_v;
     self.contentLabel.text = textData.text;
 
@@ -134,6 +135,17 @@
         self.vedioView.hidden = YES;
 
     }
+    NSArray *array = textData.top_cmt;
+    BSCommentModel *comment = array.firstObject;
+    NSLog(@"---%@---",comment);
+    if (comment) {
+        self.commentLabe.text = [NSString stringWithFormat:@"%@:%@", comment.user.username,comment.content] ;
+        self.commentBackground.hidden = NO;
+    } else {
+        self.commentBackground.hidden = YES;
+    }
+
+    
 
 }
 

@@ -31,11 +31,12 @@
 		2448FBED1CD9A13D00E49921 /* BSTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2448FBEB1CD9A13D00E49921 /* BSTitleTableViewCell.xib */; };
 		245187821CEEB0200045D810 /* BSBasicTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245187811CEEB0200045D810 /* BSBasicTableViewController.m */; };
 		245187851CEEEB4B0045D810 /* BSConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 245187841CEEEB4B0045D810 /* BSConst.m */; };
+		24569FB11CFD8F8A0052AB52 /* BSUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24569FB01CFD8F8A0052AB52 /* BSUserModel.m */; };
+		24569FB41CFD927B0052AB52 /* BSCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24569FB31CFD927B0052AB52 /* BSCommentModel.m */; };
 		246487CC1CFC29BB0074B562 /* BSScanQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246487CA1CFC29BB0074B562 /* BSScanQRCodeViewController.m */; };
 		246487CD1CFC29BB0074B562 /* BSScanQRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 246487CB1CFC29BB0074B562 /* BSScanQRCodeViewController.xib */; };
 		246BE5771CF94A4000575708 /* BSTextEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246BE5751CF94A4000575708 /* BSTextEssenceViewController.m */; };
 		246BE5781CF94A4000575708 /* BSTextEssenceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 246BE5761CF94A4000575708 /* BSTextEssenceViewController.xib */; };
-		246BE57B1CF99A1100575708 /* LBDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 246BE57A1CF99A1100575708 /* LBDropDownMenu.m */; };
 		247F23F41CDB73A2009A6595 /* BSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247F23F21CDB73A2009A6595 /* BSLoginViewController.m */; };
 		247F23F51CDB73A2009A6595 /* BSLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247F23F31CDB73A2009A6595 /* BSLoginViewController.xib */; };
 		2495CC551CE6EAEC0012BE94 /* LBSquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2495CC541CE6EAEC0012BE94 /* LBSquareButton.m */; };
@@ -126,14 +127,16 @@
 		245187811CEEB0200045D810 /* BSBasicTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSBasicTableViewController.m; sourceTree = "<group>"; };
 		245187831CEEEB4B0045D810 /* BSConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BSConst.h; path = "Other-其他/Other/BSConst.h"; sourceTree = "<group>"; };
 		245187841CEEEB4B0045D810 /* BSConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BSConst.m; path = "Other-其他/Other/BSConst.m"; sourceTree = "<group>"; };
+		24569FAF1CFD8F8A0052AB52 /* BSUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSUserModel.h; sourceTree = "<group>"; };
+		24569FB01CFD8F8A0052AB52 /* BSUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSUserModel.m; sourceTree = "<group>"; };
+		24569FB21CFD927B0052AB52 /* BSCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCommentModel.h; sourceTree = "<group>"; };
+		24569FB31CFD927B0052AB52 /* BSCommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCommentModel.m; sourceTree = "<group>"; };
 		246487C91CFC29BB0074B562 /* BSScanQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSScanQRCodeViewController.h; sourceTree = "<group>"; };
 		246487CA1CFC29BB0074B562 /* BSScanQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSScanQRCodeViewController.m; sourceTree = "<group>"; };
 		246487CB1CFC29BB0074B562 /* BSScanQRCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSScanQRCodeViewController.xib; sourceTree = "<group>"; };
 		246BE5741CF94A4000575708 /* BSTextEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTextEssenceViewController.h; sourceTree = "<group>"; };
 		246BE5751CF94A4000575708 /* BSTextEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTextEssenceViewController.m; sourceTree = "<group>"; };
 		246BE5761CF94A4000575708 /* BSTextEssenceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSTextEssenceViewController.xib; sourceTree = "<group>"; };
-		246BE5791CF99A1100575708 /* LBDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBDropDownMenu.h; sourceTree = "<group>"; };
-		246BE57A1CF99A1100575708 /* LBDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBDropDownMenu.m; sourceTree = "<group>"; };
 		247F23F11CDB73A2009A6595 /* BSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLoginViewController.h; sourceTree = "<group>"; };
 		247F23F21CDB73A2009A6595 /* BSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSLoginViewController.m; sourceTree = "<group>"; };
 		247F23F31CDB73A2009A6595 /* BSLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSLoginViewController.xib; sourceTree = "<group>"; };
@@ -368,6 +371,10 @@
 			children = (
 				243200CA1CEC336400B8D45F /* BSTextDataModel.h */,
 				243200CB1CEC336400B8D45F /* BSTextDataModel.m */,
+				24569FAF1CFD8F8A0052AB52 /* BSUserModel.h */,
+				24569FB01CFD8F8A0052AB52 /* BSUserModel.m */,
+				24569FB21CFD927B0052AB52 /* BSCommentModel.h */,
+				24569FB31CFD927B0052AB52 /* BSCommentModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -509,8 +516,6 @@
 		24CAA69F1CD98CC6005AD776 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				246BE5791CF99A1100575708 /* LBDropDownMenu.h */,
-				246BE57A1CF99A1100575708 /* LBDropDownMenu.m */,
 				240C884A1CDF43E500CFAE58 /* LBVerticalButton.h */,
 				240C884B1CDF43E500CFAE58 /* LBVerticalButton.m */,
 				24CFF4411CF54B030005B1D6 /* LBProgressView.h */,
@@ -763,9 +768,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2415D02E1CE21BF600A2E55E /* BSMeDataModel.m in Sources */,
+				24569FB11CFD8F8A0052AB52 /* BSUserModel.m in Sources */,
 				240C88481CDF114600CFAE58 /* BSPublishViewController.m in Sources */,
 				24CAA6A91CD98CC6005AD776 /* BSCategoryModel.m in Sources */,
-				246BE57B1CF99A1100575708 /* LBDropDownMenu.m in Sources */,
 				24E0CF4D1CF5DD9900931BC3 /* BSVoiceView.m in Sources */,
 				2448FBE81CD99B5E00E49921 /* Foundation+Log.m in Sources */,
 				24CAA6A71CD98CC6005AD776 /* BSRecommendViewController.m in Sources */,
@@ -773,6 +778,7 @@
 				24047C0E1CF6C75C000C9549 /* BSVedioView.m in Sources */,
 				24CAA6AB1CD98CC6005AD776 /* BSMeViewController.m in Sources */,
 				24E31CFC1CDCDEC000A42C26 /* BSSettingGuideView.m in Sources */,
+				24569FB41CFD927B0052AB52 /* BSCommentModel.m in Sources */,
 				2409235F1CED4BAF00863061 /* BSTextTableViewCell.m in Sources */,
 				24CFF4471CF5690F0005B1D6 /* BSPictureFullScreenViewController.m in Sources */,
 				24CAA6B21CD98CC6005AD776 /* BSTabBar.m in Sources */,

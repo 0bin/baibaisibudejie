@@ -13,21 +13,18 @@
 -(NSDateComponents *)dateIntervalWithFromDate:(NSDate *)date {
 
     NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSCalendarUnit unit = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute |  NSCalendarUnitSecond;
-    return  [calendar components:unit fromDate:date toDate:self options:0];
-
-
+    NSCalendarUnit unit = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
+    return [calendar components:unit fromDate:date toDate:self options:0];
 }
 
 - (BOOL)isThisYear
 {
-    // 日历
     NSCalendar *calendar = [NSCalendar currentCalendar];
-    
+    //当前时间的年
     NSInteger nowYear = [calendar component:NSCalendarUnitYear fromDate:[NSDate date]];
+    //需要查询的时间的年
     NSInteger selfYear = [calendar component:NSCalendarUnitYear fromDate:self];
-    
-    return nowYear == selfYear;
+    return (nowYear == selfYear);
 }
 
 //- (BOOL)isToday

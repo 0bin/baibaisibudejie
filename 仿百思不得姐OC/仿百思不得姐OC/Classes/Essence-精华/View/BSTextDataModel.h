@@ -20,7 +20,7 @@
 @property (nonatomic, copy) NSString *profile_image;
 
 /** 发帖时间 */
-@property (nonatomic, copy) NSString *create_time;
+@property (nonatomic, copy) NSString *created_at;
 
 /** 文字内容 */
 @property (nonatomic, copy) NSString *text;
@@ -61,6 +61,8 @@
 @property (nonatomic, assign) NSInteger playcount;
 /** 视频播放时长 */
 @property (nonatomic, assign) NSInteger videotime;
+/** 最热评论Comment模型 */
+@property (nonatomic, strong) NSArray *top_cmt;
 
 
 /**
