@@ -137,7 +137,7 @@
     }
     NSArray *array = textData.top_cmt;
     BSCommentModel *comment = array.firstObject;
-    NSLog(@"---%@---",comment);
+
     if (comment) {
         self.commentLabe.text = [NSString stringWithFormat:@"%@:%@", comment.user.username,comment.content] ;
         self.commentBackground.hidden = NO;
@@ -179,7 +179,7 @@
     static CGFloat margin = 10;
     frame.origin.x = margin;
     frame.size.width -= 2 * margin;
-    frame.size.height -= margin;
+    frame.size.height = self.textData.cellHeight - margin;
     frame.origin.y += margin;
   
     [super setFrame:frame];

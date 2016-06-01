@@ -15,6 +15,7 @@
 #import "BSBasicTableViewController.h"
 #import "BSTextDataModel.h"
 #import "BSTextTableViewCell.h"
+#import "BSCommentViewController.h"
 
 
 @interface BSBasicTableViewController ()
@@ -179,7 +180,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-
+    BSCommentViewController *commentVC = [[BSCommentViewController alloc] init];
+    commentVC.model = self.textData[indexPath.row];
+    [self.navigationController pushViewController:commentVC animated:YES];
+    
 
 
 }
