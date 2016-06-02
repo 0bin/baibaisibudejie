@@ -41,6 +41,9 @@
                         </constraints>
                         <state key="normal" backgroundImage="cellFollowIcon"/>
                         <state key="highlighted" backgroundImage="cellFollowClickIcon"/>
+                        <connections>
+                            <action selector="reportButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="FQM-9z-dQq"/>
+                        </connections>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wm7-Wp-Asz">
                         <rect key="frame" x="0.0" y="192" width="320" height="44"/>

@@ -52,6 +52,22 @@
     BSTextTableViewCell *cell = [[NSBundle mainBundle] loadNibNamed:@"BSTextTableViewCell" owner:nil options:nil].lastObject;
     return cell;
 }
+- (IBAction)reportButton:(UIButton *)sender {
+    
+  
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
+    [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+         NSLog(@"-----------------------");
+        
+    }]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"举报" style:UIAlertActionStyleDestructive handler:nil]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"收藏" style:UIAlertActionStyleDefault handler:nil]];
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
+
+    
+    
+}
+
 
 /**
  *  加载pictureview

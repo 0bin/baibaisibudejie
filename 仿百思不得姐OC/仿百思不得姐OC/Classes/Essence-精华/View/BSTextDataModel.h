@@ -12,7 +12,10 @@
 
 
 @interface BSTextDataModel : NSObject
-
+/**
+ *  id
+ */
+@property (strong, nonatomic) NSString *ID;
 /** 名称 */
 @property (nonatomic, copy) NSString *name;
 
@@ -61,8 +64,9 @@
 @property (nonatomic, assign) NSInteger playcount;
 /** 视频播放时长 */
 @property (nonatomic, assign) NSInteger videotime;
-/** 最热评论Comment模型 */
+/** 最热评论 */
 @property (nonatomic, strong) NSArray *top_cmt;
+
 
 
 /**

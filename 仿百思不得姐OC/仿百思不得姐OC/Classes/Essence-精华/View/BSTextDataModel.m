@@ -15,8 +15,15 @@
     CGFloat _cellHeight;
     
 }
++ (NSDictionary *)modelCustomPropertyMapper {
+    return @{
+             @"ID" : @"id"
+             };
+}
 + (NSDictionary *)modelContainerPropertyGenericClass {
-    return @{@"top_cmt" : @"BSCommentModel"};
+    return @{
+             @"top_cmt" : @"BSCommentModel"
+             };
 }
 
 - (CGFloat )cellHeight {
