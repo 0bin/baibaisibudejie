@@ -7,6 +7,7 @@
 //
 
 #import "BSCommentModel.h"
+#import "BSUserModel.h"
 
 @implementation BSCommentModel
 

@@ -20,6 +20,8 @@
 		2415D02E1CE21BF600A2E55E /* BSMeDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2415D02D1CE21BF600A2E55E /* BSMeDataModel.m */; };
 		24250BF51CE748D200182957 /* LBTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24250BF41CE748D200182957 /* LBTableFooterView.m */; };
 		243200CC1CEC336400B8D45F /* BSTextDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 243200CB1CEC336400B8D45F /* BSTextDataModel.m */; };
+		2436BCEE1D010C3A00104856 /* BSCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2436BCEC1D010C3A00104856 /* BSCommentTableViewCell.m */; };
+		2436BCEF1D010C3A00104856 /* BSCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2436BCED1D010C3A00104856 /* BSCommentTableViewCell.xib */; };
 		243B05BE1CDDAD980081D490 /* BSEssenceALLTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 243B05BD1CDDAD980081D490 /* BSEssenceALLTableController.m */; };
 		244350BC1CD986B0008767FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 244350BB1CD986B0008767FB /* main.m */; };
 		244350BF1CD986B0008767FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 244350BE1CD986B0008767FB /* AppDelegate.m */; };
@@ -107,6 +109,9 @@
 		24250BF41CE748D200182957 /* LBTableFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBTableFooterView.m; sourceTree = "<group>"; };
 		243200CA1CEC336400B8D45F /* BSTextDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BSTextDataModel.h; path = ../View/BSTextDataModel.h; sourceTree = "<group>"; };
 		243200CB1CEC336400B8D45F /* BSTextDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BSTextDataModel.m; path = ../View/BSTextDataModel.m; sourceTree = "<group>"; };
+		2436BCEB1D010C3A00104856 /* BSCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCommentTableViewCell.h; sourceTree = "<group>"; };
+		2436BCEC1D010C3A00104856 /* BSCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCommentTableViewCell.m; sourceTree = "<group>"; };
+		2436BCED1D010C3A00104856 /* BSCommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSCommentTableViewCell.xib; sourceTree = "<group>"; };
 		243B05BC1CDDAD980081D490 /* BSEssenceALLTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEssenceALLTableController.h; sourceTree = "<group>"; };
 		243B05BD1CDDAD980081D490 /* BSEssenceALLTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEssenceALLTableController.m; sourceTree = "<group>"; };
 		244350B71CD986B0008767FB /* 仿百思不得姐OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "仿百思不得姐OC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -402,6 +407,9 @@
 				24047C0C1CF6C75C000C9549 /* BSVedioView.h */,
 				24047C0D1CF6C75C000C9549 /* BSVedioView.m */,
 				24047C0F1CF6C772000C9549 /* BSVedioView.xib */,
+				2436BCEB1D010C3A00104856 /* BSCommentTableViewCell.h */,
+				2436BCEC1D010C3A00104856 /* BSCommentTableViewCell.m */,
+				2436BCED1D010C3A00104856 /* BSCommentTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -695,6 +703,7 @@
 				240C88491CDF114600CFAE58 /* BSPublishViewController.xib in Resources */,
 				24CAA6A61CD98CC6005AD776 /* BSAttentionViewController.xib in Resources */,
 				24CAA6A81CD98CC6005AD776 /* BSRecommendViewController.xib in Resources */,
+				2436BCEF1D010C3A00104856 /* BSCommentTableViewCell.xib in Resources */,
 				246487CD1CFC29BB0074B562 /* BSScanQRCodeViewController.xib in Resources */,
 				244350C71CD986B0008767FB /* Assets.xcassets in Resources */,
 				246BE5781CF94A4000575708 /* BSTextEssenceViewController.xib in Resources */,
@@ -813,6 +822,7 @@
 				240C884C1CDF43E500CFAE58 /* LBVerticalButton.m in Sources */,
 				24CFF4431CF54B030005B1D6 /* LBProgressView.m in Sources */,
 				24AF42181CE865C000839629 /* BSMeWebVViewController.m in Sources */,
+				2436BCEE1D010C3A00104856 /* BSCommentTableViewCell.m in Sources */,
 				244350BC1CD986B0008767FB /* main.m in Sources */,
 				24DA7B101CF176B6004EC3FE /* BSPictureCellView.m in Sources */,
 				247F23F41CDB73A2009A6595 /* BSLoginViewController.m in Sources */,

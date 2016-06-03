@@ -12,6 +12,8 @@
 #import "BSTextDataModel.h"
 #import "UIView+LBFrameExtension.h"
 #import "BSCommentModel.h"
+#import "BSCommentTableViewCell.h"
+
 #import <MJRefresh.h>
 #import <AFNetworking.h>
 #import <YYModel.h>
@@ -45,7 +47,10 @@
     [self setNav];
     [self setHeardView];
     [self setRefresh];
-
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"BSCommentTableViewCell" bundle:nil] forCellReuseIdentifier:@"commentCell"];
+    [self.tableView setEstimatedRowHeight:44];
+    [self.tableView setRowHeight:UITableViewAutomaticDimension];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
     
    
@@ -164,20 +169,15 @@
     if (section == 0) {
         return self.hotComment.count ? @"最火评论" : @"最新评论";
     }
-    return @"评论";
+    return @"最新评论";
     
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *ID = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
-    }
-    
-    BSCommentModel *model = [self commentInSection:indexPath.section][indexPath.row];
-    cell.textLabel.text = model.content;
 
+    BSCommentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"commentCell"];
+    BSCommentModel *model = [self commentInSection:indexPath.section][indexPath.row];
+    cell.model = model;
     return cell;
     
 }

@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BSUserModel.h"
+
+@class BSUserModel;
 @interface BSCommentModel : NSObject
 
 /** 音频文件的时长 */

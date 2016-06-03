@@ -8,6 +8,7 @@
 #import "NSDate+LBDate.h"
 #import "BSTextDataModel.h"
 #import "BSCommentModel.h"
+#import "BSUserModel.h"
 
 
 @implementation BSTextDataModel

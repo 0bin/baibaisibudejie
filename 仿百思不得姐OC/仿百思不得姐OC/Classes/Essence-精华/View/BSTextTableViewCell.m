@@ -16,6 +16,7 @@
 #import "BSVoiceView.h"
 #import "BSVedioView.h"
 #import "BSCommentModel.h"
+#import "BSUserModel.h"
 
 
 
