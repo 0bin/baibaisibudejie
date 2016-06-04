@@ -26,13 +26,27 @@
  */
 @property (strong, nonatomic) NSArray *hotComment;
 @property (strong, nonatomic) NSMutableArray *recentComment;
+@property (assign, nonatomic) NSInteger page;
+/**
+ *  <#Description#>
+ */
+@property (strong, nonatomic) AFHTTPSessionManager *manager;
 @end
 
 @implementation BSCommentViewController
+/**
+ *  懒加载网络请求manager
+ */
+- (AFHTTPSessionManager *)manager
+{
+    if (!_manager) {
+        _manager = [[AFHTTPSessionManager alloc]init];
+    }
+    return _manager;
+}
 
 - (NSArray *)hotComment {
     if (_hotComment == nil) {
-     NSLog(@"-----------------------");
         _hotComment = [NSArray array];
         }
     
@@ -49,27 +63,70 @@
     [self setRefresh];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"BSCommentTableViewCell" bundle:nil] forCellReuseIdentifier:@"commentCell"];
+    
     [self.tableView setEstimatedRowHeight:44];
     [self.tableView setRowHeight:UITableViewAutomaticDimension];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
     
    
 }
 
 - (void)setRefresh {
+    
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadCommentData)];
     [self.tableView.mj_header beginRefreshing];
+    
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreComentData)];
 }
-                                
+
+- (void)loadMoreComentData {
+    //取消manager内的所有任务
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
+    
+    NSInteger page = self.page;
+    //请求数据
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters[@"a"] = @"dataList";
+    parameters[@"c"] = @"comment";
+    parameters[@"data_id"] = self.model.ID;
+    parameters[@"page"] = @(page);
+    BSCommentModel *comment = self.recentComment.lastObject;
+    parameters[@"lasticd"] = comment.ID;
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSMutableArray *new = [NSMutableArray array];
+        for (NSDictionary *dict in responseObject[@"data"]) {
+            BSCommentModel *model = [BSCommentModel yy_modelWithJSON:dict];
+            [new addObject:model];
+        }
+        NSArray *newarray = new;
+        [self.recentComment addObjectsFromArray:newarray];
+        
+        self.page = page;
+        [self.tableView reloadData];
+        [self.tableView.mj_footer endRefreshing];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [self.tableView.mj_footer setHidden:YES];
+        
+    }];
+
+
+
+}
 - (void)loadCommentData {
-    //请求更多数据
+    //取消manager内的所有任务
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
+    //请求数据
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"dataList";
     parameters[@"c"] = @"comment";
     parameters[@"data_id"] = self.model.ID;
     parameters[@"hot"] = @"1";
     
-    [[AFHTTPSessionManager manager]GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         NSMutableArray *hotarray = [NSMutableArray array];
@@ -86,10 +143,17 @@
         self.hotComment = hotarray;
         self.recentComment = recentarray;
             NSLog(@"%@",self.hotComment);
-        
-        
+//下拉刷新要回到第一页
+        self.page = 1;
         [self.tableView reloadData];
         [self.tableView.mj_header endRefreshing];
+        
+        NSInteger moreCommentCount = [responseObject[@"total"] integerValue];
+        if (self.recentComment.count > moreCommentCount) {
+            self.tableView.mj_footer.hidden = YES;
+        }
+        
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
         
@@ -113,6 +177,8 @@
  */
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter]removeObserver:self];
+    //取消session内所有任务
+    [self.manager invalidateSessionCancelingTasks:YES];
 }
 
 /**

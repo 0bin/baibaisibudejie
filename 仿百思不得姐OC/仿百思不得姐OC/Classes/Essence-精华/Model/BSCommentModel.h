@@ -10,7 +10,10 @@
 
 @class BSUserModel;
 @interface BSCommentModel : NSObject
-
+/**
+ *  id
+ */
+@property (strong, nonatomic) NSString *ID;
 /** 音频文件的时长 */
 @property (nonatomic, assign) NSInteger voicetime;
 /** 评论的文字内容 */

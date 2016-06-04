@@ -10,5 +10,9 @@
 #import "BSUserModel.h"
 
 @implementation BSCommentModel
-
++ (NSDictionary *)modelCustomPropertyMapper {
+    return @{
+             @"ID" : @"id"
+             };
+}
 @end
