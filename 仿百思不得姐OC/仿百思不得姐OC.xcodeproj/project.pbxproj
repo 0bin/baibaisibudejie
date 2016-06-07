@@ -20,6 +20,7 @@
 		2415D02E1CE21BF600A2E55E /* BSMeDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2415D02D1CE21BF600A2E55E /* BSMeDataModel.m */; };
 		24250BF51CE748D200182957 /* LBTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24250BF41CE748D200182957 /* LBTableFooterView.m */; };
 		243200CC1CEC336400B8D45F /* BSTextDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 243200CB1CEC336400B8D45F /* BSTextDataModel.m */; };
+		24333A931D045FD5003C9C6F /* LBTouchTopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 24333A921D045FD5003C9C6F /* LBTouchTopWindow.m */; };
 		2436BCEE1D010C3A00104856 /* BSCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2436BCEC1D010C3A00104856 /* BSCommentTableViewCell.m */; };
 		2436BCEF1D010C3A00104856 /* BSCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2436BCED1D010C3A00104856 /* BSCommentTableViewCell.xib */; };
 		243B05BE1CDDAD980081D490 /* BSEssenceALLTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 243B05BD1CDDAD980081D490 /* BSEssenceALLTableController.m */; };
@@ -109,6 +110,8 @@
 		24250BF41CE748D200182957 /* LBTableFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBTableFooterView.m; sourceTree = "<group>"; };
 		243200CA1CEC336400B8D45F /* BSTextDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BSTextDataModel.h; path = ../View/BSTextDataModel.h; sourceTree = "<group>"; };
 		243200CB1CEC336400B8D45F /* BSTextDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BSTextDataModel.m; path = ../View/BSTextDataModel.m; sourceTree = "<group>"; };
+		24333A911D045FD5003C9C6F /* LBTouchTopWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBTouchTopWindow.h; sourceTree = "<group>"; };
+		24333A921D045FD5003C9C6F /* LBTouchTopWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBTouchTopWindow.m; sourceTree = "<group>"; };
 		2436BCEB1D010C3A00104856 /* BSCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCommentTableViewCell.h; sourceTree = "<group>"; };
 		2436BCEC1D010C3A00104856 /* BSCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCommentTableViewCell.m; sourceTree = "<group>"; };
 		2436BCED1D010C3A00104856 /* BSCommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSCommentTableViewCell.xib; sourceTree = "<group>"; };
@@ -538,6 +541,8 @@
 				24CFF4421CF54B030005B1D6 /* LBProgressView.m */,
 				2403C3E51CFBC7FE0020AA2A /* LBPopoverView.h */,
 				2403C3E61CFBC7FE0020AA2A /* LBPopoverView.m */,
+				24333A911D045FD5003C9C6F /* LBTouchTopWindow.h */,
+				24333A921D045FD5003C9C6F /* LBTouchTopWindow.m */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -808,6 +813,7 @@
 				24CAA6AD1CD98CC6005AD776 /* UIBarButtonItem+LBButtonToBarButtonItem.m in Sources */,
 				24CAA6AE1CD98CC6005AD776 /* UIView+LBFrameExtension.m in Sources */,
 				246BE5771CF94A4000575708 /* BSTextEssenceViewController.m in Sources */,
+				24333A931D045FD5003C9C6F /* LBTouchTopWindow.m in Sources */,
 				24CAA6B01CD98CC6005AD776 /* BSTabBarController.m in Sources */,
 				243B05BE1CDDAD980081D490 /* BSEssenceALLTableController.m in Sources */,
 				245187821CEEB0200045D810 /* BSBasicTableViewController.m in Sources */,

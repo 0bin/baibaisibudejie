@@ -7,7 +7,17 @@
 #import "UIView+LBFrameExtension.h"
 
 @implementation UIView (LBFrameExtension)
+- (BOOL)isShowingOnKeyWindow
+{
+    UIWindow *keywindow = [UIApplication sharedApplication].keyWindow;
+    CGRect newFrame = [keywindow convertRect:self.frame fromView:self.superview];
+    CGRect keywindowBounds = keywindow.bounds;
+    BOOL RectCompare = CGRectIntersectsRect(newFrame, keywindowBounds);
+    BOOL isShowOnKeyWindow = !self.isHidden && self.alpha > 0.01 && self.window == keywindow && RectCompare;
+    
+    return isShowOnKeyWindow;
 
+}
 - (CGFloat)width {
 
     return self.frame.size.width;
