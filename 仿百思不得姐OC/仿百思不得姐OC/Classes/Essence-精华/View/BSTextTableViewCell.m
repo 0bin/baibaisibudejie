@@ -17,6 +17,7 @@
 #import "BSVedioView.h"
 #import "BSCommentModel.h"
 #import "BSUserModel.h"
+#import "UIImage+BBBImageCategory.h"
 
 
 
@@ -58,7 +59,7 @@
   
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
     [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-         NSLog(@"-----------------------");
+        
         
     }]];
     [alert addAction:[UIAlertAction actionWithTitle:@"举报" style:UIAlertActionStyleDestructive handler:nil]];
@@ -113,8 +114,15 @@
  *  设置cell数据
  */
 - (void)setTextData:(BSTextDataModel *)textData {
+    
     _textData = textData;
-    [self.icon sd_setImageWithURL:[NSURL URLWithString:textData.profile_image]placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    
+    [self.icon sd_setImageWithURL:[NSURL URLWithString:textData.profile_image]placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        
+        self.icon.image = [self.icon.image ellipseImage];
+         
+    }];
+
     self.nameLabel.text = textData.name;
     self.timeLabel.text = textData.created_at;
     self.sinav.hidden = !textData.isSina_v;

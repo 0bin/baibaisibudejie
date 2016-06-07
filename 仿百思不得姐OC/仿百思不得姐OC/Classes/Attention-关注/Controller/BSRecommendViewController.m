@@ -85,7 +85,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
     BSCategoryModel *model = self.category[indexPath.row];
-    NSLog(@"---%@---",model.name);
+ 
     
     /**
      *  请求右侧内容数据

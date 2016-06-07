@@ -23,7 +23,6 @@
 		24333A931D045FD5003C9C6F /* LBTouchTopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 24333A921D045FD5003C9C6F /* LBTouchTopWindow.m */; };
 		2436BCEE1D010C3A00104856 /* BSCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2436BCEC1D010C3A00104856 /* BSCommentTableViewCell.m */; };
 		2436BCEF1D010C3A00104856 /* BSCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2436BCED1D010C3A00104856 /* BSCommentTableViewCell.xib */; };
-		243B05BE1CDDAD980081D490 /* BSEssenceALLTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 243B05BD1CDDAD980081D490 /* BSEssenceALLTableController.m */; };
 		244350BC1CD986B0008767FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 244350BB1CD986B0008767FB /* main.m */; };
 		244350BF1CD986B0008767FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 244350BE1CD986B0008767FB /* AppDelegate.m */; };
 		244350C71CD986B0008767FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 244350C61CD986B0008767FB /* Assets.xcassets */; };
@@ -40,6 +39,9 @@
 		246487CD1CFC29BB0074B562 /* BSScanQRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 246487CB1CFC29BB0074B562 /* BSScanQRCodeViewController.xib */; };
 		246BE5771CF94A4000575708 /* BSTextEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246BE5751CF94A4000575708 /* BSTextEssenceViewController.m */; };
 		246BE5781CF94A4000575708 /* BSTextEssenceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 246BE5761CF94A4000575708 /* BSTextEssenceViewController.xib */; };
+		247197111D06F5020051CE5B /* UIImage+BBBImageCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 247197101D06F5020051CE5B /* UIImage+BBBImageCategory.m */; };
+		247197141D06F8540051CE5B /* BSEssenceALLTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247197131D06F8540051CE5B /* BSEssenceALLTableController.m */; };
+		247197171D0713EC0051CE5B /* UIImageView+BBBImageViewCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 247197161D0713EC0051CE5B /* UIImageView+BBBImageViewCategory.m */; };
 		247F23F41CDB73A2009A6595 /* BSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247F23F21CDB73A2009A6595 /* BSLoginViewController.m */; };
 		247F23F51CDB73A2009A6595 /* BSLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247F23F31CDB73A2009A6595 /* BSLoginViewController.xib */; };
 		2495CC551CE6EAEC0012BE94 /* LBSquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2495CC541CE6EAEC0012BE94 /* LBSquareButton.m */; };
@@ -115,8 +117,6 @@
 		2436BCEB1D010C3A00104856 /* BSCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCommentTableViewCell.h; sourceTree = "<group>"; };
 		2436BCEC1D010C3A00104856 /* BSCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCommentTableViewCell.m; sourceTree = "<group>"; };
 		2436BCED1D010C3A00104856 /* BSCommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSCommentTableViewCell.xib; sourceTree = "<group>"; };
-		243B05BC1CDDAD980081D490 /* BSEssenceALLTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEssenceALLTableController.h; sourceTree = "<group>"; };
-		243B05BD1CDDAD980081D490 /* BSEssenceALLTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEssenceALLTableController.m; sourceTree = "<group>"; };
 		244350B71CD986B0008767FB /* 仿百思不得姐OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "仿百思不得姐OC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		244350BB1CD986B0008767FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		244350BD1CD986B0008767FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
@@ -147,6 +147,12 @@
 		246BE5741CF94A4000575708 /* BSTextEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTextEssenceViewController.h; sourceTree = "<group>"; };
 		246BE5751CF94A4000575708 /* BSTextEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTextEssenceViewController.m; sourceTree = "<group>"; };
 		246BE5761CF94A4000575708 /* BSTextEssenceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSTextEssenceViewController.xib; sourceTree = "<group>"; };
+		2471970F1D06F5020051CE5B /* UIImage+BBBImageCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BBBImageCategory.h"; sourceTree = "<group>"; };
+		247197101D06F5020051CE5B /* UIImage+BBBImageCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BBBImageCategory.m"; sourceTree = "<group>"; };
+		247197121D06F8540051CE5B /* BSEssenceALLTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEssenceALLTableController.h; sourceTree = "<group>"; };
+		247197131D06F8540051CE5B /* BSEssenceALLTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEssenceALLTableController.m; sourceTree = "<group>"; };
+		247197151D0713EC0051CE5B /* UIImageView+BBBImageViewCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+BBBImageViewCategory.h"; sourceTree = "<group>"; };
+		247197161D0713EC0051CE5B /* UIImageView+BBBImageViewCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+BBBImageViewCategory.m"; sourceTree = "<group>"; };
 		247F23F11CDB73A2009A6595 /* BSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLoginViewController.h; sourceTree = "<group>"; };
 		247F23F21CDB73A2009A6595 /* BSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSLoginViewController.m; sourceTree = "<group>"; };
 		247F23F31CDB73A2009A6595 /* BSLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSLoginViewController.xib; sourceTree = "<group>"; };
@@ -360,10 +366,10 @@
 		24CAA6821CD98CC6005AD776 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				247197121D06F8540051CE5B /* BSEssenceALLTableController.h */,
+				247197131D06F8540051CE5B /* BSEssenceALLTableController.m */,
 				24CAA6831CD98CC6005AD776 /* BSEssenceViewController.h */,
 				24CAA6841CD98CC6005AD776 /* BSEssenceViewController.m */,
-				243B05BC1CDDAD980081D490 /* BSEssenceALLTableController.h */,
-				243B05BD1CDDAD980081D490 /* BSEssenceALLTableController.m */,
 				245187801CEEB0200045D810 /* BSBasicTableViewController.h */,
 				245187811CEEB0200045D810 /* BSBasicTableViewController.m */,
 				24CFF4441CF5690F0005B1D6 /* BSPictureFullScreenViewController.h */,
@@ -514,6 +520,10 @@
 				24CAA6981CD98CC6005AD776 /* UIView+LBFrameExtension.m */,
 				240923611CEDEC4500863061 /* NSDate+LBDate.h */,
 				240923621CEDEC4500863061 /* NSDate+LBDate.m */,
+				2471970F1D06F5020051CE5B /* UIImage+BBBImageCategory.h */,
+				247197101D06F5020051CE5B /* UIImage+BBBImageCategory.m */,
+				247197151D0713EC0051CE5B /* UIImageView+BBBImageViewCategory.h */,
+				247197161D0713EC0051CE5B /* UIImageView+BBBImageViewCategory.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -815,20 +825,22 @@
 				246BE5771CF94A4000575708 /* BSTextEssenceViewController.m in Sources */,
 				24333A931D045FD5003C9C6F /* LBTouchTopWindow.m in Sources */,
 				24CAA6B01CD98CC6005AD776 /* BSTabBarController.m in Sources */,
-				243B05BE1CDDAD980081D490 /* BSEssenceALLTableController.m in Sources */,
 				245187821CEEB0200045D810 /* BSBasicTableViewController.m in Sources */,
 				243200CC1CEC336400B8D45F /* BSTextDataModel.m in Sources */,
 				2448FBEC1CD9A13D00E49921 /* BSTitleTableViewCell.m in Sources */,
 				2495CC551CE6EAEC0012BE94 /* LBSquareButton.m in Sources */,
 				24250BF51CE748D200182957 /* LBTableFooterView.m in Sources */,
 				240923631CEDEC4500863061 /* NSDate+LBDate.m in Sources */,
+				247197141D06F8540051CE5B /* BSEssenceALLTableController.m in Sources */,
 				244350BF1CD986B0008767FB /* AppDelegate.m in Sources */,
 				24CAA6AC1CD98CC6005AD776 /* BSNewViewController.m in Sources */,
 				245187851CEEEB4B0045D810 /* BSConst.m in Sources */,
 				240C884C1CDF43E500CFAE58 /* LBVerticalButton.m in Sources */,
 				24CFF4431CF54B030005B1D6 /* LBProgressView.m in Sources */,
 				24AF42181CE865C000839629 /* BSMeWebVViewController.m in Sources */,
+				247197171D0713EC0051CE5B /* UIImageView+BBBImageViewCategory.m in Sources */,
 				2436BCEE1D010C3A00104856 /* BSCommentTableViewCell.m in Sources */,
+				247197111D06F5020051CE5B /* UIImage+BBBImageCategory.m in Sources */,
 				244350BC1CD986B0008767FB /* main.m in Sources */,
 				24DA7B101CF176B6004EC3FE /* BSPictureCellView.m in Sources */,
 				247F23F41CDB73A2009A6595 /* BSLoginViewController.m in Sources */,
