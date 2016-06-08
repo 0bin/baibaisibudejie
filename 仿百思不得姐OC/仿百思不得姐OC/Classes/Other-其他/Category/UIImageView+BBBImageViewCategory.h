@@ -9,7 +9,19 @@
 #import <UIKit/UIKit.h>
 
 @interface UIImageView (BBBImageViewCategory)
+/**
+ *  设置圆形头像
+ *
+ *  @param url 头像地址
+ */
+- (void)setEllipseIconWithUrl:(NSString *)url;
 
-- (void)setEllipseIcon;
+
+/**
+ *  设置原始头像
+ *
+ *  @param url 头像地址
+ */
+- (void)setIconWithUrl:(NSString *)url;
 
 @end

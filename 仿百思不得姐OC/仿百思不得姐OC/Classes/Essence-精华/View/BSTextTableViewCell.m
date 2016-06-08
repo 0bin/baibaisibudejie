@@ -6,7 +6,7 @@
 //  Copyright © 2016年 LinBin. All rights reserved.
 //
 
-#import <UIImageView+WebCache.h>
+
 
 #import "BSTextTableViewCell.h"
 #import "BSTextDataModel.h"
@@ -17,7 +17,7 @@
 #import "BSVedioView.h"
 #import "BSCommentModel.h"
 #import "BSUserModel.h"
-#import "UIImage+BBBImageCategory.h"
+#import "UIImageView+BBBImageViewCategory.h"
 
 
 
@@ -117,11 +117,9 @@
     
     _textData = textData;
     
-    [self.icon sd_setImageWithURL:[NSURL URLWithString:textData.profile_image]placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        
-        self.icon.image = [self.icon.image ellipseImage];
-         
-    }];
+    
+    [self.icon setEllipseIconWithUrl:textData.profile_image];
+
 
     self.nameLabel.text = textData.name;
     self.timeLabel.text = textData.created_at;

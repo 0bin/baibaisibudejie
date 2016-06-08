@@ -44,6 +44,7 @@
 		247197171D0713EC0051CE5B /* UIImageView+BBBImageViewCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 247197161D0713EC0051CE5B /* UIImageView+BBBImageViewCategory.m */; };
 		247F23F41CDB73A2009A6595 /* BSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247F23F21CDB73A2009A6595 /* BSLoginViewController.m */; };
 		247F23F51CDB73A2009A6595 /* BSLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247F23F31CDB73A2009A6595 /* BSLoginViewController.xib */; };
+		2490326E1D07AF9B002190A6 /* BBBLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2490326D1D07AF9B002190A6 /* BBBLabel.m */; };
 		2495CC551CE6EAEC0012BE94 /* LBSquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2495CC541CE6EAEC0012BE94 /* LBSquareButton.m */; };
 		249C59A11CFEA13A007A1330 /* BSCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 249C599F1CFEA13A007A1330 /* BSCommentViewController.m */; };
 		249C59A21CFEA13A007A1330 /* BSCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 249C59A01CFEA13A007A1330 /* BSCommentViewController.xib */; };
@@ -156,6 +157,8 @@
 		247F23F11CDB73A2009A6595 /* BSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLoginViewController.h; sourceTree = "<group>"; };
 		247F23F21CDB73A2009A6595 /* BSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSLoginViewController.m; sourceTree = "<group>"; };
 		247F23F31CDB73A2009A6595 /* BSLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSLoginViewController.xib; sourceTree = "<group>"; };
+		2490326C1D07AF9B002190A6 /* BBBLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBLabel.h; sourceTree = "<group>"; };
+		2490326D1D07AF9B002190A6 /* BBBLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBLabel.m; sourceTree = "<group>"; };
 		2495CC531CE6EAEC0012BE94 /* LBSquareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBSquareButton.h; sourceTree = "<group>"; };
 		2495CC541CE6EAEC0012BE94 /* LBSquareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBSquareButton.m; sourceTree = "<group>"; };
 		249C599E1CFEA13A007A1330 /* BSCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCommentViewController.h; sourceTree = "<group>"; };
@@ -553,6 +556,8 @@
 				2403C3E61CFBC7FE0020AA2A /* LBPopoverView.m */,
 				24333A911D045FD5003C9C6F /* LBTouchTopWindow.h */,
 				24333A921D045FD5003C9C6F /* LBTouchTopWindow.m */,
+				2490326C1D07AF9B002190A6 /* BBBLabel.h */,
+				2490326D1D07AF9B002190A6 /* BBBLabel.m */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -837,6 +842,7 @@
 				245187851CEEEB4B0045D810 /* BSConst.m in Sources */,
 				240C884C1CDF43E500CFAE58 /* LBVerticalButton.m in Sources */,
 				24CFF4431CF54B030005B1D6 /* LBProgressView.m in Sources */,
+				2490326E1D07AF9B002190A6 /* BBBLabel.m in Sources */,
 				24AF42181CE865C000839629 /* BSMeWebVViewController.m in Sources */,
 				247197171D0713EC0051CE5B /* UIImageView+BBBImageViewCategory.m in Sources */,
 				2436BCEE1D010C3A00104856 /* BSCommentTableViewCell.m in Sources */,

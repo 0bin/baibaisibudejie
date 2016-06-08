@@ -255,5 +255,15 @@
     return self.recentComment;
 }
 
+#pragma make <tableView delegate>
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    BSCommentTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    UIMenuController *menu = [UIMenuController sharedMenuController];
+    [menu setTargetRect:cell.bounds inView:cell];
+    
 
+
+
+}
 @end
