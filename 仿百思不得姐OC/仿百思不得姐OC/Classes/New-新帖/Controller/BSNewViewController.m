@@ -8,6 +8,7 @@
 
 #import "BSNewViewController.h"
 #import "UIBarButtonItem+LBButtonToBarButtonItem.h"
+#import "BBBLabel.h"
 
 @interface BSNewViewController ()
 
@@ -31,6 +32,14 @@
         
         [red setFrame:CGRectMake(100, 300, 100, 100)];
     }];
+    
+    BBBLabel *label = [[BBBLabel alloc] init];
+    [label setFrame:CGRectMake(100, 100, 200, 44)];
+    [label setBackgroundColor:[UIColor greenColor]];
+    [label setText:@"dianwo"];
+    [self.view addSubview:label];
+    
+    
     
 }
 

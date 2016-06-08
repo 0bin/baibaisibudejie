@@ -11,3 +11,6 @@
 NSInteger const childVCCount = 7;
 CGFloat const TextCell = 51;
 CGFloat const bottomH = 44;
+
+
+NSString * const BBBTabBarDidSelectedNotification = @"BBBTabBarDidSelectedNotification";

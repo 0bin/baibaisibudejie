@@ -10,9 +10,10 @@
 #import "BSTabBarController.h"
 #import "BSSettingGuideView.h"
 #import "LBTouchTopWindow.h"
+#import "BSConst.h"
 
 
-@interface AppDelegate ()
+@interface AppDelegate () <UITabBarControllerDelegate>
 
 @end
 
@@ -22,16 +23,24 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [[BSTabBarController alloc] init];
-
+    BSTabBarController *tabBar = [[BSTabBarController alloc] init];
+    [tabBar setDelegate:self];
+    self.window.rootViewController = tabBar;
     [self.window makeKeyAndVisible];
     [BSSettingGuideView show];
-//    [LBTouchTopWindow show];
-
- 
     
+    
+    
+//    [LBTouchTopWindow show];
     return YES;
 }
+
+#pragma mark <UITabBarControllerDelegate>
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:BBBTabBarDidSelectedNotification object:nil userInfo:nil];
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

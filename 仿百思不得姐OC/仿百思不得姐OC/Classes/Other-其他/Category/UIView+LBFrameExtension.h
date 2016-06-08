@@ -18,7 +18,9 @@
 @property (nonatomic, assign) CGFloat centerX;
 @property (nonatomic, assign) CGFloat centerY;
 
-
+/**
+ *  当前在屏幕显示
+ */
 - (BOOL)isShowingOnKeyWindow;
 
 @end

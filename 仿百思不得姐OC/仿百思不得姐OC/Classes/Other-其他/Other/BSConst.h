@@ -21,3 +21,5 @@ typedef enum {
 UIKIT_EXTERN NSInteger const childVCCount;
 UIKIT_EXTERN CGFloat const TextCell;
 UIKIT_EXTERN CGFloat const bottomH;
+
+UIKIT_EXTERN NSString * const BBBTabBarDidSelectedNotification;

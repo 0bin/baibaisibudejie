@@ -13,6 +13,7 @@
 #import "BSMeViewController.h"
 #import "BSTabBar.h"
 #import "BSNavigationController.h"
+#import "BSConst.h"
 
 
 @interface BSTabBarController ()
@@ -41,9 +42,10 @@
     //通过kvc替换系统tabbar
     BSTabBar *tabBar = [[BSTabBar alloc] init];
     [self setValue:tabBar forKeyPath:@"tabBar"];
-
-   
     
+
+
+
 }
 
 /**

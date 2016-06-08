@@ -16,6 +16,8 @@
 #import "BSTextDataModel.h"
 #import "BSTextTableViewCell.h"
 #import "BSCommentViewController.h"
+#import "BSConst.h"
+#import "UIView+LBFrameExtension.h"
 
 
 @interface BSBasicTableViewController ()
@@ -28,6 +30,7 @@
 @property (assign, nonatomic) NSInteger page;
 /** 加载页数 */
 @property (assign, nonatomic) NSDictionary *parameters;
+@property (assign, nonatomic) NSInteger  selectedIndex;
 
 @end
 
@@ -48,8 +51,23 @@
     [super viewDidLoad];
     //添加刷新控件
     [self addRefreshController];
+    //接收tabbar点击
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarSelected) name:BBBTabBarDidSelectedNotification object:nil];
     
 }
+
+/**
+ *  接受通知后执行刷新table
+ */
+- (void)tabBarSelected
+{
+
+    if (self.selectedIndex == self.tabBarController.selectedIndex && self.view.isShowingOnKeyWindow ) {
+          [self.tableView.mj_header beginRefreshing];
+    }
+    self.selectedIndex = self.tabBarController.selectedIndex;
+}
+
 
 /**
  *  添加刷新控件

@@ -13,7 +13,6 @@
 #import "UIView+LBFrameExtension.h"
 #import "BSCommentModel.h"
 #import "BSCommentTableViewCell.h"
-
 #import <MJRefresh.h>
 #import <AFNetworking.h>
 #import <YYModel.h>
@@ -21,9 +20,7 @@
 @interface BSCommentViewController () <UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *toolBarBottomLine;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-/**
- *  <#Description#>
- */
+
 @property (strong, nonatomic) NSArray *hotComment;
 @property (strong, nonatomic) NSMutableArray *recentComment;
 @property (assign, nonatomic) NSInteger page;
@@ -257,13 +254,36 @@
 
 #pragma make <tableView delegate>
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    BSCommentTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+
     UIMenuController *menu = [UIMenuController sharedMenuController];
-    [menu setTargetRect:cell.bounds inView:cell];
-    
+    if (menu.isMenuVisible) {
+        [menu setMenuVisible:NO animated:YES];
+    } else {
+        BSCommentTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+        CGRect rect = CGRectMake(cell.x, cell.height * 0.5, cell.width , cell.height * 0.5);
+        [menu setTargetRect:rect inView:cell];
+        [menu setMenuVisible:YES animated:YES];
+        [cell becomeFirstResponder];
+        
+        UIMenuItem *ding = [[UIMenuItem alloc] initWithTitle:@"ding" action:@selector(ding:)];
+        UIMenuItem *cai = [[UIMenuItem alloc] initWithTitle:@"cai " action:@selector(cai :)];
+        UIMenuItem *jubao = [[UIMenuItem alloc] initWithTitle:@"jubao" action:@selector(jubao:)];
+        menu.menuItems = @[ding,cai,jubao];
+    }
+}
 
-
-
+- (void)ding:(UIMenuController *)menu
+{
+    NSIndexPath *indexpath = [self.tableView indexPathForSelectedRow];
+    NSLog(@"---%@---",indexpath);
+      NSLog(@"%s",__func__);
+}
+- (void)cai :(UIMenuController *)menu
+{
+    NSLog(@"%s",__func__);
+}
+- (void)jubao:(UIMenuController *)menu
+{
+    NSLog(@"%s",__func__);
 }
 @end

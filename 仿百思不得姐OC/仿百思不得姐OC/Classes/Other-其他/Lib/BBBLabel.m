@@ -40,13 +40,42 @@
 
 }
 
-- (BOOL)canBecomeFocused
+/**
+ *  设置控件能成为第一响应者			
+ */
+- (BOOL)canBecomeFirstResponder
 {
     return YES;
 }
 
+/**
+ *  弹出选项，yes显示全部
+ */
 - (BOOL)canPerformAction:(SEL)action withSender:(id)sender
 {
-    return YES;
+    if (action == @selector(cut:) || action == @selector(copy:) || action == @selector(paste:) ) {
+        return YES;
+    }
+    return NO;
+}
+
+- (void)copy:(UIMenuController *)menu
+{
+    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+    pasteboard.string = self.text;
+   
+    
+}
+- (void)cut:(UIMenuController *)menu
+{
+    [self copy:menu];
+    self.text = nil;
+
+}
+- (void)paste:(UIMenuController *)menu
+{
+    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+    self.text = pasteboard.string ;
+    
 }
 @end

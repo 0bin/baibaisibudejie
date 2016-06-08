@@ -25,7 +25,17 @@
 
 
 @implementation BSCommentTableViewCell
-
+/**
+ *  设置menu
+ */
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender
+{
+    return NO;
+}
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
