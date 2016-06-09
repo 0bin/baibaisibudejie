@@ -14,11 +14,11 @@
 		2409235F1CED4BAF00863061 /* BSTextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2409235D1CED4BAF00863061 /* BSTextTableViewCell.m */; };
 		240923601CED4BAF00863061 /* BSTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2409235E1CED4BAF00863061 /* BSTextTableViewCell.xib */; };
 		240923631CEDEC4500863061 /* NSDate+LBDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 240923621CEDEC4500863061 /* NSDate+LBDate.m */; };
-		240C88481CDF114600CFAE58 /* BSPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 240C88461CDF114600CFAE58 /* BSPublishViewController.m */; };
-		240C88491CDF114600CFAE58 /* BSPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 240C88471CDF114600CFAE58 /* BSPublishViewController.xib */; };
 		240C884C1CDF43E500CFAE58 /* LBVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 240C884B1CDF43E500CFAE58 /* LBVerticalButton.m */; };
 		2415D02E1CE21BF600A2E55E /* BSMeDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2415D02D1CE21BF600A2E55E /* BSMeDataModel.m */; };
 		24250BF51CE748D200182957 /* LBTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24250BF41CE748D200182957 /* LBTableFooterView.m */; };
+		242FEC4D1D095D40001A9E1A /* BSPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 242FEC491D095D40001A9E1A /* BSPublishViewController.m */; };
+		242FEC4E1D095D40001A9E1A /* BSPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 242FEC4A1D095D40001A9E1A /* BSPublishViewController.xib */; };
 		243200CC1CEC336400B8D45F /* BSTextDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 243200CB1CEC336400B8D45F /* BSTextDataModel.m */; };
 		24333A931D045FD5003C9C6F /* LBTouchTopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 24333A921D045FD5003C9C6F /* LBTouchTopWindow.m */; };
 		2436BCEE1D010C3A00104856 /* BSCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2436BCEC1D010C3A00104856 /* BSCommentTableViewCell.m */; };
@@ -102,15 +102,15 @@
 		2409235E1CED4BAF00863061 /* BSTextTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSTextTableViewCell.xib; sourceTree = "<group>"; };
 		240923611CEDEC4500863061 /* NSDate+LBDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+LBDate.h"; sourceTree = "<group>"; };
 		240923621CEDEC4500863061 /* NSDate+LBDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+LBDate.m"; sourceTree = "<group>"; };
-		240C88451CDF114600CFAE58 /* BSPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPublishViewController.h; sourceTree = "<group>"; };
-		240C88461CDF114600CFAE58 /* BSPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPublishViewController.m; sourceTree = "<group>"; };
-		240C88471CDF114600CFAE58 /* BSPublishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSPublishViewController.xib; sourceTree = "<group>"; };
 		240C884A1CDF43E500CFAE58 /* LBVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBVerticalButton.h; sourceTree = "<group>"; };
 		240C884B1CDF43E500CFAE58 /* LBVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBVerticalButton.m; sourceTree = "<group>"; };
 		2415D02C1CE21BF600A2E55E /* BSMeDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMeDataModel.h; sourceTree = "<group>"; };
 		2415D02D1CE21BF600A2E55E /* BSMeDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMeDataModel.m; sourceTree = "<group>"; };
 		24250BF31CE748D200182957 /* LBTableFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBTableFooterView.h; sourceTree = "<group>"; };
 		24250BF41CE748D200182957 /* LBTableFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBTableFooterView.m; sourceTree = "<group>"; };
+		242FEC481D095D40001A9E1A /* BSPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPublishViewController.h; sourceTree = "<group>"; };
+		242FEC491D095D40001A9E1A /* BSPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPublishViewController.m; sourceTree = "<group>"; };
+		242FEC4A1D095D40001A9E1A /* BSPublishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSPublishViewController.xib; sourceTree = "<group>"; };
 		243200CA1CEC336400B8D45F /* BSTextDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BSTextDataModel.h; path = ../View/BSTextDataModel.h; sourceTree = "<group>"; };
 		243200CB1CEC336400B8D45F /* BSTextDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BSTextDataModel.m; path = ../View/BSTextDataModel.m; sourceTree = "<group>"; };
 		24333A911D045FD5003C9C6F /* LBTouchTopWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBTouchTopWindow.h; sourceTree = "<group>"; };
@@ -236,6 +236,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		242FEC461D095D40001A9E1A /* Publish-发帖 */ = {
+			isa = PBXGroup;
+			children = (
+				242FEC471D095D40001A9E1A /* Controller */,
+				242FEC4B1D095D40001A9E1A /* Model */,
+				242FEC4C1D095D40001A9E1A /* View */,
+			);
+			path = "Publish-发帖";
+			sourceTree = "<group>";
+		};
+		242FEC471D095D40001A9E1A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				242FEC481D095D40001A9E1A /* BSPublishViewController.h */,
+				242FEC491D095D40001A9E1A /* BSPublishViewController.m */,
+				242FEC4A1D095D40001A9E1A /* BSPublishViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		242FEC4B1D095D40001A9E1A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		242FEC4C1D095D40001A9E1A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		244350AE1CD986B0008767FB = {
 			isa = PBXGroup;
 			children = (
@@ -302,6 +336,7 @@
 				245187841CEEEB4B0045D810 /* BSConst.m */,
 				244350BD1CD986B0008767FB /* AppDelegate.h */,
 				244350BE1CD986B0008767FB /* AppDelegate.m */,
+				242FEC461D095D40001A9E1A /* Publish-发帖 */,
 				24CAA6751CD98CC6005AD776 /* Attention-关注 */,
 				24CAA6811CD98CC6005AD776 /* Essence-精华 */,
 				24CAA6871CD98CC6005AD776 /* Me-我 */,
@@ -538,9 +573,6 @@
 				24CAA69B1CD98CC6005AD776 /* BSNavigationController.m */,
 				24CAA69C1CD98CC6005AD776 /* BSTabBarController.h */,
 				24CAA69D1CD98CC6005AD776 /* BSTabBarController.m */,
-				240C88451CDF114600CFAE58 /* BSPublishViewController.h */,
-				240C88461CDF114600CFAE58 /* BSPublishViewController.m */,
-				240C88471CDF114600CFAE58 /* BSPublishViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -720,7 +752,6 @@
 				247F23F51CDB73A2009A6595 /* BSLoginViewController.xib in Resources */,
 				24E0CF4F1CF5DDAC00931BC3 /* BSVoiceView.xib in Resources */,
 				249C59A21CFEA13A007A1330 /* BSCommentViewController.xib in Resources */,
-				240C88491CDF114600CFAE58 /* BSPublishViewController.xib in Resources */,
 				24CAA6A61CD98CC6005AD776 /* BSAttentionViewController.xib in Resources */,
 				24CAA6A81CD98CC6005AD776 /* BSRecommendViewController.xib in Resources */,
 				2436BCEF1D010C3A00104856 /* BSCommentTableViewCell.xib in Resources */,
@@ -732,6 +763,7 @@
 				2448FBED1CD9A13D00E49921 /* BSTitleTableViewCell.xib in Resources */,
 				24047C101CF6C772000C9549 /* BSVedioView.xib in Resources */,
 				24E31CFE1CDCDF0200A42C26 /* BSSettingGuideView.xib in Resources */,
+				242FEC4E1D095D40001A9E1A /* BSPublishViewController.xib in Resources */,
 				24CFF4481CF5690F0005B1D6 /* BSPictureFullScreenViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -807,7 +839,6 @@
 			files = (
 				2415D02E1CE21BF600A2E55E /* BSMeDataModel.m in Sources */,
 				24569FB11CFD8F8A0052AB52 /* BSUserModel.m in Sources */,
-				240C88481CDF114600CFAE58 /* BSPublishViewController.m in Sources */,
 				249C59A11CFEA13A007A1330 /* BSCommentViewController.m in Sources */,
 				24CAA6A91CD98CC6005AD776 /* BSCategoryModel.m in Sources */,
 				24E0CF4D1CF5DD9900931BC3 /* BSVoiceView.m in Sources */,
@@ -823,6 +854,7 @@
 				24CAA6B21CD98CC6005AD776 /* BSTabBar.m in Sources */,
 				246487CC1CFC29BB0074B562 /* BSScanQRCodeViewController.m in Sources */,
 				24CAA6AA1CD98CC6005AD776 /* BSEssenceViewController.m in Sources */,
+				242FEC4D1D095D40001A9E1A /* BSPublishViewController.m in Sources */,
 				2403C3E71CFBC7FE0020AA2A /* LBPopoverView.m in Sources */,
 				24CAA6A51CD98CC6005AD776 /* BSAttentionViewController.m in Sources */,
 				24CAA6AD1CD98CC6005AD776 /* UIBarButtonItem+LBButtonToBarButtonItem.m in Sources */,

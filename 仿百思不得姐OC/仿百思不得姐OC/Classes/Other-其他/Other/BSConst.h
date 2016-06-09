@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ 页面类型
+ */
 typedef enum {
     BSBasicTypeAll = 1,
     BSBasicTypeText = 29,
@@ -18,8 +21,12 @@ typedef enum {
     BSBasicTypeOther = 13096,
 } BSBasicType;
 
+
+/**
+ *  tabbar选中通知
+ */
+UIKIT_EXTERN NSString * const BBBTabBarDidSelectedNotification;
+
 UIKIT_EXTERN NSInteger const childVCCount;
 UIKIT_EXTERN CGFloat const TextCell;
 UIKIT_EXTERN CGFloat const bottomH;
-
-UIKIT_EXTERN NSString * const BBBTabBarDidSelectedNotification;

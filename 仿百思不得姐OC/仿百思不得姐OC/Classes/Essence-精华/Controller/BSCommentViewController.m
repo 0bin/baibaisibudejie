@@ -69,6 +69,9 @@
    
 }
 
+/**
+ *  设置上啦下拉刷新
+ */
 - (void)setRefresh {
     
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadCommentData)];
@@ -77,6 +80,10 @@
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreComentData)];
 }
 
+
+/**
+ *  加载更多数据
+ */
 - (void)loadMoreComentData {
     //取消manager内的所有任务
     [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
@@ -104,6 +111,12 @@
         self.page = page;
         [self.tableView reloadData];
         [self.tableView.mj_footer endRefreshing];
+        NSInteger total = [responseObject[@"total"] integerValue];
+        if (self.recentComment.count >= total) {
+            self.tableView.mj_footer.hidden = YES;
+        } else {
+            [self.tableView.mj_footer endRefreshing];
+        }
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [self.tableView.mj_footer setHidden:YES];
@@ -113,6 +126,10 @@
 
 
 }
+
+/**
+ *  加载数据
+ */
 - (void)loadCommentData {
     //取消manager内的所有任务
     [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];

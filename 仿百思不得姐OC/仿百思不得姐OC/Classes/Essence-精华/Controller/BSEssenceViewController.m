@@ -221,14 +221,6 @@
 
     //添加控制器对应的视图
     NSInteger index = scrollView.contentOffset.x / scrollView.width;
-    BSEssenceALLTableController *all = self.childViewControllers[index];
-    if ([all isViewLoaded]) return;
-    [all.view setFrame:CGRectMake(scrollView.contentOffset.x, 0, scrollView.width, scrollView.height)];
-    [all.tableView setContentInset:UIEdgeInsetsMake(CGRectGetMaxY(self.titleScroll.frame), 0, self.tabBarController.tabBar.height, 0)];
-    [self.contentScroll addSubview:all.view];
-    
-
-    
     //设置button点击居中
     UIButton *button = self.titleScroll.subviews[index];
     CGFloat buttonX = button.centerX - scrollView.width * 0.5;
@@ -240,6 +232,17 @@
         buttonX = self.titleScroll.contentSize.width - scrollView.width;
     }
     [self.titleScroll setContentOffset:CGPointMake(buttonX,0) animated:YES];
+    
+    
+    
+    BSEssenceALLTableController *all = self.childViewControllers[index];
+    if ([all isViewLoaded]) return;
+    [all.view setFrame:CGRectMake(scrollView.contentOffset.x, 0, scrollView.width, scrollView.height)];
+    [all.tableView setContentInset:UIEdgeInsetsMake(CGRectGetMaxY(self.titleScroll.frame), 0, self.tabBarController.tabBar.height, 0)];
+    [self.contentScroll addSubview:all.view];
+
+    
+
 
 }
 
