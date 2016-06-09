@@ -14,8 +14,20 @@
 
 @implementation BSNavigationController
 + (void)initialize {
+    UINavigationBar *bar = [UINavigationBar appearance];
+    [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
+    [bar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:20]}];
     
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
+    UIBarButtonItem *item = [UIBarButtonItem appearance];
+    NSMutableDictionary *attr = [NSMutableDictionary dictionary];
+    attr[NSForegroundColorAttributeName] = [UIColor blackColor];
+    [item setTitleTextAttributes:attr forState:UIControlStateNormal];
+    
+    NSMutableDictionary *attrD = [NSMutableDictionary dictionary];
+    attrD[NSForegroundColorAttributeName] = [UIColor lightGrayColor];
+    [item setTitleTextAttributes:attrD forState:UIControlStateDisabled];
+    
+    
 }
 - (void)viewDidLoad {
     [super viewDidLoad];

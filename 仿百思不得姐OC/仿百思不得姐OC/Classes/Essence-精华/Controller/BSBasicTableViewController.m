@@ -11,6 +11,7 @@
 #import <AFNetworking.h>
 #import <UIImageView+WebCache.h>
 #import <MJRefresh.h>
+#import <SVProgressHUD.h>
 
 #import "BSBasicTableViewController.h"
 #import "BSTextDataModel.h"
@@ -53,6 +54,8 @@
     [self addRefreshController];
     //接收tabbar点击
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarSelected) name:BBBTabBarDidSelectedNotification object:nil];
+
+
     
 }
 
@@ -87,6 +90,10 @@
  */
 - (void)loadTextData:(UIRefreshControl *)refresh {
     
+    [SVProgressHUD show];
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+
+    
     [self.tableView.mj_footer endRefreshing];
     //请求数据
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
@@ -114,8 +121,10 @@
         //结束刷新
         [self.tableView.mj_header endRefreshing];
         self.page = 0;
+        [SVProgressHUD dismiss];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [self.tableView.mj_header endRefreshing];
+        [SVProgressHUD showErrorWithStatus:@"加载失败，请检查网络"];
     }];
     
 }

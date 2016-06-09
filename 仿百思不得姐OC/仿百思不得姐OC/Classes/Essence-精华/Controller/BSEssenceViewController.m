@@ -232,17 +232,12 @@
         buttonX = self.titleScroll.contentSize.width - scrollView.width;
     }
     [self.titleScroll setContentOffset:CGPointMake(buttonX,0) animated:YES];
-    
-    
-    
+  
     BSEssenceALLTableController *all = self.childViewControllers[index];
     if ([all isViewLoaded]) return;
     [all.view setFrame:CGRectMake(scrollView.contentOffset.x, 0, scrollView.width, scrollView.height)];
     [all.tableView setContentInset:UIEdgeInsetsMake(CGRectGetMaxY(self.titleScroll.frame), 0, self.tabBarController.tabBar.height, 0)];
     [self.contentScroll addSubview:all.view];
-
-    
-
 
 }
 

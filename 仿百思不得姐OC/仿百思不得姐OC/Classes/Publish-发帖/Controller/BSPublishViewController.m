@@ -10,6 +10,8 @@
 #import "LBVerticalButton.h"
 #import <pop/POP.h>
 #import "UIView+LBFrameExtension.h"
+#import "BSPublishTextController.h"
+#import "BSNavigationController.h"
 
 @interface BSPublishViewController ()
 
@@ -23,7 +25,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-//数据
+    [self setButtonWithAnimation];
+
+    
+}
+
+
+- (void)setButtonWithAnimation
+{
+    //数据
     NSArray *imageNames = @[@"publish-video", @"publish-picture", @"publish-text", @"publish-audio", @"publish-review", @"publish-offline"];
     NSArray *buttonTitles = @[@"视频", @"图片", @"段子", @"声音", @"审帖", @"离线下载"];
     
@@ -36,9 +46,11 @@
     CGFloat buttonH = buttonW + 30;
     CGFloat cloumnMargin = (screenW - column * buttonW) / (column + 1);
     CGFloat buttonStartY = (screenH - buttonH * 2) * 0.5;
-//添加button
-    for (NSInteger i = 0; i < buttomNumber; i++) {
+    //添加button
+    for (NSInteger i = 0; i < buttomNumber; i++)
+    {
         LBVerticalButton *button = [[LBVerticalButton alloc] init];
+        button.tag = i;
         button.imageView.image = [UIImage imageNamed:imageNames[i]];
         [button setImage:[UIImage imageNamed:imageNames[i]] forState:UIControlStateNormal];
         [button setTitle:buttonTitles[i] forState:UIControlStateNormal];
@@ -49,7 +61,7 @@
         [button addTarget:self action:@selector(publishButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         [button setFrame:CGRectMake(buttonX, buttonY, buttonW,buttonH)];
         [self.view addSubview:button];
-//设置button动画
+        //设置button动画
         POPSpringAnimation *animation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewFrame];
         animation.fromValue = [NSValue valueWithCGRect:CGRectMake(buttonX, buttonY - screenH, buttonW, buttonH)];
         animation.toValue = [NSValue valueWithCGRect:CGRectMake(buttonX, buttonY, buttonW, buttonH)];;
@@ -59,7 +71,7 @@
         [button pop_addAnimation:animation forKey:nil];
     }
     
-//添加宣传语并设置动画
+    //添加宣传语并设置动画
     UIImageView *slogan = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"app_slogan"]];
     [self.view addSubview:slogan];
     POPSpringAnimation *animation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewCenter];
@@ -69,16 +81,18 @@
     animation.springSpeed = 5;
     animation.beginTime = CACurrentMediaTime() + imageNames.count * 0.1;
     [slogan pop_addAnimation:animation forKey:nil];
-
-    
 }
-
 
 /**
  *  button点击
  */
 - (void)publishButtonClick:(UIButton *)button {
-      NSLog(@"%s",__func__);
+      
+    if (button.tag == 2) {
+        BSPublishTextController *textVC = [[BSPublishTextController alloc] init];
+        BSNavigationController *nav = [[BSNavigationController alloc] initWithRootViewController:textVC];
+        [self presentViewController:nav animated:YES completion:nil];
+    }
 
 }
 
