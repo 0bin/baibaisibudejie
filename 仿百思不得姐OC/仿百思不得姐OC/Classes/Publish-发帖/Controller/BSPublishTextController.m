@@ -6,7 +6,10 @@
 //  Copyright © 2016年 LinBin. All rights reserved.
 //
 
+
+
 #import "BSPublishTextController.h"
+#import "BSPlaceholderTextView.h"
 
 @interface BSPublishTextController ()
 
@@ -17,33 +20,51 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor redColor];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStyleDone target:self action:@selector(cancelButton)];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"发布" style:UIBarButtonItemStyleDone target:self action:@selector(publishButton)];
+    [self setNavigation];
+    [self setTextView];
+    
 
-    self.title = @"发帖子";
-
-    self.navigationItem.rightBarButtonItem.enabled = NO;
-    //强制刷新 检测button状态
-    [self .navigationController.navigationBar layoutIfNeeded];
+    
     
 }
 
+/**
+ *  设置textView
+ */
+- (void)setTextView
+{
+    BSPlaceholderTextView *textView = [[BSPlaceholderTextView alloc] init];
+    textView.frame = self.view.bounds;
+    textView.placeholder = @"xxxxxxxxxxxxxxooooo占位ooooooooxoxxxxxxxxxdsdfdsfdfjksjfkjdfjkdsjfklsjldfjldksjflksdjflkjsdlkfj";
+    [self.view addSubview:textView];
 
+}
 
+/**
+ *  设置导航栏
+ */
+- (void)setNavigation
+{
+    self.view.backgroundColor = [UIColor grayColor];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStyleDone target:self action:@selector(cancelButton)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"发布" style:UIBarButtonItemStyleDone target:self action:@selector(publishButton)];
+    self.title = @"发帖子";
+    self.navigationItem.rightBarButtonItem.enabled = NO;
+    //强制刷新 检测button状态
+    [self .navigationController.navigationBar layoutIfNeeded];
+
+}
 
 
 
 - (void)cancelButton
 {
     [self dismissViewControllerAnimated:YES completion:nil];
-
 }
 
 - (void)publishButton
 {
      NSLog(@"--------------publish---------");
-
 }
 
 

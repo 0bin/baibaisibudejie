@@ -36,6 +36,7 @@
 		245187851CEEEB4B0045D810 /* BSConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 245187841CEEEB4B0045D810 /* BSConst.m */; };
 		24569FB11CFD8F8A0052AB52 /* BSUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24569FB01CFD8F8A0052AB52 /* BSUserModel.m */; };
 		24569FB41CFD927B0052AB52 /* BSCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24569FB31CFD927B0052AB52 /* BSCommentModel.m */; };
+		245708931D0C396800F084BF /* BSPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 245708921D0C396800F084BF /* BSPlaceholderTextView.m */; };
 		246487CC1CFC29BB0074B562 /* BSScanQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246487CA1CFC29BB0074B562 /* BSScanQRCodeViewController.m */; };
 		246487CD1CFC29BB0074B562 /* BSScanQRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 246487CB1CFC29BB0074B562 /* BSScanQRCodeViewController.xib */; };
 		246BE5771CF94A4000575708 /* BSTextEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246BE5751CF94A4000575708 /* BSTextEssenceViewController.m */; };
@@ -145,6 +146,8 @@
 		24569FB01CFD8F8A0052AB52 /* BSUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSUserModel.m; sourceTree = "<group>"; };
 		24569FB21CFD927B0052AB52 /* BSCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCommentModel.h; sourceTree = "<group>"; };
 		24569FB31CFD927B0052AB52 /* BSCommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCommentModel.m; sourceTree = "<group>"; };
+		245708911D0C396800F084BF /* BSPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPlaceholderTextView.h; sourceTree = "<group>"; };
+		245708921D0C396800F084BF /* BSPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPlaceholderTextView.m; sourceTree = "<group>"; };
 		246487C91CFC29BB0074B562 /* BSScanQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSScanQRCodeViewController.h; sourceTree = "<group>"; };
 		246487CA1CFC29BB0074B562 /* BSScanQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSScanQRCodeViewController.m; sourceTree = "<group>"; };
 		246487CB1CFC29BB0074B562 /* BSScanQRCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSScanQRCodeViewController.xib; sourceTree = "<group>"; };
@@ -271,6 +274,8 @@
 		242FEC4C1D095D40001A9E1A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				245708911D0C396800F084BF /* BSPlaceholderTextView.h */,
+				245708921D0C396800F084BF /* BSPlaceholderTextView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -888,6 +893,7 @@
 				244350BC1CD986B0008767FB /* main.m in Sources */,
 				24DA7B101CF176B6004EC3FE /* BSPictureCellView.m in Sources */,
 				247F23F41CDB73A2009A6595 /* BSLoginViewController.m in Sources */,
+				245708931D0C396800F084BF /* BSPlaceholderTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
