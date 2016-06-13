@@ -16,6 +16,8 @@
 		240923631CEDEC4500863061 /* NSDate+LBDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 240923621CEDEC4500863061 /* NSDate+LBDate.m */; };
 		240C884C1CDF43E500CFAE58 /* LBVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 240C884B1CDF43E500CFAE58 /* LBVerticalButton.m */; };
 		2415D02E1CE21BF600A2E55E /* BSMeDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2415D02D1CE21BF600A2E55E /* BSMeDataModel.m */; };
+		242468511D0EE26B00E676C1 /* BSPublishTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 242468501D0EE26B00E676C1 /* BSPublishTool.m */; };
+		242468531D0EE3C200E676C1 /* BSPublishTool.xib in Resources */ = {isa = PBXBuildFile; fileRef = 242468521D0EE3C200E676C1 /* BSPublishTool.xib */; };
 		24250BF51CE748D200182957 /* LBTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24250BF41CE748D200182957 /* LBTableFooterView.m */; };
 		242FEC4D1D095D40001A9E1A /* BSPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 242FEC491D095D40001A9E1A /* BSPublishViewController.m */; };
 		242FEC4E1D095D40001A9E1A /* BSPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 242FEC4A1D095D40001A9E1A /* BSPublishViewController.xib */; };
@@ -108,6 +110,9 @@
 		240C884B1CDF43E500CFAE58 /* LBVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBVerticalButton.m; sourceTree = "<group>"; };
 		2415D02C1CE21BF600A2E55E /* BSMeDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMeDataModel.h; sourceTree = "<group>"; };
 		2415D02D1CE21BF600A2E55E /* BSMeDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMeDataModel.m; sourceTree = "<group>"; };
+		2424684F1D0EE26B00E676C1 /* BSPublishTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPublishTool.h; sourceTree = "<group>"; };
+		242468501D0EE26B00E676C1 /* BSPublishTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPublishTool.m; sourceTree = "<group>"; };
+		242468521D0EE3C200E676C1 /* BSPublishTool.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSPublishTool.xib; sourceTree = "<group>"; };
 		24250BF31CE748D200182957 /* LBTableFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBTableFooterView.h; sourceTree = "<group>"; };
 		24250BF41CE748D200182957 /* LBTableFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBTableFooterView.m; sourceTree = "<group>"; };
 		242FEC481D095D40001A9E1A /* BSPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPublishViewController.h; sourceTree = "<group>"; };
@@ -276,6 +281,9 @@
 			children = (
 				245708911D0C396800F084BF /* BSPlaceholderTextView.h */,
 				245708921D0C396800F084BF /* BSPlaceholderTextView.m */,
+				2424684F1D0EE26B00E676C1 /* BSPublishTool.h */,
+				242468501D0EE26B00E676C1 /* BSPublishTool.m */,
+				242468521D0EE3C200E676C1 /* BSPublishTool.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -762,6 +770,7 @@
 				247F23F51CDB73A2009A6595 /* BSLoginViewController.xib in Resources */,
 				24E0CF4F1CF5DDAC00931BC3 /* BSVoiceView.xib in Resources */,
 				249C59A21CFEA13A007A1330 /* BSCommentViewController.xib in Resources */,
+				242468531D0EE3C200E676C1 /* BSPublishTool.xib in Resources */,
 				24CAA6A61CD98CC6005AD776 /* BSAttentionViewController.xib in Resources */,
 				24CAA6A81CD98CC6005AD776 /* BSRecommendViewController.xib in Resources */,
 				2436BCEF1D010C3A00104856 /* BSCommentTableViewCell.xib in Resources */,
@@ -851,6 +860,7 @@
 				24569FB11CFD8F8A0052AB52 /* BSUserModel.m in Sources */,
 				249C59A11CFEA13A007A1330 /* BSCommentViewController.m in Sources */,
 				24CAA6A91CD98CC6005AD776 /* BSCategoryModel.m in Sources */,
+				242468511D0EE26B00E676C1 /* BSPublishTool.m in Sources */,
 				24E0CF4D1CF5DD9900931BC3 /* BSVoiceView.m in Sources */,
 				2448FBE81CD99B5E00E49921 /* Foundation+Log.m in Sources */,
 				24CAA6A71CD98CC6005AD776 /* BSRecommendViewController.m in Sources */,

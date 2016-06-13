@@ -19,8 +19,15 @@
 @property (nonatomic, assign) CGFloat centerY;
 
 /**
+ *  从xib加载控件
+ */
++ (instancetype)initWithFromXib;
+
+
+/**
  *  当前在屏幕显示
  */
 - (BOOL)isShowingOnKeyWindow;
+
 
 @end

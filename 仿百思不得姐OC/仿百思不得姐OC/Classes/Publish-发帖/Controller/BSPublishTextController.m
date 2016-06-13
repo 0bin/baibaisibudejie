@@ -10,8 +10,10 @@
 
 #import "BSPublishTextController.h"
 #import "BSPlaceholderTextView.h"
+#import "BSPublishTool.h"
+#import "UIView+LBFrameExtension.h"
 
-@interface BSPublishTextController ()
+@interface BSPublishTextController () <UITextViewDelegate>
 
 @end
 
@@ -22,20 +24,39 @@
     // Do any additional setup after loading the view.
     [self setNavigation];
     [self setTextView];
+    [self addTool];
     
 
-    
     
 }
 
+- (void)addTool
+{
+    BSPublishTool *tool = [BSPublishTool initWithFromXib];
+    tool.width = self.view.width;
+    tool.x = 0;
+    tool.y = self.view.height - tool.height;
+    
+    
+    [self.view addSubview:tool];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardChange:) name:UIKeyboardDidChangeFrameNotification object:nil];
+}
+
+- (void)keyboardChange:(NSNotification *)notify
+{
+   
+}
 /**
  *  设置textView
  */
 - (void)setTextView
 {
     BSPlaceholderTextView *textView = [[BSPlaceholderTextView alloc] init];
+    textView.delegate = self;
     textView.frame = self.view.bounds;
-    textView.placeholder = @"xxxxxxxxxxxxxxooooo占位ooooooooxoxxxxxxxxxdsdfdsfdfjksjfkjdfjkdsjfklsjldfjldksjflksdjflkjsdlkfj";
+    textView.placeholder = @"xxxxxxxxxxxxxxooooo占位";
+//    textView.inputAccessoryView = [BSPublishTool initWithFromXib];
     [self.view addSubview:textView];
 
 }
@@ -73,14 +94,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - textView Delegate
+- (void)textViewDidChange:(UITextView *)textView
+{
+    self.navigationItem.rightBarButtonItem.enabled = textView.hasText;
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
-*/
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    [self.view endEditing:YES];
+}
 
 @end

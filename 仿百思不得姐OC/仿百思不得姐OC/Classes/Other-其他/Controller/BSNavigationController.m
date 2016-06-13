@@ -33,7 +33,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     //设置所有的导航栏
-
+    self.interactivePopGestureRecognizer.delegate = nil;
 
 }
 /**

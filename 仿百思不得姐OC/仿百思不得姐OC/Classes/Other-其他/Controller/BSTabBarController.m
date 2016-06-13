@@ -42,6 +42,8 @@
     //通过kvc替换系统tabbar
     BSTabBar *tabBar = [[BSTabBar alloc] init];
     [self setValue:tabBar forKeyPath:@"tabBar"];
+    
+    
 
 }
 

@@ -7,6 +7,13 @@
 #import "UIView+LBFrameExtension.h"
 
 @implementation UIView (LBFrameExtension)
+
++ (instancetype)initWithFromXib
+{
+    return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil].lastObject;
+}
+
+
 - (BOOL)isShowingOnKeyWindow
 {
     UIWindow *keywindow = [UIApplication sharedApplication].keyWindow;
@@ -18,18 +25,22 @@
     return isShowOnKeyWindow;
 
 }
+
 - (CGFloat)width {
 
     return self.frame.size.width;
 }
+
 - (CGFloat)height {
     
     return self.frame.size.height;
 }
+
 - (CGFloat)x {
     
     return self.frame.origin.x;
 }
+
 - (CGFloat)y {
     
      return self.frame.origin.y;
@@ -49,9 +60,6 @@
 
     return self.center.y;
 }
-
-
-
 
 - (void)setWidth:(CGFloat)width {
 
