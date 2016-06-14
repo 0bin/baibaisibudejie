@@ -10,12 +10,12 @@
 #import "UIBarButtonItem+LBButtonToBarButtonItem.h"
 #import "BBBLabel.h"
 
-@interface BSNewViewController ()
+@interface BSNewViewController () <UICollectionViewDataSource>
 
 @end
 
 @implementation BSNewViewController
-
+static NSString *const cvCell = @"collectCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -24,24 +24,29 @@
     [self.view setBackgroundColor:[UIColor lightGrayColor]];
     
     
-    UIView *red = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
-    [red setBackgroundColor:[UIColor redColor]];
-    [self.view addSubview:red];
+   
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    layout.itemSize = CGSizeMake(250, 180);
+    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     
-    [UIView animateWithDuration:5.0 animations:^{
-        
-        [red setFrame:CGRectMake(100, 300, 100, 100)];
-    }];
+    CGRect frame = CGRectMake(0, 88, self.view.frame.size.width, 200);
+    UICollectionView *collect = [[UICollectionView alloc] initWithFrame:frame collectionViewLayout:layout];
+    [collect setDataSource:self];
+    [collect setBackgroundColor:[UIColor blackColor]];
+    [self.view addSubview:collect];
+    [collect registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:cvCell];
     
-    BBBLabel *label = [[BBBLabel alloc] init];
-    [label setFrame:CGRectMake(100, 100, 200, 44)];
-    [label setBackgroundColor:[UIColor greenColor]];
-    [label setText:@"dianwo"];
-    [self.view addSubview:label];
     
+    
+    self.automaticallyAdjustsScrollViewInsets = NO;
+ 
+    
+
     
     
 }
+
+
 
 - (void)leftButtonClick {
     
@@ -52,6 +57,25 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark - UICollectionViewDataSource
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+
+}
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 55;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cvCell forIndexPath:indexPath];
+    cell.backgroundColor = [UIColor redColor];
+    return  cell;
+
+}
+
 
 /*
 #pragma mark - Navigation

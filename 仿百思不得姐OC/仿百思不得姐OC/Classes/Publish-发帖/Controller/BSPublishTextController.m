@@ -14,7 +14,10 @@
 #import "UIView+LBFrameExtension.h"
 
 @interface BSPublishTextController () <UITextViewDelegate>
-
+/**
+ *  <#Description#>
+ */
+@property (weak, nonatomic) BSPublishTool *tool;
 @end
 
 @implementation BSPublishTextController
@@ -39,14 +42,24 @@
     
     
     [self.view addSubview:tool];
+    self.tool = tool;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardChange:) name:UIKeyboardDidChangeFrameNotification object:nil];
 }
 
 - (void)keyboardChange:(NSNotification *)notify
 {
-   
+    CGRect kbFrame = [notify.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+
+    CGFloat duration = [notify.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    
+    [UIView animateWithDuration:duration animations:^{
+            [self.tool setTransform:CGAffineTransformMakeTranslation(0, kbFrame.origin.y - [UIScreen mainScreen].bounds.size.height )];
+    }];
+    
 }
+
+
 /**
  *  设置textView
  */
