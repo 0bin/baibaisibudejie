@@ -9,6 +9,7 @@
 #import "BSNewViewController.h"
 #import "UIBarButtonItem+LBButtonToBarButtonItem.h"
 #import "BBBLabel.h"
+#import "BBBScrollLayout.h"
 
 @interface BSNewViewController () <UICollectionViewDataSource>
 
@@ -16,6 +17,7 @@
 
 @implementation BSNewViewController
 static NSString *const cvCell = @"collectCell";
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -25,8 +27,8 @@ static NSString *const cvCell = @"collectCell";
     
     
    
-    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-    layout.itemSize = CGSizeMake(250, 180);
+    BBBScrollLayout *layout = [[BBBScrollLayout alloc] init];
+    layout.itemSize = CGSizeMake([UIScreen mainScreen].bounds.size.width * 0.8, 200);
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     
     CGRect frame = CGRectMake(0, 88, self.view.frame.size.width, 200);
@@ -35,9 +37,7 @@ static NSString *const cvCell = @"collectCell";
     [collect setBackgroundColor:[UIColor blackColor]];
     [self.view addSubview:collect];
     [collect registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:cvCell];
-    
-    
-    
+ 
     self.automaticallyAdjustsScrollViewInsets = NO;
  
     
