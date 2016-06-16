@@ -26,7 +26,9 @@
 }
 
 - (void)drawRect:(CGRect)rect {
-    if (self.hasText) {
+    
+    if (self.hasText)
+    {
         return;
     }
     NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
@@ -37,9 +39,7 @@
 }
 
 /**
- *  重写set方法
  *
- *  @param placeholder <#placeholder description#>
  */
 - (void)setPlaceholder:(NSString *)placeholder
 {

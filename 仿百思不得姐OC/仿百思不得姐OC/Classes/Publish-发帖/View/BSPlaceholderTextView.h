@@ -12,5 +12,5 @@
 /**
  *  占位字符
  */
-@property (strong, nonatomic) NSString *placeholder;
+@property (copy, nonatomic) NSString *placeholder;
 @end

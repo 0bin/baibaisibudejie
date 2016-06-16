@@ -4,7 +4,7 @@
 //
 //  Created by LinBin on 16/6/14.
 //  Copyright © 2016年 LinBin. All rights reserved.
-//
+//  自定义水平轮播图
 
 #import <UIKit/UIKit.h>
 
