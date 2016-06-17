@@ -27,6 +27,7 @@
 		242FEC541D09765B001A9E1A /* BSPublishTextController.m in Sources */ = {isa = PBXBuildFile; fileRef = 242FEC531D09765B001A9E1A /* BSPublishTextController.m */; };
 		243200CC1CEC336400B8D45F /* BSTextDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 243200CB1CEC336400B8D45F /* BSTextDataModel.m */; };
 		24333A931D045FD5003C9C6F /* LBTouchTopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 24333A921D045FD5003C9C6F /* LBTouchTopWindow.m */; };
+		243456021D14302000B6F78C /* BBBRoundLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 243456011D14302000B6F78C /* BBBRoundLayout.m */; };
 		2436BCEE1D010C3A00104856 /* BSCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2436BCEC1D010C3A00104856 /* BSCommentTableViewCell.m */; };
 		2436BCEF1D010C3A00104856 /* BSCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2436BCED1D010C3A00104856 /* BSCommentTableViewCell.xib */; };
 		244350BC1CD986B0008767FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 244350BB1CD986B0008767FB /* main.m */; };
@@ -133,6 +134,8 @@
 		243200CB1CEC336400B8D45F /* BSTextDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BSTextDataModel.m; path = ../View/BSTextDataModel.m; sourceTree = "<group>"; };
 		24333A911D045FD5003C9C6F /* LBTouchTopWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBTouchTopWindow.h; sourceTree = "<group>"; };
 		24333A921D045FD5003C9C6F /* LBTouchTopWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBTouchTopWindow.m; sourceTree = "<group>"; };
+		243456001D14302000B6F78C /* BBBRoundLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBRoundLayout.h; sourceTree = "<group>"; };
+		243456011D14302000B6F78C /* BBBRoundLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBRoundLayout.m; sourceTree = "<group>"; };
 		2436BCEB1D010C3A00104856 /* BSCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCommentTableViewCell.h; sourceTree = "<group>"; };
 		2436BCEC1D010C3A00104856 /* BSCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCommentTableViewCell.m; sourceTree = "<group>"; };
 		2436BCED1D010C3A00104856 /* BSCommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSCommentTableViewCell.xib; sourceTree = "<group>"; };
@@ -568,6 +571,8 @@
 				2401CF761D123FA0008C140C /* BBBCustomCollectionCell.xib */,
 				2401CF791D12E67D008C140C /* BBBVerticalLayout.h */,
 				2401CF7A1D12E67D008C140C /* BBBVerticalLayout.m */,
+				243456001D14302000B6F78C /* BBBRoundLayout.h */,
+				243456011D14302000B6F78C /* BBBRoundLayout.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -926,6 +931,7 @@
 				24DA7B101CF176B6004EC3FE /* BSPictureCellView.m in Sources */,
 				247F23F41CDB73A2009A6595 /* BSLoginViewController.m in Sources */,
 				245708931D0C396800F084BF /* BSPlaceholderTextView.m in Sources */,
+				243456021D14302000B6F78C /* BBBRoundLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

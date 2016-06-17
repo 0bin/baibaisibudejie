@@ -8,13 +8,19 @@
 
 #import "BSNewViewController.h"
 #import "UIBarButtonItem+LBButtonToBarButtonItem.h"
+#import "UIView+LBFrameExtension.h"
 #import "BBBLabel.h"
 #import "BBBScrollLayout.h"
 #import "BBBCustomCollectionCell.h"
+#import "BBBVerticalLayout.h"
+#import "BBBRoundLayout.h"
 
 
 @interface BSNewViewController () <UICollectionViewDataSource,UICollectionViewDelegate>
-
+/**
+ *  <#Description#>
+ */
+@property (weak, nonatomic) UICollectionView *collecionView;
 @end
 
 @implementation BSNewViewController
@@ -22,10 +28,10 @@
 #define kScreenW [UIScreen mainScreen].bounds.size.width
 #define kScreenH [UIScreen mainScreen].bounds.size.height
 static NSString *const cvCell = @"collectCell";
-static CGFloat const HorizontalCollectionH = 200;
+static CGFloat const HorizontalCollectionH = 300;
 static CGFloat const HorizontalCollectionY = 66;
 
-static CGFloat const VerticalCollectionY = HorizontalCollectionY + HorizontalCollectionH + 20;
+static CGFloat const VerticalCollectionY = HorizontalCollectionY + HorizontalCollectionH + 44;
 static CGFloat const VerticalCollectionH = 300;
 
 - (void)viewDidLoad {
@@ -35,30 +41,32 @@ static CGFloat const VerticalCollectionH = 300;
     [self setNav];
     [self setHorizontalCollection];
     [self setVerticalCollection];
+    [self addChangeButton];
 
     self.automaticallyAdjustsScrollViewInsets = NO;
    
 }
+- (void)addChangeButton
+{
+
+    UIButton *button = [[UIButton alloc] init];
+    button.size = CGSizeMake(44, 30);
+    
 
 /**
  *  设置collection垂直
  */
 - (void)setVerticalCollection
 {
-    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-    layout.itemSize = CGSizeMake(kScreenW * 0.6, 190);
-    
+    BBBVerticalLayout *layout = [[BBBVerticalLayout alloc] init];
     CGRect frame = CGRectMake(0, VerticalCollectionY, kScreenW, VerticalCollectionH);
     UICollectionView *vCollect = [[UICollectionView alloc] initWithFrame:frame collectionViewLayout:layout];
     [vCollect setDataSource:self];
     [vCollect setDelegate:self];
     [vCollect setBackgroundColor:[UIColor blackColor]];
     [self.view addSubview:vCollect];
-    
     [vCollect registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:cvCell];
     [vCollect registerNib:[UINib nibWithNibName:@"BBBCustomCollectionCell" bundle:nil] forCellWithReuseIdentifier:cvCell];
-
-
 }
 
 /**
@@ -74,9 +82,10 @@ static CGFloat const VerticalCollectionH = 300;
     [collect setDataSource:self];
     [collect setDelegate:self];
     [collect setBackgroundColor:[UIColor blackColor]];
-    [self.view addSubview:collect];
     [collect registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:cvCell];
     [collect registerNib:[UINib nibWithNibName:@"BBBCustomCollectionCell" bundle:nil] forCellWithReuseIdentifier:cvCell];
+    [self.view addSubview:collect];
+    self.collecionView = collect;
     
 }
 
