@@ -41,17 +41,12 @@ static CGFloat const VerticalCollectionH = 300;
     [self setNav];
     [self setHorizontalCollection];
     [self setVerticalCollection];
-    [self addChangeButton];
+
 
     self.automaticallyAdjustsScrollViewInsets = NO;
    
 }
-- (void)addChangeButton
-{
 
-    UIButton *button = [[UIButton alloc] init];
-    button.size = CGSizeMake(44, 30);
-    
 
 /**
  *  设置collection垂直
@@ -93,6 +88,26 @@ static CGFloat const VerticalCollectionH = 300;
 {
     UIBarButtonItem *item = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" highlightImage:@"MainTagSubIconClick" target:self action:@selector(leftButtonClick)];
     [self.navigationItem setLeftBarButtonItem:item];
+    UIButton *button = [[UIButton alloc] init];
+    button.size = CGSizeMake(60, 30);
+    [button setTitle:@"change" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
+    [button addTarget:self action:@selector(clickButtonChange) forControlEvents:UIControlEventTouchUpInside];
+    [self.navigationItem setTitleView:button];
+}
+
+- (void)clickButtonChange
+{
+    if ([self.collecionView.collectionViewLayout isKindOfClass:[BBBScrollLayout class]]) {
+        [self.collecionView setCollectionViewLayout:[[BBBRoundLayout alloc] init] animated:YES];
+    } else {
+        BBBScrollLayout *layout = [[BBBScrollLayout alloc] init];
+        layout.itemSize = CGSizeMake(kScreenW * 0.6, HorizontalCollectionH * 0.9);
+        [self.collecionView setCollectionViewLayout:layout animated:YES];
+    }
+
+
 }
 
 - (void)leftButtonClick {
