@@ -106,7 +106,6 @@
     [[AFHTTPSessionManager manager]GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-         [responseObject writeToFile:@"/Users/linbin/Desktop/xx.plist" atomically:YES];
   
         if (self.parameters != parameters) return;
         self.maxtime = responseObject[@"info"][@"maxtime"];

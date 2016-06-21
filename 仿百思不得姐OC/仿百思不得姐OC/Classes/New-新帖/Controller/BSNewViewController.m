@@ -14,6 +14,7 @@
 #import "BBBCustomCollectionCell.h"
 #import "BBBVerticalLayout.h"
 #import "BBBRoundLayout.h"
+#import "BSWaterfallController.h"
 
 
 @interface BSNewViewController () <UICollectionViewDataSource,UICollectionViewDelegate>
@@ -60,7 +61,7 @@ static CGFloat const VerticalCollectionH = 300;
     [vCollect setDelegate:self];
     [vCollect setBackgroundColor:[UIColor blackColor]];
     [self.view addSubview:vCollect];
-    [vCollect registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:cvCell];
+//    [vCollect registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:cvCell];
     [vCollect registerNib:[UINib nibWithNibName:@"BBBCustomCollectionCell" bundle:nil] forCellWithReuseIdentifier:cvCell];
 }
 
@@ -77,7 +78,7 @@ static CGFloat const VerticalCollectionH = 300;
     [collect setDataSource:self];
     [collect setDelegate:self];
     [collect setBackgroundColor:[UIColor blackColor]];
-    [collect registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:cvCell];
+//    [collect registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:cvCell];
     [collect registerNib:[UINib nibWithNibName:@"BBBCustomCollectionCell" bundle:nil] forCellWithReuseIdentifier:cvCell];
     [self.view addSubview:collect];
     self.collecionView = collect;
@@ -112,7 +113,8 @@ static CGFloat const VerticalCollectionH = 300;
 
 - (void)leftButtonClick {
     
-    NSLog(@"-----------------------");
+    BSWaterfallController *waterfall = [[BSWaterfallController alloc] init];
+    [self.navigationController pushViewController:waterfall animated:YES];
 }
 
 

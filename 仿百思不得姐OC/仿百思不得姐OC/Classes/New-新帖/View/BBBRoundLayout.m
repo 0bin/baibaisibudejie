@@ -30,6 +30,8 @@
 - (void)prepareLayout
 {
     [super prepareLayout];
+    //不清除数组会越来越大
+    [self.arrayM removeAllObjects];
     NSInteger count = [self.collectionView numberOfItemsInSection:0];
     for (NSInteger i = 0; i < count; i++) {
         NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:0];
