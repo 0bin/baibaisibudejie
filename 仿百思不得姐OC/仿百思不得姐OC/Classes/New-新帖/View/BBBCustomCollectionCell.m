@@ -20,7 +20,7 @@
     [super awakeFromNib];
     //(__bridge CGColorRef _Nullable)([UIColor whiteColor])
     self.imageV.layer.borderColor = [[UIColor whiteColor] CGColor];;
-    self.imageV.layer.borderWidth = 2;
+    self.imageV.layer.borderWidth = 1;
 }
 
 - (void)setImageName:(NSString *)imageName

@@ -12,16 +12,22 @@
 #import "BBBLabel.h"
 #import "BBBScrollLayout.h"
 #import "BBBCustomCollectionCell.h"
-#import "BBBVerticalLayout.h"
 #import "BBBRoundLayout.h"
 #import "BSWaterfallController.h"
+#import "BBBWaterfallLayout.h"
 
 
-@interface BSNewViewController () <UICollectionViewDataSource,UICollectionViewDelegate>
+@interface BSNewViewController () <UICollectionViewDataSource,UICollectionViewDelegate,BBBWaterfallLayoutDelegate,UICollectionViewDelegateFlowLayout>
 /**
- *  <#Description#>
+ *  水平collection
  */
 @property (weak, nonatomic) UICollectionView *collecionView;
+/**
+ *  垂直瀑布collection
+ */
+@property (weak, nonatomic) UICollectionView *collecionWaterfall;
+
+
 @end
 
 @implementation BSNewViewController
@@ -32,8 +38,8 @@ static NSString *const cvCell = @"collectCell";
 static CGFloat const HorizontalCollectionH = 300;
 static CGFloat const HorizontalCollectionY = 66;
 
-static CGFloat const VerticalCollectionY = HorizontalCollectionY + HorizontalCollectionH + 44;
-static CGFloat const VerticalCollectionH = 300;
+static CGFloat const VerticalCollectionY = HorizontalCollectionY + HorizontalCollectionH + 10;
+static CGFloat const VerticalCollectionH = 230;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -43,25 +49,25 @@ static CGFloat const VerticalCollectionH = 300;
     [self setHorizontalCollection];
     [self setVerticalCollection];
 
-
     self.automaticallyAdjustsScrollViewInsets = NO;
    
 }
 
 
 /**
- *  设置collection垂直
+ *  垂直瀑布流
  */
 - (void)setVerticalCollection
 {
-    BBBVerticalLayout *layout = [[BBBVerticalLayout alloc] init];
+    BBBWaterfallLayout *layout = [[BBBWaterfallLayout alloc] init];
+    layout.delegate = self;
     CGRect frame = CGRectMake(0, VerticalCollectionY, kScreenW, VerticalCollectionH);
     UICollectionView *vCollect = [[UICollectionView alloc] initWithFrame:frame collectionViewLayout:layout];
     [vCollect setDataSource:self];
     [vCollect setDelegate:self];
     [vCollect setBackgroundColor:[UIColor blackColor]];
     [self.view addSubview:vCollect];
-//    [vCollect registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:cvCell];
+    self.collecionWaterfall = vCollect;
     [vCollect registerNib:[UINib nibWithNibName:@"BBBCustomCollectionCell" bundle:nil] forCellWithReuseIdentifier:cvCell];
 }
 
@@ -85,6 +91,9 @@ static CGFloat const VerticalCollectionH = 300;
     
 }
 
+/**
+ *  导航栏设置
+ */
 - (void)setNav
 {
     UIBarButtonItem *item = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" highlightImage:@"MainTagSubIconClick" target:self action:@selector(leftButtonClick)];
@@ -97,7 +106,9 @@ static CGFloat const VerticalCollectionH = 300;
     [button addTarget:self action:@selector(clickButtonChange) forControlEvents:UIControlEventTouchUpInside];
     [self.navigationItem setTitleView:button];
 }
-
+/**
+ *  点击按钮改变collection布局模式
+ */
 - (void)clickButtonChange
 {
     if ([self.collecionView.collectionViewLayout isKindOfClass:[BBBScrollLayout class]]) {
@@ -107,10 +118,11 @@ static CGFloat const VerticalCollectionH = 300;
         layout.itemSize = CGSizeMake(kScreenW * 0.6, HorizontalCollectionH * 0.9);
         [self.collecionView setCollectionViewLayout:layout animated:YES];
     }
-
-
 }
 
+/**
+ *  点击按钮跳转下个界面
+ */
 - (void)leftButtonClick {
     
     BSWaterfallController *waterfall = [[BSWaterfallController alloc] init];
@@ -127,13 +139,13 @@ static CGFloat const VerticalCollectionH = 300;
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 20;
+    return 46;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     BBBCustomCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cvCell forIndexPath:indexPath];
-    cell.imageName = [NSString stringWithFormat:@"%zd",indexPath.item + 1];
+    cell.imageName = [NSString stringWithFormat:@"%zd",indexPath.item ];
     return  cell;
 
 }
@@ -143,6 +155,27 @@ static CGFloat const VerticalCollectionH = 300;
 {
 
 
+}
+
+#pragma mark - BBBWaterfallLayoutDelegate
+- (CGFloat)waterfallLayout:(BBBWaterfallLayout *)waterfallLayout heightForItemAtIndexPath:(NSIndexPath *)indexPath itemWidth:(CGFloat)itemWidth
+{
+    NSString *imageName = [NSString stringWithFormat:@"%ld",(long)indexPath.item];
+    UIImage *image = [UIImage imageNamed:imageName];
+    return itemWidth * image.size.height / image.size.width;
+
+}
+
+- (NSUInteger)columnCountInWaterfallLayout:(BBBWaterfallLayout *)waterfallLayout
+{
+    return 4;
+}
+
+#pragma mark - UICollectionViewDelegateFlowLayout
+- (CGFloat) collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
+{
+
+    return 0;
 }
 /*
 #pragma mark - Navigation
