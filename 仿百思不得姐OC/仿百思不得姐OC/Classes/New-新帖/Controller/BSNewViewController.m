@@ -13,11 +13,11 @@
 #import "BBBScrollLayout.h"
 #import "BBBCustomCollectionCell.h"
 #import "BBBRoundLayout.h"
-#import "BSWaterfallController.h"
+#import "BSCollectionViewController.h"
 #import "BBBWaterfallLayout.h"
 
 
-@interface BSNewViewController () <UICollectionViewDataSource,UICollectionViewDelegate,BBBWaterfallLayoutDelegate,UICollectionViewDelegateFlowLayout>
+@interface BSNewViewController () <UICollectionViewDataSource,UICollectionViewDelegate,BBBWaterfallLayoutDelegate>
 /**
  *  水平collection
  */
@@ -78,13 +78,13 @@ static CGFloat const VerticalCollectionH = 230;
 {
     BBBScrollLayout *layout = [[BBBScrollLayout alloc] init];
     layout.itemSize = CGSizeMake(kScreenW * 0.6, HorizontalCollectionH * 0.9);
-    
+    layout.minimumLineSpacing = 0;
+    layout.minimumInteritemSpacing = 0;
     CGRect frame = CGRectMake(0, HorizontalCollectionY, kScreenW, HorizontalCollectionH);
     UICollectionView *collect = [[UICollectionView alloc] initWithFrame:frame collectionViewLayout:layout];
     [collect setDataSource:self];
     [collect setDelegate:self];
     [collect setBackgroundColor:[UIColor blackColor]];
-//    [collect registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:cvCell];
     [collect registerNib:[UINib nibWithNibName:@"BBBCustomCollectionCell" bundle:nil] forCellWithReuseIdentifier:cvCell];
     [self.view addSubview:collect];
     self.collecionView = collect;
@@ -125,8 +125,8 @@ static CGFloat const VerticalCollectionH = 230;
  */
 - (void)leftButtonClick {
     
-    BSWaterfallController *waterfall = [[BSWaterfallController alloc] init];
-    [self.navigationController pushViewController:waterfall animated:YES];
+    BSCollectionViewController *collectionVC = [[BSCollectionViewController alloc] initWithCollectionViewLayout:[[UICollectionViewFlowLayout alloc] init]];
+    [self.navigationController pushViewController:collectionVC animated:YES];
 }
 
 
@@ -171,12 +171,7 @@ static CGFloat const VerticalCollectionH = 230;
     return 4;
 }
 
-#pragma mark - UICollectionViewDelegateFlowLayout
-- (CGFloat) collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
-{
 
-    return 0;
-}
 /*
 #pragma mark - Navigation
 

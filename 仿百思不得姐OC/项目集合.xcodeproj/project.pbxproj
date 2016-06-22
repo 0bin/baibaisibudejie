@@ -34,7 +34,6 @@
 		244350C71CD986B0008767FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 244350C61CD986B0008767FB /* Assets.xcassets */; };
 		244350D51CD986B0008767FB /* ______OCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 244350D41CD986B0008767FB /* ______OCTests.m */; };
 		244350E01CD986B0008767FB /* ______OCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 244350DF1CD986B0008767FB /* ______OCUITests.m */; };
-		2444C5181D17940700F8A250 /* BSWaterfallController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2444C5171D17940700F8A250 /* BSWaterfallController.m */; };
 		2448FBE81CD99B5E00E49921 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 2448FBE71CD99B5E00E49921 /* Foundation+Log.m */; };
 		2448FBEC1CD9A13D00E49921 /* BSTitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2448FBEA1CD9A13D00E49921 /* BSTitleTableViewCell.m */; };
 		2448FBED1CD9A13D00E49921 /* BSTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2448FBEB1CD9A13D00E49921 /* BSTitleTableViewCell.xib */; };
@@ -44,7 +43,6 @@
 		24569FB41CFD927B0052AB52 /* BSCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24569FB31CFD927B0052AB52 /* BSCommentModel.m */; };
 		245708931D0C396800F084BF /* BSPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 245708921D0C396800F084BF /* BSPlaceholderTextView.m */; };
 		245ADD361D103C7C00C55B27 /* BBBScrollLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 245ADD351D103C7C00C55B27 /* BBBScrollLayout.m */; };
-		246402621D1981190065523D /* BBBImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 246402611D1981190065523D /* BBBImageModel.m */; };
 		246487CC1CFC29BB0074B562 /* BSScanQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246487CA1CFC29BB0074B562 /* BSScanQRCodeViewController.m */; };
 		246487CD1CFC29BB0074B562 /* BSScanQRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 246487CB1CFC29BB0074B562 /* BSScanQRCodeViewController.xib */; };
 		246BE5771CF94A4000575708 /* BSTextEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246BE5751CF94A4000575708 /* BSTextEssenceViewController.m */; };
@@ -83,6 +81,7 @@
 		24E31CFC1CDCDEC000A42C26 /* BSSettingGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E31CFB1CDCDEC000A42C26 /* BSSettingGuideView.m */; };
 		24E31CFE1CDCDF0200A42C26 /* BSSettingGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24E31CFD1CDCDF0200A42C26 /* BSSettingGuideView.xib */; };
 		24EA71A51D1A60B900244036 /* BBBWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EA71A41D1A60B900244036 /* BBBWaterfallLayout.m */; };
+		24EA71AB1D1AC72200244036 /* BSCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EA71AA1D1AC72200244036 /* BSCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,8 +150,6 @@
 		244350DB1CD986B0008767FB /* 项目集合.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "项目集合.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		244350DF1CD986B0008767FB /* ______OCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "______OCUITests.m"; sourceTree = "<group>"; };
 		244350E11CD986B1008767FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2444C5161D17940700F8A250 /* BSWaterfallController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSWaterfallController.h; sourceTree = "<group>"; };
-		2444C5171D17940700F8A250 /* BSWaterfallController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSWaterfallController.m; sourceTree = "<group>"; };
 		2448FBE71CD99B5E00E49921 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		2448FBE91CD9A13D00E49921 /* BSTitleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTitleTableViewCell.h; sourceTree = "<group>"; };
 		2448FBEA1CD9A13D00E49921 /* BSTitleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTitleTableViewCell.m; sourceTree = "<group>"; };
@@ -169,8 +166,6 @@
 		245708921D0C396800F084BF /* BSPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPlaceholderTextView.m; sourceTree = "<group>"; };
 		245ADD341D103C7C00C55B27 /* BBBScrollLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBScrollLayout.h; sourceTree = "<group>"; };
 		245ADD351D103C7C00C55B27 /* BBBScrollLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBScrollLayout.m; sourceTree = "<group>"; };
-		246402601D1981190065523D /* BBBImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBImageModel.h; sourceTree = "<group>"; };
-		246402611D1981190065523D /* BBBImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBImageModel.m; sourceTree = "<group>"; };
 		246487C91CFC29BB0074B562 /* BSScanQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSScanQRCodeViewController.h; sourceTree = "<group>"; };
 		246487CA1CFC29BB0074B562 /* BSScanQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSScanQRCodeViewController.m; sourceTree = "<group>"; };
 		246487CB1CFC29BB0074B562 /* BSScanQRCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSScanQRCodeViewController.xib; sourceTree = "<group>"; };
@@ -236,6 +231,8 @@
 		24E31CFD1CDCDF0200A42C26 /* BSSettingGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSSettingGuideView.xib; sourceTree = "<group>"; };
 		24EA71A31D1A60B900244036 /* BBBWaterfallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBWaterfallLayout.h; sourceTree = "<group>"; };
 		24EA71A41D1A60B900244036 /* BBBWaterfallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBWaterfallLayout.m; sourceTree = "<group>"; };
+		24EA71A91D1AC72200244036 /* BSCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCollectionViewController.h; sourceTree = "<group>"; };
+		24EA71AA1D1AC72200244036 /* BSCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCollectionViewController.m; sourceTree = "<group>"; };
 		685B7A1BE0098BF7920E4106 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		74659E73E4B91EBCDDE3FDC4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D2C1A27C5786AA18AF22A5E1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -559,8 +556,8 @@
 			children = (
 				24CAA68F1CD98CC6005AD776 /* BSNewViewController.h */,
 				24CAA6901CD98CC6005AD776 /* BSNewViewController.m */,
-				2444C5161D17940700F8A250 /* BSWaterfallController.h */,
-				2444C5171D17940700F8A250 /* BSWaterfallController.m */,
+				24EA71A91D1AC72200244036 /* BSCollectionViewController.h */,
+				24EA71AA1D1AC72200244036 /* BSCollectionViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -568,8 +565,6 @@
 		24CAA6911CD98CC6005AD776 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				246402601D1981190065523D /* BBBImageModel.h */,
-				246402611D1981190065523D /* BBBImageModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -913,14 +908,12 @@
 				24CAA6B21CD98CC6005AD776 /* BSTabBar.m in Sources */,
 				246487CC1CFC29BB0074B562 /* BSScanQRCodeViewController.m in Sources */,
 				24CAA6AA1CD98CC6005AD776 /* BSEssenceViewController.m in Sources */,
-				246402621D1981190065523D /* BBBImageModel.m in Sources */,
 				242FEC4D1D095D40001A9E1A /* BSPublishViewController.m in Sources */,
 				2403C3E71CFBC7FE0020AA2A /* LBPopoverView.m in Sources */,
 				24CAA6A51CD98CC6005AD776 /* BSAttentionViewController.m in Sources */,
 				24CAA6AD1CD98CC6005AD776 /* UIBarButtonItem+LBButtonToBarButtonItem.m in Sources */,
 				24CAA6AE1CD98CC6005AD776 /* UIView+LBFrameExtension.m in Sources */,
 				246BE5771CF94A4000575708 /* BSTextEssenceViewController.m in Sources */,
-				2444C5181D17940700F8A250 /* BSWaterfallController.m in Sources */,
 				242FEC541D09765B001A9E1A /* BSPublishTextController.m in Sources */,
 				24333A931D045FD5003C9C6F /* LBTouchTopWindow.m in Sources */,
 				24CAA6B01CD98CC6005AD776 /* BSTabBarController.m in Sources */,
@@ -932,6 +925,7 @@
 				240923631CEDEC4500863061 /* NSDate+LBDate.m in Sources */,
 				247197141D06F8540051CE5B /* BSEssenceALLTableController.m in Sources */,
 				2401CF771D123FA0008C140C /* BBBCustomCollectionCell.m in Sources */,
+				24EA71AB1D1AC72200244036 /* BSCollectionViewController.m in Sources */,
 				244350BF1CD986B0008767FB /* AppDelegate.m in Sources */,
 				24CAA6AC1CD98CC6005AD776 /* BSNewViewController.m in Sources */,
 				245187851CEEEB4B0045D810 /* BSConst.m in Sources */,
