@@ -10,9 +10,9 @@
 #import "UIView+LBFrameExtension.h"
 #import "UIBarButtonItem+LBButtonToBarButtonItem.h"
 #import "UIView+LBFrameExtension.h"
-#import "BSEssenceALLTableController.h"
+
 #import "BSBasicTableViewController.h"
-#import "BSTextEssenceViewController.h"
+
 #import "LBPopoverView.h"
 
 
@@ -194,9 +194,9 @@
  *  设置导航左侧按钮点击
  */
 - (void)leftButtonClick {
-    
-    BSTextEssenceViewController *text = [[BSTextEssenceViewController alloc] init];
-    [self.navigationController pushViewController:text animated:YES];
+//    
+//    BSTextEssenceViewController *text = [[BSTextEssenceViewController alloc] init];
+//    [self.navigationController pushViewController:text animated:YES];
 }
 
 /**
@@ -233,7 +233,7 @@
     }
     [self.titleScroll setContentOffset:CGPointMake(buttonX,0) animated:YES];
   
-    BSEssenceALLTableController *all = self.childViewControllers[index];
+    BSBasicTableViewController *all = self.childViewControllers[index];
     if ([all isViewLoaded]) return;
     [all.view setFrame:CGRectMake(scrollView.contentOffset.x, 0, scrollView.width, scrollView.height)];
     [all.tableView setContentInset:UIEdgeInsetsMake(CGRectGetMaxY(self.titleScroll.frame), 0, self.tabBarController.tabBar.height, 0)];

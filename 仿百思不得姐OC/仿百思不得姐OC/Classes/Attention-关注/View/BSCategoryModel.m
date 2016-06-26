@@ -18,4 +18,12 @@
 
 }
 
+- (NSMutableArray *)arrayContentData
+{
+    if (!_arrayContentData) {
+        _arrayContentData = [NSMutableArray array];
+    }
+    return _arrayContentData;
+}
+
 @end

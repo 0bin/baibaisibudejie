@@ -17,6 +17,11 @@
 /** 名字 */
 @property (nonatomic, copy) NSString *name;
 
+/**
+ *  <#Description#>
+ */
+@property (strong, nonatomic) NSMutableArray *arrayContentData;
+
 
 + (instancetype)modelWithDict:(NSDictionary *)dict;
 
