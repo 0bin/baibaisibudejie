@@ -17,12 +17,13 @@
 /** 名字 */
 @property (nonatomic, copy) NSString *name;
 
-/**
- *  <#Description#>
- */
-@property (strong, nonatomic) NSMutableArray *arrayContentData;
+/**   */
+@property (strong, nonatomic) NSMutableArray *allUserData;
 
+/** 当前页码 */
+@property (nonatomic, assign) NSInteger currentPage;
+/** 总数 */
+@property (nonatomic, assign) NSInteger total;
 
-+ (instancetype)modelWithDict:(NSDictionary *)dict;
 
 @end

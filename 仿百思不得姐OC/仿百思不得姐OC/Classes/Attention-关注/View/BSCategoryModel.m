@@ -10,20 +10,14 @@
 
 @implementation BSCategoryModel
 
-+(instancetype)modelWithDict:(NSDictionary *)dict {
 
-    BSCategoryModel *model = [[self alloc] init];
-    [model setValuesForKeysWithDictionary:dict];
-    return model;
 
-}
-
-- (NSMutableArray *)arrayContentData
+- (NSMutableArray *)allUserData
 {
-    if (!_arrayContentData) {
-        _arrayContentData = [NSMutableArray array];
+    if (!_allUserData) {
+        _allUserData = [NSMutableArray array];
     }
-    return _arrayContentData;
+    return _allUserData;
 }
 
 @end

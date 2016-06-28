@@ -98,4 +98,8 @@ static id _tool;
 
 }
 
+- (void)cancelAllOperations
+{
+    [self.manager.operationQueue cancelAllOperations];
+}
 @end

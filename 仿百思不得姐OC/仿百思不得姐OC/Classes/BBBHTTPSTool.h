@@ -23,4 +23,5 @@
  */
 - (void)Post:(NSString *)URLString parameters:(id)parameters succeed:(void (^)(id responseObject))succeed failure:(void (^)(NSError *error))failure;
 
+- (void)cancelAllOperations;
 @end
