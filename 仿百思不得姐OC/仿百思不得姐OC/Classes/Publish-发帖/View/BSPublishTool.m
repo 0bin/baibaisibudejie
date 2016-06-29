@@ -7,15 +7,30 @@
 //
 
 #import "BSPublishTool.h"
+#import "UIView+LBFrameExtension.h"
+
+@interface BSPublishTool ()
+
+@property (weak, nonatomic) IBOutlet UIView *toolTopView;
+
+@end
 
 @implementation BSPublishTool
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
++ (instancetype)tool
+{
+   return [[NSBundle mainBundle] loadNibNamed:@"BSPublishTool" owner:nil options:nil].lastObject;
 }
-*/
+
+- (void)awakeFromNib
+{
+    UIButton *addButton = [[UIButton alloc] init];
+    [addButton setImage:[UIImage imageNamed:@"tag_add_icon"] forState:UIControlStateNormal];
+    [addButton setFrame:CGRectMake(10, 10, addButton.currentImage.size.width, addButton.currentImage.size.height)];
+    [self.toolTopView addSubview:addButton];
+    
+    
+
+}
 
 @end

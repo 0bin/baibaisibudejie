@@ -35,7 +35,7 @@
 
 - (void)addTool
 {
-    BSPublishTool *tool = [BSPublishTool initWithFromXib];
+    BSPublishTool *tool = [BSPublishTool tool];
     tool.width = self.view.width;
     tool.x = 0;
     tool.y = self.view.height - tool.height;

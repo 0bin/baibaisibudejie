@@ -10,4 +10,6 @@
 
 @interface BSPublishTool : UIView
 
++ (instancetype)tool;
+
 @end

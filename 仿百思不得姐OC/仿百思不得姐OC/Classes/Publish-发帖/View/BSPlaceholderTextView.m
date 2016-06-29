@@ -27,8 +27,7 @@
 
 - (void)drawRect:(CGRect)rect {
     
-    if (self.hasText)
-    {
+    if (self.hasText) {
         return;
     }
     NSMutableDictionary *attributes = [NSMutableDictionary dictionary];

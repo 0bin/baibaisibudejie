@@ -6,7 +6,7 @@
 //  Copyright © 2016年 LinBin. All rights reserved.
 //
 
-
+#import <Social/Social.h>
 
 #import "BSTextTableViewCell.h"
 #import "BSTextDataModel.h"
@@ -213,6 +213,11 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+- (IBAction)shareButtonClick:(id)sender {
+    
+
+    
 }
 
 @end

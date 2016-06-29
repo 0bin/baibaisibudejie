@@ -6,6 +6,8 @@
 //  Copyright © 2016年 LinBin. All rights reserved.
 //
 
+#import <Social/Social.h>
+#import <SVProgressHUD.h>
 #import "BSMeViewController.h"
 #import "UIBarButtonItem+LBButtonToBarButtonItem.h"
 #import "BSMeDataModel.h"
@@ -38,7 +40,7 @@
     [self.tableView layoutIfNeeded];
     [self.tableView setContentSize:CGSizeMake(0, CGRectGetMaxY(footerView.subviews.lastObject.frame))];
     [self.tableView reloadData];
-       NSLog(@"-----------------------");
+    
 
 
 }
@@ -82,7 +84,7 @@
 
 #pragma mark <TableView DataSource>
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -110,7 +112,10 @@
         
     } else if(indexPath.section == 1) {
     cell.textLabel.text = @"离线下载";
+    } else if(indexPath.section == 2) {
+        cell.textLabel.text = @"分享";
     }
+    
     
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     return cell;
@@ -119,10 +124,41 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSLog(@"---%@---",indexPath);
-
+    
+    if (indexPath.section == 0) {
         BSLoginViewController *login = [[BSLoginViewController alloc] init];
         [self presentViewController:login animated:YES completion:nil];
+    } else if (indexPath.section == 1) {
+    
+    }else if (indexPath.section == 2) {
+        // 1.判断平台是否可用
+        if (![SLComposeViewController isAvailableForServiceType:SLServiceTypeSinaWeibo]) {
+            [SVProgressHUD showErrorWithStatus:@"在设置内配置账号"];
+            [SVProgressHUD dismiss];
+            return;
+        }
+
+        SLComposeViewController *composeVc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeSinaWeibo];
+        [composeVc setInitialText:@"share"];
+        // 2.2.添加一个图片
+        [composeVc addImage:[UIImage imageNamed:@""]];
+        
+        // 2.3.添加一个分享的链接
+        [composeVc addURL:[NSURL URLWithString:@""]];
+        
+        // 3.弹出分享控制器
+        [self presentViewController:composeVc animated:YES completion:nil];
+        
+        // 4.监听用户点击了取消还是发送
+        composeVc.completionHandler = ^(SLComposeViewControllerResult result) {
+            if (result == SLComposeViewControllerResultCancelled) {
+                NSLog(@"点击了取消");
+            } else {
+                NSLog(@"点击了发送");
+            }
+        };
+    }
+    
     
 
 }
