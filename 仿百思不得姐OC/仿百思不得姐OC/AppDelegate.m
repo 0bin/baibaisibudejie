@@ -11,6 +11,9 @@
 #import "BSSettingGuideView.h"
 #import "LBTouchTopWindow.h"
 #import "BSConst.h"
+//#import "UMSocialWechatHandler.h"
+//#import "UMSocialQQHandler.h"
+//#import "UMSocialSinaSSOHandler.h"
 
 
 @interface AppDelegate () <UITabBarControllerDelegate>
@@ -28,12 +31,16 @@
     self.window.rootViewController = tabBar;
     [self.window makeKeyAndVisible];
     [BSSettingGuideView show];
+
+
     
     
     
 //    [LBTouchTopWindow show];
     return YES;
 }
+
+
 
 #pragma mark <UITabBarControllerDelegate>
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController

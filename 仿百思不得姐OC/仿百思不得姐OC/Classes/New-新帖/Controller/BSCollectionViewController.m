@@ -25,7 +25,9 @@ static NSString * const reuseIdentifier = @"Cell";
     // Register cell classes
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
-    
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"xx" message:@"oooooooo" delegate:self cancelButtonTitle:@"pp" otherButtonTitles:nil, nil];
+    [alert show];
+      NSLog(@"%s",__func__);
     // Do any additional setup after loading the view.
 }
 
@@ -47,13 +49,13 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete implementation, return the number of sections
+
     return 3;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of items
+
     return 40;
 }
 

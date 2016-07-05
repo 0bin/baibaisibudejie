@@ -37,9 +37,9 @@
 static NSString *const cvCell = @"collectCell";
 static CGFloat const HorizontalCollectionH = 300;
 static CGFloat const HorizontalCollectionY = 66;
-
 static CGFloat const VerticalCollectionY = HorizontalCollectionY + HorizontalCollectionH + 10;
 static CGFloat const VerticalCollectionH = 230;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];

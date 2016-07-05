@@ -7,6 +7,7 @@
 //
 
 #import <Social/Social.h>
+
 #import <SVProgressHUD.h>
 #import "BSMeViewController.h"
 #import "UIBarButtonItem+LBButtonToBarButtonItem.h"
@@ -15,6 +16,7 @@
 #import "LBTableFooterView.h"
 #import "UIView+LBFrameExtension.h"
 #import "BSLoginViewController.h"
+
 
 @interface BSMeViewController ()
 @property (strong, nonatomic) NSArray *dataArray;
@@ -129,6 +131,14 @@
         BSLoginViewController *login = [[BSLoginViewController alloc] init];
         [self presentViewController:login animated:YES completion:nil];
     } else if (indexPath.section == 1) {
+//        [UMSocialData defaultData].extConfig.title = @"分享的title";
+//        [UMSocialData defaultData].extConfig.qqData.url = @"http://baidu.com";
+//        [UMSocialSnsService presentSnsIconSheetView:self
+//                                             appKey:@"507fcab25270157b37000010"
+//                                          shareText:@"友盟社会化分享让您快速实现分享等社会化功能，http://umeng.com/social"
+//                                         shareImage:[UIImage imageNamed:@"icon"]
+//                                    shareToSnsNames:@[UMShareToWechatSession,UMShareToWechatTimeline,UMShareToSina,UMShareToQQ,UMShareToQzone]
+//                                           delegate:self];
     
     }else if (indexPath.section == 2) {
         // 1.判断平台是否可用

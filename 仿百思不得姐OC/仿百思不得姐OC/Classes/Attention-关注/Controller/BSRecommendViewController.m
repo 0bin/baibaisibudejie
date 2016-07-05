@@ -70,7 +70,7 @@ static NSString *const titleCell = @"titleCell";
 }
 - (void)checkFooter
 {
-    BSCategoryModel *model = self.categoryData[self.titleTable.indexPathForSelectedRow.row];
+    
     
 }
 - (void)setRefresh
